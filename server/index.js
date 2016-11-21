@@ -8,7 +8,7 @@ var app = module.exports = express();
 
 var port = 3000;
 
-var connectionString = config.MASSIVE_URI //don't forget to name your database jaybird!
+var connectionString = config.MASSIVE_URI;
 var db = massive.connectSync({
     connectionString: connectionString
 });
@@ -18,8 +18,42 @@ app.use(bodyParser.json());
 app.use(express.static('../dist'));
 app.use(cors());
 
+var UserCtrl = require('./controllers/UserCtrl');
+var cartCtrl = require('./controllers/cartCtrl');
 
+var passport = require('./services/passport');
 
+var isAuthed = function(req, res, next) {
+    if (!req.isAuthenticated()) return res.status(401)
+        .send();
+    return next();
+}
+
+app.use(session({
+    secret: config.SESSION_SECRET,
+    saveUnitialized: false,
+    resave: false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport endpoints
+app.post('/api/login', passport.authenticate('local', {
+    successRedirect: '/me'
+}));
+
+app.get('/api/logout', function(req, res, next) {
+    req.logout();
+    return res.status(200)
+        .send('logged out');
+});
+
+//User endpoints
+app.post('/api/register', UserCtrl.register);
+app.post('/api/user', UserCtrl.read);
+app.get('/api/me', isAuthed, UserCtrl.me);
+app.put('/api/user/current', isAuthed, UserCtrl.update);
 
 app.listen(port, function() {
     console.log('nailed it on port ' + port);
