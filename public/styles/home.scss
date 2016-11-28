@@ -1,14 +1,13 @@
 .jumbo-wrapper {
-  background-position: center;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+  height: auto;
+  position: relative;
+  .poster {
+    width: 100%;
+    height: auto;
+  }
   .jumbotron {
-    background-position: center;
     width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
     position: absolute;
     top: 20%;
@@ -16,13 +15,18 @@
     transform: translate(-50%, -50%);
   }
   .cameras {
-    width: 100%;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 44%);
+    background-position: center;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     img {
-      width: 450px;
-      background-size: cover;
-      position: absolute;
-      left: 39%;
-      top: 28%;
+      width: 100%;
     }
   }
 }
