@@ -1,4 +1,4 @@
-angular.module("goApp", ['ui.router'])
+angular.module("goApp", ['ui.router', 'ngAnimate'])
 .config(function($stateProvider, $urlRouterProvider) {
 
    $urlRouterProvider.otherwise('/');
