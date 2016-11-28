@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Miriam+Libre');
-$font: 'Miriam Libre', sans-serif;
+$font: 'Roboto', sans-serif;
 .jumbo-wrapper {
   width: 100vw;
   height: auto;
@@ -38,15 +38,30 @@ $font: 'Miriam Libre', sans-serif;
   width: 100vw;
   text-align: center;
   margin-top: 12%;
-  line-height: 60px;
+  line-height: 48px;
   .bold {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     font-family: $font;
+    color: $fake-black;
+    letter-spacing: 1px;
+    .trademark {
+      font-size: 20px;
+      font-weight: normal;
+    }
   }
   .sub-text {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     font-family: $font;
+    color: $fake-black;
+    letter-spacing: 1px;
+  }
+  .small-sub-text {
+    color: $fake-black;
+    font-family: $font;
+    font-weight: 100;
+    line-height: 28px;
+    font-size: 15px;
   }
 }
