@@ -4,6 +4,7 @@ $font: 'Roboto', sans-serif;
   width: 100vw;
   height: auto;
   position: relative;
+  z-index: -1;
   .poster {
     width: 100%;
     height: auto;
@@ -37,8 +38,9 @@ $font: 'Roboto', sans-serif;
 .text-wrapper {
   width: 100vw;
   text-align: center;
-  margin-top: 12%;
+  margin-top: 87px;
   line-height: 48px;
+  padding-bottom: 45px;
   .bold {
     font-size: 35px;
     font-weight: bold;
@@ -63,5 +65,58 @@ $font: 'Roboto', sans-serif;
     font-weight: 100;
     line-height: 28px;
     font-size: 15px;
+    .bold {
+      color: $fake-black;
+      font-family: $font;
+      font-weight: 700;;
+      line-height: 28px;
+      font-size: 18px;
+    }
   }
+}
+
+.button-wrapper {
+  padding-bottom: 50px;
+  .button {
+    width: 63px;
+    background: #009fdf;
+    margin: 0 auto;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: $font;
+    text-align: center;
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  .subscript {
+    width: 123px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 40px;
+    font-family: sans-serif;
+    color: rgb(164,165,165);
+    font-weight: 100;
+    font-size: 14px;
+  }
+}
+
+.landing-wrapper {
+  background: #f2f2f2;
+  width: 100vw;
+  height: 1000px;
+  position: absolute;
+  .photo-wrapper {
+    background-color: #FFF;
+    width: 1200px;
+    height: 670px;
+    .img {
+      position: absolute;
+      width: 1200px;
+    }
+  }
+
 }
