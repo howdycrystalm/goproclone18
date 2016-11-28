@@ -28,7 +28,7 @@
       }
       li {
          margin-left: 39px;
-         font-family: $header-link;
+         font-family: $med-blue;
          font-size: 900;
          text-transform: uppercase;
          height: 40px;
@@ -47,7 +47,7 @@
       .top {
          margin-top: -10px;
          margin-bottom: 9px;
-         color: $label-blue;
+         color: $dark-blue;
          font-family: $header-link;
          font-size: 500;
          text-transform: capitalize;
@@ -68,7 +68,7 @@
             margin-top: 5px;
             margin-left: 5px;
          }
-         
+
          ul {
             @include flexSetUp(space-between, center);
             flex-direction: row;
@@ -133,7 +133,7 @@
          margin-bottom: 3px;
       }
       li:hover {
-         border-bottom: $button-blue solid 3px;
+         border-bottom: $med-blue solid 3px;
          margin-bottom: 0px;
       }
       a {
