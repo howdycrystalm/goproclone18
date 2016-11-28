@@ -1,0 +1,32 @@
+.jumbo-wrapper {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  .poster {
+    width: 100%;
+    height: auto;
+  }
+  .jumbotron {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .cameras {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, 44%);
+    background-position: center;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
