@@ -1,48 +1,4 @@
 @import "mixins";
 @import "banner";
 @import "body";
-@import url('https://fonts.googleapis.com/css?family=Miriam+Libre|Open+Sans|Roboto:500');
-
-//==============================================================================//
-//  Comments below reference GoPro.com's home page to show where fonts are used //
-//==============================================================================//
-
-//==============================================================================//
-//                               Colors                                         //
-//==============================================================================//
-$med-blue: #009FDF;
-$dark-blue: #005DAC;
-$white: #FFFFFF;
-$fake-black: #333333;
-$black: #000000;
-$light-grey: #F7F7F7;
-
-//==============================================================================//
-//                               Header Text                                    //
-//==============================================================================//
-
-$header-link: 'Miriam Libre', 'Tahoma', 'Helvetica', sans-serif; //use all caps, bold SHOP APPS WATCH
-$header-text: 'Roboto', 'Tahoma', 'Helvetica', sans-serif; //home-view1 for Login/Register Support US, also use for dropdown Cameras, Drones, etc.
-$header-font-size: 14px;
-
-//==============================================================================//
-//                             Body Text                                        //
-//==============================================================================//
-
-$title: 'Roboto', 'Tahoma', 'Helvetica', sans-serif;
-$title-size: 48px;
-$tagline: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-$tagline-size: 28px;
-$button-text: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-$button-text-size: 12px;
-$video-text:
-
-//==============================================================================//
-//                              Footer                                          //
-//==============================================================================//
-
-$footer-title: 'Miriam Libre', 'Tahoma', 'Helvetica', sans-serif;
-$footer-title-size: 15px;
-$footer-tag: 'Roboto', 'Tahoma', 'Helvetica', sans-serif; //if possible, make Roboto Light weight
-$footer-tag-size: 14px;
-$footer-link: 'Helvetica', 'Tahoma', sans-serif;
+@import "variables";
