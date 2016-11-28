@@ -7,6 +7,7 @@
    position: fixed;
    right: 0;
    left: 0;
+   top: 0px;
    margin-right: auto;
    margin-left: auto;
 
@@ -38,12 +39,66 @@
    }
 
    .right {
-      margin-right: 30px;
+      width: 310px;
+      margin-right: 20px;
+      margin-top: 15px;
+      @include flexSetUp();
+      flex-direction: column;
+      .top {
+         margin-top: -10px;
+         margin-bottom: 9px;
+         color: $label-blue;
+         font-family: $header-link;
+         font-size: 500;
+         text-transform: capitalize;
+         font-size: 14px;
+      }
+      .bottom {
+         font-family: $header-link;
+         font-size: 300;
+         text-transform: capitalize;
+         font-size: 14px;
+
+         .down-arrow {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 5px 5px 0 5px;
+            border-color: #ffffff transparent transparent transparent;
+            margin-top: 5px;
+            margin-left: 5px;
+         }
+         
+         ul {
+            @include flexSetUp(space-between, center);
+            flex-direction: row;
+            li {
+               margin-right: 25px;
+               @include flexSetUp();
+               flex-direction: row;
+               img {
+                  @include width-height(20px, 20px);
+               }
+               a {
+                  text-decoration: none;
+                  color: white;
+               }
+               a:hover {
+                  text-decoration: none;
+                  color: white;
+               }
+               a:visited {
+                  text-decoration: none;
+                  color: white;
+               }
+            }
+         }
+      }
    }
 }
 
 .dropdown {
-   @include width-height(1200px, 85px);
+   @include width-height(1200px, 95px);
    @include flexSetUp(space-between, flex-end);
    background-color: white;
    color: black;
@@ -59,8 +114,13 @@
    .label {
       font-family: $header-link;
       font-size: 14px;
-      font-size: 500;
+      font-size: 900;
       text-transform: capitalize;
+      margin-top: 4px;
+   }
+   .watch-small {
+      width: 580px;
+      margin: auto;
    }
    ul {
       width: 100%;
@@ -90,7 +150,6 @@
       }
    }
 }
-
 
 .dropdown-show {
    top: 75px;
