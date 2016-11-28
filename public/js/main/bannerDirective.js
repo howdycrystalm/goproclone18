@@ -5,6 +5,10 @@ angular.module('goApp').directive('banner', function() {
       templateUrl: './views/bannerDir.html',
       scope: {
          item: '='
+      },
+      controller: function($scope) {
+         $scope.hoverShop = false;
+         $scope.hoverWatch = false;
       }
    };
 })
