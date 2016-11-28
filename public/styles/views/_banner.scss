@@ -28,10 +28,22 @@
       }
       li {
          margin-left: 39px;
-         font-family: $med-blue;
+         font-family: $header-link;
          font-size: 900;
          text-transform: uppercase;
          height: 40px;
+      }
+      a {
+         text-decoration: none;
+         color: white;
+      }
+      a:hover {
+         text-decoration: none;
+         color: white;
+      }
+      a:visited {
+         text-decoration: none;
+         color: white;
       }
       .search-icon {
          @include width-height(14px, 14px);
@@ -47,7 +59,7 @@
       .top {
          margin-top: -10px;
          margin-bottom: 9px;
-         color: $dark-blue;
+         color: $med-blue;
          font-family: $header-link;
          font-size: 500;
          text-transform: capitalize;
@@ -121,6 +133,7 @@
    .watch-small {
       width: 580px;
       margin: auto;
+      margin-bottom: -1px;
    }
    ul {
       width: 100%;
@@ -139,6 +152,7 @@
       a {
          text-decoration: none;
          color: black;
+         margin-bottom: 3px;
       }
       a:hover {
          text-decoration: none;
