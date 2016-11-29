@@ -15,7 +15,7 @@ var db = massive.connectSync({
 app.set('db', db);
 var db = app.get('db');
 app.use(bodyParser.json());
-app.use(express.static('../dist'));
+app.use(express.static(__dirname + './../dist'));
 app.use(cors());
 
 var UserCtrl = require('./controllers/UserCtrl');

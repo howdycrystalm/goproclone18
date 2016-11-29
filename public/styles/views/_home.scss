@@ -1,76 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Miriam+Libre');
 $font: 'Roboto', sans-serif;
+.top-banner {
+  height: 860px;
+  background-color: white;
+}
+
 .jumbo-wrapper {
-  width: 100vw;
+  width: 100%;
   height: auto;
   position: relative;
-  z-index: -1;
+  // z-index: -1;
   .poster {
     width: 100%;
-    height: auto;
+    // height: auto;
   }
   .jumbotron {
-    width: 100vw;
     overflow: hidden;
     position: absolute;
-    top: 20%;
+    width: 100%;
+    top: 220px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   .cameras {
-    width: 100vw;
-    position: absolute;
+
+    @include flexSetUp(flex-start, center);
+    flex-direction: column;
+    width: 100%;
     left: 0;
     bottom: 0;
-    transform: translate(0, 44%);
-    background-position: center;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    img {
-      width: 70%;
-      margin-left: 14vw;
-    }
-  }
-}
+    transform: translate(0, 0);
 
-.text-wrapper {
-  width: 100vw;
-  text-align: center;
-  margin-top: 87px;
-  line-height: 48px;
-  padding-bottom: 45px;
-  .bold {
-    font-size: 35px;
-    font-weight: bold;
-    font-family: $font;
-    color: $fake-black;
-    letter-spacing: 1px;
-    .trademark {
-      font-size: 20px;
-      font-weight: normal;
+    .text-banner {
+      margin: 0px 0 40px 0;
+      @include flexSetUp(flex-start, center);
+      flex-direction: column;
+      margin: 150px 0 90px 0;
+      p {
+        font-family: $font;
+        margin-bottom: 25px;
+        color: white;
+
+      }
     }
-  }
-  .sub-text {
-    font-size: 35px;
-    font-weight: bold;
-    font-family: $font;
-    color: $fake-black;
-    letter-spacing: 1px;
-  }
-  .small-sub-text {
-    color: $fake-black;
-    font-family: $font;
-    font-weight: 100;
-    line-height: 28px;
-    font-size: 15px;
-    .bold {
-      color: $fake-black;
-      font-family: $font;
-      font-weight: 700;;
-      line-height: 28px;
-      font-size: 18px;
+
+    .text-banner-bottom {
+      margin-top: 56px;
+      h2 {
+        font-family: $font;
+        font-size: 40px;
+        color: $fake-black;
+        font-weight: bolder;
+        margin-bottom: 20px;
+      }
+      p {
+        text-align: center;
+        font-family: $font;
+        font-size: 20px;
+        color: $fake-black;
+        padding-bottom: 30px;
+      }
     }
   }
 }
@@ -92,31 +81,133 @@ $font: 'Roboto', sans-serif;
   .button:hover {
     cursor: pointer;
   }
-  .subscript {
-    width: 123px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 15px 40px;
-    font-family: sans-serif;
-    color: rgb(164,165,165);
-    font-weight: 100;
-    font-size: 14px;
-  }
 }
 
-.landing-wrapper {
-  background: #f2f2f2;
-  width: 100vw;
-  height: 1000px;
-  position: absolute;
+
+
   .photo-wrapper {
     background-color: #FFF;
     width: 1200px;
     height: 670px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+
+    .super-div  {
+      @include flexSetUp(flex-start, center);
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 6;
+
+      .karma {
+        margin-top: 48px;
+      }
+      .drone {
+        width: 500px;
+        margin-top: 53px;
+      }
+      .drone-text {
+        @include flexSetUp(flex-start, center);
+        flex-direction: column;
+        font-family: sans-serif;
+        font-weight: bolder;
+        margin-top: 30px;
+        color: #333333;
+        margin-bottom: 60px;
+        h2 {
+          // padding-top: 450px;
+          font-size: 35px;
+          padding-bottom: 20px;
+        }
+        p {
+          font-weight: normal;
+          padding-bottom: 7px
+        }
+      }
+    }
+
+
     .img {
       position: absolute;
       width: 1200px;
     }
+    .dual-camera {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      margin-top: 163px;
+    }
   }
 
-}
+  .plus-info-box {
+    background-color: #FFF;
+    width: 1200px;
+    height: 650px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+
+    .top {
+      height: 15%;
+      @include flexSetUp(center, center);
+      .plus-container {
+        position: relative;
+        padding-top: 0px;
+        }
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: flex-start;
+        height: 85%;
+        .left {
+          width: 35%;
+          color: #333333;
+          @include flexSetUp(center);
+          flex-direction: column;
+          padding-left: 55px;
+          height: 100%;
+          h2 {
+            font-size: 35px;
+            font-family: $font;
+            color: $fake-black;
+            font-weight: bolder;
+            margin-bottom: 30px;
+          }
+          p {
+            font-size: 16px;
+            font-family: sans-serif;
+            color: $fake-black;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+          .button-box {
+            padding-bottom: 50px;
+            .button {
+              width: 80px;
+              background: #009fdf;
+              margin: 0 auto;
+              padding: 15px 40px;
+              text-transform: uppercase;
+              color: white;
+              font-weight: 700;
+              font-size: 12px;
+              font-family: $font;
+              text-align: center;
+            }
+            .button:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .right {
+          width: 75%;
+          @include flexSetUp(center);
+          flex-direction: column;
+          margin-left: 100px;
+        }
+      }
+    }
