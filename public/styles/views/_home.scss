@@ -113,9 +113,26 @@ $font: 'Roboto', sans-serif;
     background-color: #FFF;
     width: 1200px;
     height: 670px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    .hero-title {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      margin: 56px auto 0 auto;
+    }
     .img {
       position: absolute;
       width: 1200px;
+    }
+    .dual-camera {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      margin-top: 163px;
     }
   }
 
