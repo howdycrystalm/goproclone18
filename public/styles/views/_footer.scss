@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 .footer {
    @include width-height(100%, 435px);
    position: absolute;
    bottom: 0;
    margin-top: 435px;
+=======
+.droper {
+   position: absolute;
+   
+}
+
+.footer {
+   @include width-height(100%, 435px);
+>>>>>>> master
    color: white;
    background: black;
 
