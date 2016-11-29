@@ -1,0 +1,110 @@
+.footer {
+   @include width-height(100%, 435px);
+   position: absolute;
+   bottom: 0;
+   margin-top: 435px;
+   color: white;
+   background: black;
+
+   .thirds {
+      @include flexSetUp(space-around, center);
+
+      .third {
+         @include width-height(30%, 150px);
+         @include flexSetUp(space-between);
+         flex-direction: column;
+         margin-top: 50px;
+         .top {
+            .header {
+               font-family: $footer-tag;
+               font-size: 14px;
+               font-weight: bold;
+               border-bottom: 1px white solid;
+               padding-bottom: 12px;
+               text-transform: uppercase;
+               span {
+                  margin-left: 10px;
+                  font-weight: 400;
+                  font-size: 14px;
+               }
+            }
+            .text {
+               margin-top: 12px;
+               font-family: $footer-link;
+               font-size: 15px;
+               font-weight: 100;
+               line-height: 24px;
+            }
+         }
+         .bottom {
+            color: pink;
+            @include flexSetUp(flex-start, center);
+            input {
+               @include width-height(130px, 24px);
+               padding-left: 5px;
+               border-radius: 2px;
+               border: none;
+            }
+            span {
+               font-family: $footer-tag;
+               text-transform: uppercase;
+               color: $med-blue;
+               font-size: 14px;
+               font-weight: 100;
+               line-height: 24px;
+            }
+            .submit {
+               margin-left: 20px;
+            }
+         }
+      }
+   }
+
+   .middle {
+      @include flexSetUp();
+      flex-direction: column;
+      margin: 45px 2% 0 2%;
+      .top {
+         @include flexSetUp(space-between, center);
+         width: 100%;
+         padding-bottom: 5px;
+         border-bottom: 1px white solid;
+            .images {
+               @include flexSetUp(space-between,center);
+               img {
+                  margin-right: 15px;
+               }
+            }
+            .right {
+               font-family: $footer-tag;
+               font-size: 22px;
+               margin-bottom: -30px;
+               text-transform: capitalize;
+               span {
+                  font-size: 20px;
+               }
+            }
+      }
+
+      .bottom {
+         ul {
+            @include flexSetUp();
+            flex-wrap: wrap;
+            li {
+               font-family: $footer-tag;
+               margin-right: 18px;
+               margin-top: 18px;
+               text-transform: capitalize;
+               font-size: 12.5px;
+            }
+         }
+      }
+   }
+
+   .bottom-box {
+      margin: 45px 0 0 2%;
+      font-family: $footer-tag;
+      font-size: 12px;
+      color: gray;
+   }
+}
