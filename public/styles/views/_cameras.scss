@@ -1,337 +1,352 @@
 .cameras-container {
-  -webkit-font-smoothing: antialiased;
-  background: red;
-  // nested
+    -webkit-font-smoothing: antialiased;
+    background: red;
+    // nested
+    .container {
+        width: 95%;
+        height: 650px;
+        background: orange;
+        position: relative;
+        top: 55px;
+        margin: auto;
+    }
 
-  .container {
-    width: 95%;
-    height: 650px;
-    background: orange;
-    position: relative;
-    top: 55px;
-    margin: auto;
-  }
-  .cam-landing-compare {
-    width: 95%;
-    height: 300px;
-    background: coral;
-    position: relative;
-    margin: auto;
-  }
+    .cam-landing-compare {
+        width: 95%;
+        height: 300px;
+        background: coral;
+        position: relative;
+        margin: auto;
+    }
+    //==============================================================================//
+    //                          Comparison Chart                                    //
+    //==============================================================================//
 
-//==============================================================================//
-//                          Comparison Chart                                    //
-//==============================================================================//
-.compare-container {
+    .compare-container {
+        width: 95%;
+        // height: 100vh;
+        display: -webkit-flex;
+        display: flex;
+        margin: auto;
+    }
 
-  width: 95%;
-  // height: 100vh;
-  display: -webkit-flex;
-  display: flex;
-  margin: auto;
+    .compare-column {
+        width: 100%;
+        // height: 100vh;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        background: #F7F7F7;
+    }
 
-}
+    .top-box {
+        width: 100%;
+        height: 200px;
+        background: #F7F7F7;
+        text-align: center;
+        padding: 5% 0;
+    }
 
-.compare-column {
-  width: 100%;
-  // height: 100vh;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  background: #F7F7F7;
-}
+    .top-box-title {
+        font-family: 'Roboto', 'Tahoma', 'Helvetica', sans-serif;
+        font-size: 26px;
+        font-weight: bold;
+        color: #000000;
+        position: relative;
+        bottom: 4px;
+    }
 
-.top-box {
-  width: 100%;
-  height: 200px;
-  background: #F7F7F7;
-  text-align: center;
-  padding: 5% 0%;
-}
-.top-box-title {
-  font-family: 'Roboto', 'Tahoma', 'Helvetica', sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  color: #000000;
-  position: relative;
-  bottom: 4px;
-}
+    .top-box-price {
+        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-size: 16px;
+        line-height: 3em;
+        position: relative;
+        bottom: 11px;
+    }
 
-.top-box-price {
-  font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-  font-size: 16px;
-  line-height: 3em;
-  position: relative;
-  bottom: 11px;
-}
+    .learn-more-button {
+        width: 144px;
+        min-height: 35px;
+        background: #00b8fd;
+        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        margin: auto;
+    }
 
-.learn-more-button {
-  width: 144px;
-  min-height: 35px;
-  background: #00b8fd;
-  font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #FFFFFF;
-  display: -webkit-flex;
-  -webkit-align-items: center;
-  -webkit-justify-content: center;
-  margin: auto;
-}
+    .learn-more-container {
+      width: 100%;
+      background: blue;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+    }
 
-.img-box {
-  background: #DDDDDD;
-}
+    .learn-more-row {
+      width: 97%;
+      display: flex;
+      /* flex-direction: row; */
+      justify-content: center;
+      margin: auto;
+    }
 
-.img-HERO5 {
-  z-index: 1;
-  width: 90%;
-  height: 300px;
-  background-image: url(https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw41a1ade9/hero5launch/HERO5_Black_compare_v2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  position: relative;
-  top: 121px;
-}
+    .img-box {
+        background: #DDDDDD;
+    }
 
-.img-HERO5-session {
-  z-index: 1;
-  width: 90%;
-  height: 300px;
-  background-image: url(https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw67485b33/hero5launch/HERO5_Session_compare_v2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  position: relative;
-  top: 121px;
-}
+    .img-HERO5 {
+        z-index: 1;
+        width: 90%;
+        height: 300px;
+        background-image: url("https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw41a1ade9/hero5launch/HERO5_Black_compare_v2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        position: relative;
+        top: 121px;
+    }
 
-.img-session {
-  z-index: 1;
-  width: 85%;
-  height: 290px;
-  background-image: url(https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dwcb018876/hero5launch/HERO_Session_315.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  position: relative;
-  top: 121px;
-}
+    .img-HERO5-session {
+        z-index: 1;
+        width: 90%;
+        height: 300px;
+        background-image: url("https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw67485b33/hero5launch/HERO5_Session_compare_v2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        position: relative;
+        top: 121px;
+    }
 
-.spec-container {
-  width:100%;
-  background: purple;
- }
+    .img-session {
+        z-index: 1;
+        width: 85%;
+        height: 290px;
+        background-image: url("https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dwcb018876/hero5launch/HERO_Session_315.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        position: relative;
+        top: 121px;
+    }
 
-.top-two-spec-boxes {
-  height: 30px;
-  line-height:1.5em;
-  border-bottom:1px solid #ccc;
-  float:left;
-  display:inline;
-  background: black;
-}
+    .spec-container {
+        width: 100%;
+        background: purple;
+    }
 
-.spec-box {
-  height: 160px;
-  line-height:3em;
-  float:left;
-  display:inline;
-  background: black;
-}
+    .top-two-spec-boxes {
+        height: 30px;
+        line-height: 1.5em;
+        border-bottom: 1px solid #ccc;
+        float: left;
+        display: inline;
+        background: black;
+    }
 
-#two-columns  .spec-box {
-  width:50%;
-}
+    .spec-box {
+        height: 160px;
+        line-height: 3em;
+        float: left;
+        display: inline;
+        background: black;
+    }
 
-.top-two-text-align {
-  width: 50%;
-  display: block;
-  margin: auto;
-  margin-top: 8px;
-  text-align: center;
-  line-height: 1.5em;
-  font-family: Roboto;
-  position: relative;
-  top: 100px;
-  color: #666666;
-}
+    #two-columns .spec-box {
+        width: 50%;
+    }
 
-.top-two-icon-size {
-  width: 100%;
-  height: 50px;
-  position: relative;
-  top: 100px;
-}
+    .top-two-text-align {
+        width: 50%;
+        display: block;
+        margin: 8px auto auto;
+        text-align: center;
+        line-height: 1.5em;
+        font-family: Roboto;
+        position: relative;
+        top: 100px;
+        color: #666666;
+    }
 
-.text-align {
-  width: 50%;
-  display: block;
-  margin: auto;
-  margin-top: 8px;
-  text-align: center;
-  line-height: 1.5em;
-  font-family: Roboto;
-  position: relative;
-  top: 28px;
-  color: #666666;
-}
+    .top-two-icon-size {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top: 100px;
+    }
 
-.text-white {
-  width: 50%;
-  display: block;
-  margin: auto;
-  margin-top: 8px;
-  text-align: center;
-  line-height: 1.5em;
-  font-family: Roboto;
-  position: relative;
-  top: 28px;
-  color: #FFFFFF;
-}
+    .text-align {
+        width: 50%;
+        display: block;
+        margin: 8px auto auto;
+        text-align: center;
+        line-height: 1.5em;
+        font-family: Roboto;
+        position: relative;
+        top: 28px;
+        color: #666666;
+    }
 
-.icon-size {
-  width: 100%;
-  height: 50px;
-  position: relative;
-  top: 28px;
-}
+    .text-white {
+        width: 50%;
+        display: block;
+        margin: 8px auto auto;
+        text-align: center;
+        line-height: 1.5em;
+        font-family: Roboto;
+        position: relative;
+        top: 28px;
+        color: #FFFFFF;
+    }
 
-.spec-box-color1 {
-  background: #FFFFFF;
-}
+    .icon-size {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        top: 28px;
+    }
 
-.icon-camera {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Photo.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color1 {
+        background: #FFFFFF;
+    }
 
-.spec-box-color2 {
-  background: #F2F1F0;
-}
+    .icon-camera {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Photo.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-video {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Video.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color2 {
+        background: #F2F1F0;
+    }
 
-.spec-box-color3 {
-  background: #E3E4E2;
-}
+    .icon-video {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Video.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-waterproof {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479782283383/images/compare_feature_icons/Waterproof.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color3 {
+        background: #E3E4E2;
+    }
 
-.spec-box-color4 {
-  background: #CBCCCB;
-}
+    .icon-waterproof {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479782283383/images/compare_feature_icons/Waterproof.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-one-button {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479782283383/images/compare_feature_icons/1%20Button.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color4 {
+        background: #CBCCCB;
+    }
 
-.spec-box-color5 {
-  background: #B4B4B4;
-}
+    .icon-one-button {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479782283383/images/compare_feature_icons/1%20Button.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
+    .spec-box-color5 {
+        background: #B4B4B4;
+    }
 
-.icon-wifi {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Wifi.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .icon-wifi {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Wifi.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
+    .spec-box-color6 {
+        background: #9E9F9E;
+    }
 
-.spec-box-color6 {
-  background: #9E9F9E;
-}
+    .icon-wind {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Wind%20Suppression.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-wind {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Wind%20Suppression.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color7 {
+        background: #00A3D1;
+    }
 
-.spec-box-color7 {
-  background: #00A3D1;
-}
+    .icon-voice {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Voice%20Control.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-voice {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Voice%20Control.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color8 {
+        background: #0695C5;
+    }
 
-.spec-box-color8 {
-  background: #0695C5;
-}
+    .icon-stabilization {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/video%20stabilization.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-stabilization {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/video%20stabilization.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color9 {
+        background: #007FBA;
+    }
 
-.spec-box-color9 {
-  background: #007FBA;
-}
+    .icon-touch {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Touchscreen.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.icon-touch {
-  background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/Touchscreen.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
+    .spec-box-color10 {
+        background: #005295;
+    }
 
+    .icon-auto-upload {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/AutoUpload.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.spec-box-color10 {
-  background: #005295;
-}
+    .spec-box-color11 {
+        background: #00447A;
+    }
 
-.icon-auto-upload {
-    background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/AutoUpload.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
+    .icon-location {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/GPS%20Capture.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
 
-.spec-box-color11 {
-  background: #00447A;
-}
+    .spec-box-color12 {
+        background: #012E57;
+    }
 
-.icon-location {
-    background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/GPS%20Capture.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
+    .icon-raw {
+        background: url("https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/RAW%20Format.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+    .spec-box-no-color {
+        background: none;
+    }
 
-.spec-box-color12 {
-  background: #012E57;
-}
-
-.icon-raw {
-    background: url(https://shop.gopro.com/on/demandware.static/Sites-GoPro-Site/-/default/v1479924154516/images/compare_feature_icons/RAW%20Format.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-}
 }
