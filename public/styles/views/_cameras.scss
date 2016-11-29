@@ -2,6 +2,12 @@
     -webkit-font-smoothing: antialiased;
     background: red;
     // nested
+    .top-hero-img {
+      z-index: 1;
+      width: 100%;
+      height: 700px;
+      background: black;
+    }
     .container {
         width: 95%;
         height: 650px;
