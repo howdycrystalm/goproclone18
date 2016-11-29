@@ -2,15 +2,25 @@
     -webkit-font-smoothing: antialiased;
     background: red;
     // nested
-    .top-hero-img {
+    .top-hero-box {
       z-index: 1;
       width: 100%;
-      height: 700px;
-      background: black;
+      height: 83vh;
+      background-color: pink;
     }
+
+    .top-hero-img {
+      width: 100%;
+      height: 100%;
+      background: url('https://shop.gopro.com/on/demandware.static/-/Sites/default/dwa41b8054/images/slot/hero5_launch/Holiday2016-CLP-HeroBG-Desktop.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
     .container {
         width: 95%;
-        height: 650px;
+        height: 630px;
         background: orange;
         position: relative;
         top: 55px;
