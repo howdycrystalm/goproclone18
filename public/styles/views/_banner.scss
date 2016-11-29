@@ -110,10 +110,11 @@
 }
 
 .dropdown {
-   @include width-height(1200px, 95px);
+   @include width-height(1198px, 95px);
    @include flexSetUp();
    background-color: white;
    color: black;
+   border: black 1px solid;
    z-index: 9;
    position: fixed;
    right: 0;
@@ -171,4 +172,8 @@
 
 .dropdown-show {
    top: 75px;
+}
+
+.dropdown-part {
+
 }
