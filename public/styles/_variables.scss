@@ -10,27 +10,6 @@ $black: #000000;
 $light-grey: #F7F7F7;
 
 //==============================================================================//
-//                              Custom Fonts                                    //
-//==============================================================================//
-
-@font-face {
-    font-family: 'Proxima Nova Light';
-    src: url('public/styles/fonts/proximanova-light-webfont.woff');
-}
-$FUN: 'Proxima Nova Light';
-
-@font-face {
-    font-family: 'Proxima Nova Light2';
-    src: url('public/styles/fonts/proximanova-light-webfont.woff2');
-}
-$FUNLIGHT: 'Proxima Nova Light2';
-
-@font-face {
-    font-family: 'Proxima Nova Medium';
-    src: url('public/styles/fonts/proximanova-regular-webfont.woff');
-}
-$FUNMEDIUM: 'Proxima Nova Medium';
-//==============================================================================//
 //                               Header Text                                    //
 //==============================================================================//
 
