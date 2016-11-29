@@ -41,11 +41,15 @@
     }
 
     .top-box {
-        width: 100%;
-        height: 200px;
-        background: #F7F7F7;
-        text-align: center;
-        padding: 5% 0;
+      width: 100%;
+      height: 200px;
+      background: #F7F7F7;
+      text-align: center;
+      padding: 5% 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     .top-box-title {
@@ -54,7 +58,7 @@
         font-weight: bold;
         color: #000000;
         position: relative;
-        bottom: 4px;
+        top: 20px;
     }
 
     .top-box-price {
@@ -62,7 +66,22 @@
         font-size: 16px;
         line-height: 3em;
         position: relative;
-        bottom: 11px;
+        top: 20px;
+    }
+
+    .top-learn-more-button {
+        width: 144px;
+        min-height: 35px;
+        background: #00b8fd;
+        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #FFFFFF;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -webkit-justify-content: center;
+        position: relative;
+        top: 10px;
     }
 
     .learn-more-button {
@@ -76,7 +95,6 @@
         display: -webkit-flex;
         -webkit-align-items: center;
         -webkit-justify-content: center;
-        margin: auto;
     }
 
     .learn-more-container {
@@ -92,9 +110,8 @@
     .learn-more-row {
       width: 97%;
       display: flex;
-      /* flex-direction: row; */
       justify-content: center;
-      margin: auto;
+      margin: 50px auto 0px;
     }
 
     .img-box {
