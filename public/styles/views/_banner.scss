@@ -111,7 +111,7 @@
 
 .dropdown {
    @include width-height(1200px, 95px);
-   @include flexSetUp(space-between, flex-end);
+   @include flexSetUp();
    background-color: white;
    color: black;
    z-index: 9;
@@ -124,7 +124,7 @@
    transition: top 0.3s cubic-bezier(0.68, -0.01, 0.31, 1.31);
 
    .label {
-      font-family: $header-link;
+      font-family: $header-text;
       font-size: 14px;
       font-size: 900;
       text-transform: capitalize;
@@ -135,6 +135,10 @@
       margin: auto;
       margin-bottom: -1px;
    }
+   .shop-list {
+      margin-top: 11px;
+   }
+
    ul {
       width: 100%;
       @include flexSetUp(space-around);
