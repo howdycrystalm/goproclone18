@@ -211,3 +211,33 @@ $font: 'Roboto', sans-serif;
         }
       }
     }
+
+    .video-wrapper {
+      background: url('http://www.deluxebattery.com/wp-content/uploads/2014/11/go-pro-photo-ideas-01.jpg') no-repeat center center;
+      position: relative;
+      padding-top: 600px;
+      .fade {
+        background-color: black;
+        z-index: 99;
+        // display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.75;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .play {
+        position: relative;
+        // background: url('') no-repeat;
+        background-position: center;
+        z-index: 4;
+        width: 285px;
+        height: 285px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
