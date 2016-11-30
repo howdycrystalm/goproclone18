@@ -32,6 +32,9 @@
          font-size: 900;
          text-transform: uppercase;
          height: 40px;
+         .show {
+            display: block;
+         }
       }
       a {
          text-decoration: none;
@@ -90,6 +93,7 @@
                flex-direction: row;
                img {
                   @include width-height(20px, 20px);
+                  cursor: pointer;
                }
                a {
                   text-decoration: none;
@@ -102,6 +106,27 @@
                a:visited {
                   text-decoration: none;
                   color: white;
+               }
+               .cart-total {
+                  @include flexSetUp(center, center);
+                  @include width-height(19px, 19px);
+                  background-color: red;
+                  border-radius: 10px;
+                  margin-left: 7px;
+                  margin-top: 2px;
+                  h2 {
+                     margin-left: -2px;
+                     font-family: $button-text;
+                     font-size: 12px;
+                  }
+               }
+               .cart-total:hover {
+                  @include width-height(22px, 22px);
+                  margin-top: 0px;
+                  cursor: pointer;
+                  h2 {
+                     font-size: 14px;
+                  }
                }
             }
          }
@@ -147,7 +172,7 @@
          width: 100%;
          @include flexSetUp(flex-start, center);
          flex-direction: column;
-         margin-bottom: 3px;
+         margin-top: 3px;
       }
       .up-arrow {
          width: 0;
@@ -159,11 +184,11 @@
          margin-left: 5px;
       }
       li:hover {
-         border-bottom: $med-blue solid 3px;
+         border-bottom: $med-blue solid 2px;
          margin-bottom: 0px;
       }
       .highlighted {
-         border-bottom: $med-blue solid 3px;
+         border-bottom: $med-blue solid 2px;
          margin-bottom: 0px;
       }
       a {
@@ -201,6 +226,198 @@
    display: none;
 }
 
-.show {
+.dropdown-cart {
+   @include width-height(355px, auto);
+   flex-direction: column;
+   background-color: black;
+   padding: 10px 5px;
+   position: absolute;
+   right: 0px;
+   top: 75px;
+   z-index: 11;
    display: block;
+   opacity: 1;
+   transition: opacity 0.3s cubic-bezier(0.68, -0.01, 0.31, 1.31);
+
+   .top{
+      @include width-height(100%, 43px);
+      @include flexSetUp(space-between, center);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: white;
+      color: black;
+      margin-bottom: 1px;
+
+      h2 {
+         margin-left: 9px;
+         font-family: $button-text;
+         font-weight: bolder;
+      }
+      .close {
+        position: absolute;
+        right: 15px;
+        top: 23px;
+        width: 20px;
+        height: 20px;
+      }
+      .close:hover {
+        cursor: pointer;
+      }
+      .close:before, .close:after {
+        position: absolute;
+        left: 8px;
+        content: ' ';
+        height: 17px;
+        width: 2px;
+        background-color: #666666;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
+   }
+
+   .mid{
+      @include width-height(100%, auto);
+      background-color: white;
+      margin-bottom: 1px;
+      padding: 1px 0;
+
+      .empty {
+         display: none;
+         justify-content: center;
+         align-items: center;
+         color: black;
+         font-family: $button-text;
+         font-size: 12px;
+      }
+
+      .full {
+         @include flexSetUp(flex-start, center);
+         margin: 10px 0;
+         display: none;
+         .img {
+            margin-left: 10px;
+            @include width-height(85px, 50px);
+            img {
+               width: 100%;
+               height: 100%;
+            }
+         }
+         .quantitiy {
+            @include flexSetUp(flex-start, center);
+            h2 {
+               color: black;
+               font-size: 16px;
+               font-family: $button-text;
+               margin-left: 20px;
+            }
+         }
+         .name-price {
+            @include flexSetUp(flex-start);
+            flex-direction: column;
+            margin-left: 20px;
+            a {
+               font-size: 14px;
+               font-size: bold;
+               font-family: $button-text;
+               color: $med-blue;
+               margin-bottom: 5px;
+            }
+            h3 {
+               color: gray;
+               font-family: $button-text;
+               font-size: 14px;
+            }
+         }
+      }
+      .show-thing {
+         display: flex;
+      }
+   }
+
+   .bot{
+      width: 100%;
+      height: 76px;
+      @include flexSetUp(center, center);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: white;
+
+      .empty {
+         @include width-height(100%, 76px);
+         @include flexSetUp(center, center);
+         display: none;
+         a {
+            margin: 0;
+            text-decoration: none;
+         }
+
+        .button {
+          @include flexSetUp(space-between, center);
+          @include width-height(300px, 38px);
+          background: #009fdf;
+
+          padding: 1px 10px;
+          color: white;
+          border-radius: 3px;
+          h2 {
+             font-family: $button-text;
+             font-size: 16px;
+             margin-left: 6px;
+          }
+          h3 {
+             font-family: $button-text;
+             font-size: 16px;
+             margin-right: 6px;
+          }
+        }
+        .button:hover {
+          cursor: pointer;
+        }
+      }
+      .full {
+         @include width-height(100%, 76px);
+         @include flexSetUp(center, center);
+         display: none;
+
+         a {
+            margin: 0;
+            text-decoration: none;
+         }
+
+         .button {
+          @include flexSetUp(space-between, center);
+          @include width-height(300px, 38px);
+          background: #7ed321;
+
+          padding: 1px 10px;
+          color: white;
+          border-radius: 3px;
+          h2 {
+             font-family: $button-text;
+             font-size: 16px;
+             margin-left: 6px;
+          }
+          h3 {
+             font-family: $button-text;
+             font-size: 16px;
+             margin-right: 6px;
+          }
+         }
+      }
+      .show-thing {
+         display: flex;
+      }
+   }
+}
+
+.show-cart {
+   opacity: 0;
+}
+
+.hide {
+   display: none;
 }
