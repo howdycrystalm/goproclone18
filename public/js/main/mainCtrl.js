@@ -30,6 +30,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
       console.log("i fired");
       mainService.getItem(id)
          .then(function(response) {
+            console.log(response.data);
             $state.cart=mainService.checkDouble($state.cart, response.data)
          .then(function() {$state.subTotal=mainService.getSubTotal($state.cart)
          .then(function() {$state.items=mainService.getNumOfItems($state.cart)})
