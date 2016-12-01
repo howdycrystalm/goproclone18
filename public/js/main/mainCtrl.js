@@ -23,10 +23,10 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
 
    $scope.stateName;
    $scope.cart = [];
-   $scope.subTotal = 522.23;
-   $scope.items = 5;
+   $scope.subTotal = 0;
+   $scope.items = 0;
 
-   $state.addToCart = function(id) {
+   $scope.addToCart = function(id) {
       console.log("i fired");
       mainService.getItem(id)
          .then(function(response) {
