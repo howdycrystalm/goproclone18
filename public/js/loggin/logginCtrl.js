@@ -1,6 +1,7 @@
 angular.module("goApp").controller('logginCtrl', function($scope, authService, $state) {
    $scope.test = 'Loggin CTRL works';
    $scope.login = function(user) {
+     console.log('stephen');
     authService.login(user).then(function(response) {
       if(!response.data) {
         alert('User does not exist');

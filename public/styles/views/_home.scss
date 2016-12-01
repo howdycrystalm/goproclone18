@@ -47,7 +47,7 @@ $font: 'Roboto', sans-serif;
       margin-top: 56px;
       h2 {
         font-family: $font;
-        font-size: 40px;
+        font-size: 50px;
         color: $fake-black;
         font-weight: bolder;
         margin-bottom: 20px;
@@ -234,11 +234,9 @@ $font: 'Roboto', sans-serif;
       .awesome-vid {
         background-color: black;
         z-index: 100;
-        width:500px;
-        height: 281px;
+        // width:500px;
+        // height: 281px;
         position: fixed;
-        width: 80%;
-        height: 80%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

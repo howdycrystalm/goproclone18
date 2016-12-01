@@ -3,7 +3,7 @@ angular.module('goApp').service('authService', function($http) {
   this.login = function(user) {
     return $http({
       method: 'POST',
-      url: '/login',
+      url: '/api/login',
       data: user
     }).then(function(response) {
       return response;
@@ -13,7 +13,7 @@ angular.module('goApp').service('authService', function($http) {
   this.logout = function() {
     return $http({
       method: 'GET',
-      url: '/logout'
+      url: '/api/logout'
     }).then(function(response) {
       return response;
     });
@@ -22,7 +22,7 @@ angular.module('goApp').service('authService', function($http) {
   this.getCurrentUser = function() {
     return $http({
       method: 'GET',
-      url: '/me'
+      url: '/api/me'
     }).then(function(response) {
       return response;
     });
@@ -32,7 +32,7 @@ angular.module('goApp').service('authService', function($http) {
     console.log('authService', user);
     return $http({
       method: 'POST',
-      url: '/register',
+      url: '/api/register',
       data: user
     }).then(function(response) {
       return response;
@@ -42,7 +42,7 @@ angular.module('goApp').service('authService', function($http) {
   this.editUser = function(id, user) {
     return $http({
       method: 'PUT',
-      url: '/user/' + id,
+      url: '/api/user/' + id,
       data: user
     }).then(function(response) {
       return response;
