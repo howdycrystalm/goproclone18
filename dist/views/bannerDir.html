@@ -23,7 +23,7 @@
             <li>Support</li>
             <li>US <div class="down-arrow"></div></li>
             <li ng-click="cartShow = !cartShow"><img src="http://shop.spacex.com/media/queldorei/shopper/new_cart_icon.png" alt="">
-               <div class="cart-total">
+               <div class="cart-total" ng-class="{'hide': inCart <= 0}">
                   <h2>5</h2>
                </div>
             </li>
@@ -44,11 +44,11 @@
                <img src="{{prod.img}}" alt="">
             </div>
             <div class="quantitiy">
-               <h2>{{prod.total}}</h2>
+               <h2>{{prod.count}}</h2>
             </div>
             <div class="name-price">
-               <a>{{prod.name}}</a>
-               <h3>{{prod.price * prod.total | currency}}</h2>
+               <a>{{prod.title}}</a>
+               <h3>{{prod.price * prod.count | currency}}</h2>
             </div>
          </div>
       </div>
