@@ -1,0 +1,76 @@
+$font: 'Roboto';
+
+    // background: url('https://ds9dsukghgfh6.cloudfront.net/54052903d80cd434072bb0cf7cb358e3e66afb64/564aba5bc72b3e61987bcac643414121.jpg') no-repeat;
+    // background-size: cover;
+
+.login-page-wrapper {
+  background: url('https://ds9dsukghgfh6.cloudfront.net/54052903d80cd434072bb0cf7cb358e3e66afb64/7c5c16b72dd2180d81a8130c02452ace.jpg') no-repeat center center;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  .login-wrapper {
+      .logo-login {
+        max-width: 145px;
+        margin: 0 auto;
+        padding-top: 44px;
+      }
+
+      .sign-in {
+          text-align: center;
+          padding-top: 75px;
+          font-size: 30px;
+          font-family: $font;
+          color: white;
+      }
+
+      .form-wrapper {
+          width: 455.66px;
+          // display: flex;
+          // justify-content: center;
+          // flex-direction: column;
+          margin: 0 auto;
+          .sign-in {
+            padding-bottom: 30px;
+          }
+          .center-input {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .email {
+                display: flex;
+                padding: 21px 27px 21px 47px;
+                font-size: 18px;
+                border: none;
+            }
+            .email:focus {
+              outline: none;
+            }
+
+            .password {
+                padding: 21px 27px 21px 47px;
+                font-size: 18px;
+            }
+            .password:focus {
+              outline: none;
+            }
+
+            .sign-in-button {
+              text-align: center;
+              background: #009fdf;
+              padding: 21px 27px 21px 47px;
+              font-family: sans-serif;
+              color: white;
+              font-size: 18px;
+              margin-top: 10px;
+              text-transform: uppercase;
+              border: none;
+            }
+            .sign-in-button:hover {
+              cursor: pointer;
+            }
+          }
+
+        }
+  }
+
+}
