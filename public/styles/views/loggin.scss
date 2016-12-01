@@ -1,0 +1,58 @@
+$font: 'Roboto';
+
+    // background: url('https://ds9dsukghgfh6.cloudfront.net/54052903d80cd434072bb0cf7cb358e3e66afb64/564aba5bc72b3e61987bcac643414121.jpg') no-repeat;
+    // background-size: cover;
+
+
+.login-wrapper {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // flex-direction: column;
+    .logo-login {
+        max-width: 145px;
+        margin: 44px auto 0;
+    }
+
+    .sign-in {
+        text-align: center;
+        padding-top: 75px;
+        font-size: 30px;
+        font-family: $font;
+        color: white;
+    }
+
+    .input-wrapper {
+        width: 455.66px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+
+        .email {
+            display: flex;
+            padding: 21px 27px 21px 47px;
+            font-size: 18px;
+        }
+
+        .password {
+            padding: 21px 27px 21px 47px;
+            font-size: 18px;
+        }
+
+        .sign-in-button {
+          text-align: center;
+          width: 381.66px;
+          background: #009fdf;
+          padding: 21px 27px 21px 47px;
+          font-family: sans-serif;
+          color: white;
+          font-size: 18px;
+          margin-top: 10px;
+          text-transform: uppercase;
+        }
+        .sign-in-button:hover {
+          cursor: pointer;
+        }
+      }
+}
