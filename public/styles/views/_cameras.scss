@@ -1,3 +1,8 @@
+// @font-face {
+//   font-family: 'test';
+//   src: url('./fonts/proximanova-regular-webfont.woff') format('woff');
+//   //src: url('./public/styles/fonts/proximanova-regular-webfont.woff2') format('woff2');
+// }
 .cameras-container {
     -webkit-font-smoothing: antialiased;
     background: red;
@@ -50,13 +55,22 @@
 
     .logo {
       width: auto;
-      position: relative;
-      top: -46%;
+      position: absolute;
+      top: 6.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+
     }
 
     .hero5-image {
       width: 35%;
       margin-top: -13%;
+    }
+
+    .test-font {
+      font-family: $new-title;
+      font-size: 30px;
     }
     //===============================================================================//
     //                        HERO5 Session and Session Section                      //
