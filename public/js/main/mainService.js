@@ -4,8 +4,9 @@ angular.module("goApp").service('mainService', function($http) {
    this.getItem = function(id) {
       return $http({
          method: 'GET',
-         url: '/api/getItem'
+         url: '/api/getItem/' + id
       }).then(function(response) {
+         response.data.count = 1;
          return response.data;
       });
    };
@@ -16,12 +17,9 @@ angular.module("goApp").service('mainService', function($http) {
             cart[i].count++;
             return cart;
          }
-         else {
-            cart.push(data);
-            // cart.[cart.length - 1].count = 1;
-            return cart;
-         }
       }
+      cart.push(data);
+      return cart;
    };
 
    this.getSubTotal = function(cart) {

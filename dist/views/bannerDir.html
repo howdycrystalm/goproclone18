@@ -22,9 +22,9 @@
             <li><a ui-sref="loggin">Login/Register</a></li>
             <li>Support</li>
             <li>US <div class="down-arrow"></div></li>
-            <li ng-click="cartShow = !cartShow"><img src="http://shop.spacex.com/media/queldorei/shopper/new_cart_icon.png" alt="">
-               <div class="cart-total" ng-class="{'hide': inCart <= 0}">
-                  <h2>5</h2>
+            <li ng-click="cartShow = !cartShow" class="hover"><img src="http://shop.spacex.com/media/queldorei/shopper/new_cart_icon.png" alt="">
+               <div class="cart-total" ng-class="{'hide': incart <= 0}">
+                  <h2>{{incart}}</h2>
                </div>
             </li>
          </ul>
@@ -60,9 +60,9 @@
             </div></a>
          </div>
          <div class="full" ng-class="{'show-thing': products.length > 0}">
-            <h2></h1>
-            <a ui-sref="cameras"><div class="button">
-               <h2>Checkout</h2>
+            <h4>Subtotal: {{subtot | currency}}</h4>
+            <a ui-sref="cart"><div class="button">
+               <h2 class="button-text">Checkout</h2>
                <h3>&#10095;</h3>
             </div></a>
          </div>

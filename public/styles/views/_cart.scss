@@ -1,0 +1,25 @@
+.cart-body {
+   margin-top: 90px;
+   max-width: 1200px;
+   margin: auto;
+   margin-top: 100px;
+
+   .button {
+     @include flexSetUp(space-between, center);
+     @include width-height(300px, 38px);
+     background: #009fdf;
+     margin-bottom: 10px;
+
+     padding: 1px 10px;
+     color: white;
+     border-radius: 3px;
+     h2 {
+       font-family: $button-text;
+       font-size: 16px;
+       margin-left: 6px;
+     }
+   }
+   .button:hover {
+     cursor: pointer;
+   }
+}

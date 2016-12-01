@@ -6,8 +6,8 @@ angular.module('goApp').directive('banner', function() {
       scope: {
          state: '=',
          products: '=',
-         subTot: '=',
-         inCart: '='
+         subtot: '=',
+         incart: '='
       },
       controller: function($scope) {
          $scope.hoverShop = false;
