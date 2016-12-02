@@ -1,0 +1,48 @@
+.apparel-photo {
+  width: 100%;
+  height: 550px;
+  background: url('https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw4cbf2399/images/si02089-150203-nick-lanham-13936900.png') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .apparel-text-wrapper {
+    width: 1200px;
+    z-index: 3;
+    margin: 38px 3px 1px 0px;
+    .title-app {
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: 400;
+      font-family: 'proxima-nova-rg';
+      color: white;
+    }
+    .para-app {
+      width: 50%;
+      margin-bottom: 3px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 300;
+      @extend .title-app;
+    }
+  }
+}
+
+.apparel-container {
+  .clothing-switch {
+    margin: 34px 30px 30px 82px;
+    width: 690px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    font-family: 'proxima-nova-rg', sans-serif;
+    .mens {
+
+    }
+    .womens {
+
+    }
+  }
+
+}
