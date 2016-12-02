@@ -15,7 +15,7 @@ var db = massive.connectSync({
 app.set('db', db);
 var db = app.get('db');
 app.use(bodyParser.json());
-app.use(express.static('../dist'));
+app.use(express.static(__dirname + './../dist'));
 app.use(cors());
 
 var UserCtrl = require('./controllers/UserCtrl');
@@ -54,6 +54,7 @@ app.post('/api/register', UserCtrl.register);
 app.post('/api/user', UserCtrl.read);
 app.get('/api/me', isAuthed, UserCtrl.me);
 app.put('/api/user/current', isAuthed, UserCtrl.update);
+app.get('/api/getItem/:id', cartCtrl.getItem);
 
 app.listen(port, function() {
     console.log('nailed it on port ' + port);
