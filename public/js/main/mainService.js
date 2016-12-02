@@ -8,7 +8,7 @@ angular.module("goApp").service('mainService', function($http) {
       }).then(function(response) {
          console.log(response.data);
          response.data[0].count = 1;
-         return response.data;
+         return response.data[0];
       });
    };
 
