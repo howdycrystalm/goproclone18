@@ -3,13 +3,13 @@
    <div class="top-labels">
       <h2>Shopping Cart</h2>
       <div class="buttons">
-         <div class="button-clear">
+         <a ui-sref="cameras"><div class="button-clear">
             <h2>Continue Shopping</h2>
-         </div>
-         <div class="button-green">
+         </div></a>
+         <a ui-sref="checkout"><div class="button-green">
             <h2>Checkout</h2>
             <h3>&#10095;</h3>
-         </div>
+         </div></a>
       </div>
    </div>
 
@@ -25,19 +25,9 @@
                <h3>Availibility: In Stock</h3>
             </div>
             <div class="two">
-               <select name="quantity" data-value="{{item.count}}" class="itm-quan">
-						<option value="1" name="1" selected="selected">1</option>
-						<option value="2" name="2">2</option>
-						<option value="3" name="3">3</option>
-						<option value="4" name="4">4</option>
-						<option value="5" name="5">5</option>
-						<option value="6" name="6">6</option>
-						<option value="7" name="7">7</option>
-						<option value="8" name="8">8</option>
-						<option value="9" name="9">9</option>
-						<option value="10" name="10">10</option>
+               <select ng-model="item.count" ng-options="x for x in values" ng-selected="updateTotal()">
 					</select>
-               <h2>Remove</h2>
+               <h2 ng-click="removeFromCart(item.id)">Remove</h2>
             </div>
             <div class="three">
                <h2>{{item.price | currency}}</h2>
@@ -68,7 +58,7 @@
       </div>
    </div>
 
-   <div class="dummie">
+   <!-- <div class="dummie">
       <div class="button" ng-click="addToCart(1)">
          <h2>add id 1</h2>
       </div>
@@ -81,5 +71,5 @@
       <div class="button" ng-click="addToCart(6)">
          <h2>add id 6</h2>
       </div>
-   </div>
+   </div> -->
 </div>
