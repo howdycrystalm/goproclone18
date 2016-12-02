@@ -32,10 +32,9 @@ $font: 'Roboto', sans-serif;
     transform: translate(0, 0);
 
     .text-banner {
-      margin: 0px 0 40px 0;
       @include flexSetUp(flex-start, center);
       flex-direction: column;
-      margin: 150px 0 90px 0;
+      margin: 150px 0 80px 0;
       p {
         font-family: $font;
         margin-bottom: 25px;
@@ -48,7 +47,7 @@ $font: 'Roboto', sans-serif;
       margin-top: 56px;
       h2 {
         font-family: $font;
-        font-size: 40px;
+        font-size: 50px;
         color: $fake-black;
         font-weight: bolder;
         margin-bottom: 20px;
@@ -209,5 +208,51 @@ $font: 'Roboto', sans-serif;
           flex-direction: column;
           margin-left: 100px;
         }
+      }
+    }
+
+    .video-wrapper {
+      background: url('http://www.deluxebattery.com/wp-content/uploads/2014/11/go-pro-photo-ideas-01.jpg') no-repeat center center;
+      margin: 100px auto;
+      width: 1200px;
+      height: 650px;
+      @include flexSetUp(center, center);
+      flex-direction: column;
+        .text-stuff {
+          font-size: 54px;
+          font-family: $font;
+          color: white;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+        }
+        .play-button {
+          padding-top: 30px;
+        }
+        .play-button:hover {
+          cursor: pointer;
+        }
+      .awesome-vid {
+        background-color: black;
+        z-index: 100;
+        // width:500px;
+        // height: 281px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+        }
+
+      .fade {
+        background-color: black;
+        z-index: 99;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.75;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
