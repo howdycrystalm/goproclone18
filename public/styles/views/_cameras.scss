@@ -33,21 +33,23 @@
 
     .hero-container {
         width: 84%;
-        height: 718px;
+        height: 87vh;
         background: green;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        flex-direction: column;
         margin: auto;
     }
 
-    .hero5-box {
-        position: relative;
-        background-color: #fff;
-        text-align: center;
-        padding-bottom: 150px;
-        width: 100%;
-    }
+    // .hero5-box {
+    //     position: relative;
+    //     background-color: #fff;
+    //     text-align: center;
+    //     padding-bottom: 150px;
+    //     width: 100%;
+    //     height: 72vh;
+    // }
 
     .hero5-header-size {
         width: 100%;
@@ -91,8 +93,38 @@
 
     .button-row {
       width: 100%;
-      height: 169px;
+      height: 13.5vh;
       background: cyan;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .solid-button {
+      width: 150px;
+      height: 52px;
+      background-color: $button-color;
+      color: #ffffff;
+      @include button-text()
+      @include flexSetUp(center, center);
+      margin-right: 10px;
+    }
+
+    .outline-button {
+      width: 150px;
+      height: 48px;
+      border: 2px solid $button-color;
+      color: $button-color;
+      @include button-text()
+      @include flexSetUp(center, center);
+      margin-left: 10px;
+    }
+
+    .compare-text {
+      @include button-text()
+      @include flexSetUp(center, center);
+      color: $fake-black;
     }
     //===============================================================================//
     //                        HERO5 Session and Session Section                      //
@@ -149,9 +181,6 @@
     .top-box-price {
         font-family: $tagline, 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
         font-size: 18px;
-        line-height: 3em;
-        position: relative;
-        top: 18px;
     }
 
     .top-learn-more-button {
