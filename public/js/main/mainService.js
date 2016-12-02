@@ -6,7 +6,8 @@ angular.module("goApp").service('mainService', function($http) {
          method: 'GET',
          url: '/api/getItem/' + id
       }).then(function(response) {
-         response.data.count = 1;
+         console.log(response.data);
+         response.data[0].count = 1;
          return response.data;
       });
    };

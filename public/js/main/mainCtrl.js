@@ -27,14 +27,15 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
    $scope.items = 0;
 
    $scope.addToCart = function(id) {
-      console.log("i fired");
       mainService.getItem(id)
          .then(function(response) {
-            console.log(response.data);
-            $state.cart=mainService.checkDouble($state.cart, response.data)
-         .then(function() {$state.subTotal=mainService.getSubTotal($state.cart)
-         .then(function() {$state.items=mainService.getNumOfItems($state.cart)})
-      })
+            console.log(response[0]);
+            $scope.cart=mainService.checkDouble($scope.cart, response[0]);
+            $scope.subTotal=mainService.getSubTotal($scope.cart);
+            $scope.items=mainService.getNumOfItems($scope.cart);
+            console.log($scope.cart);
+            console.log($scope.subTotal);
+            console.log($scope.items);
       })
    }
 
