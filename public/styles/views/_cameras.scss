@@ -33,7 +33,7 @@
 
     .hero-container {
         width: 84%;
-        height: 630px;
+        height: 718px;
         background: green;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -68,9 +68,31 @@
       margin-top: -13%;
     }
 
-    .test-font {
-      
-      font-size: 30px;
+    .title-font {
+      font-family: $title;
+      font-weight: bold;
+      font-size: 36px;
+      margin-top: 3vh;
+      color: $fake-black;
+      letter-spacing: .01em;
+    }
+
+    .tag-line {
+      width: 70%;
+      max-width: 800px;
+      font-family: $tagline;
+      font-size: $tagline-size;
+      color: $fake-black;
+      padding: 23px;
+      margin: auto;
+      line-height: 30px;
+
+    }
+
+    .button-row {
+      width: 100%;
+      height: 169px;
+      background: cyan;
     }
     //===============================================================================//
     //                        HERO5 Session and Session Section                      //
@@ -125,11 +147,11 @@
     }
 
     .top-box-price {
-        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-        font-size: 16px;
+        font-family: $tagline, 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-size: 18px;
         line-height: 3em;
         position: relative;
-        top: 20px;
+        top: 18px;
     }
 
     .top-learn-more-button {
