@@ -1,0 +1,104 @@
+.apparelProduct-container {
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100vh;
+  background: red;
+  @include flexSetUp(center, center);
+
+  .sticky-header {
+    max-width:1180px; /*1200 minus the padding*/
+    height: 42px;
+    background: #EEEEEE;
+    padding: 2px 10px;
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 107px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius:3px;
+    @include flexSetUp(flex-start, center);
+  }
+
+  .product-name {
+    font-family: $title;
+    font-size: 30px;
+    color: #000000;
+  }
+
+  .delivery-box {
+    width: 185px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 397px;
+  }
+
+  .delivery-truck {
+    width: 32px;
+    height: 32px;
+    background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/dw29b007ae/images/interface/deliveryVan.png');
+    background-repeat: no-repeat;
+
+  }
+
+  .delivery-text {
+    color: #ba0c10;
+    font-family: 'proxima-nova-medium';
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 13px;
+  }
+
+  .plus-box {
+    width: 483px;
+    height: 33px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 702px;
+  }
+
+  .plus-logo {
+    width: 98px;
+    background: url(http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/dw7ece6f7a/images/goproplus/plus-logo-c.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .sale-text {
+    font-family: "Tahoma", "Helvetica", sans-serif;
+    font-size: 22px;
+    color: #009FDF;
+    margin-left: 10px;
+    margin-top: -2px;
+  }
+
+  .price-text {
+    font-family: $tagline;
+    font-weight: bold;
+    font-size: 24px;
+    color: $fake-black;
+    margin-left: 10px;
+    margin-top: -2px;
+  }
+
+  .add-button {
+    width: 119px;
+    height: 19px;
+    background-color: #999999;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-family: $title;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-left: 21px;
+    margin-top: -9px;
+    padding-top: 11px;
+    padding-left: 11px;
+  }
+
+}
