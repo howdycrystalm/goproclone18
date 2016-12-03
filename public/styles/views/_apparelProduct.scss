@@ -100,5 +100,75 @@
     padding-top: 11px;
     padding-left: 11px;
   }
+  //==============================================================================//
+  //                             Product Container                                //
+  //==============================================================================//
+
+  .product-container {
+    max-width:1200px; /*1200 minus the padding*/
+    height: 533px;
+    background: tan;
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 153px;
+    margin-right: auto;
+    margin-left: auto;
+    // @include flexSetUp(flex-start, center);
+  }
+
+  .vertical-thumbs {
+    width: 92px;
+    height: 366px;
+    background: palevioletred;
+  }
+
+  .arrow-up {
+    width: 18px;
+    height: 36px;
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-image: url(http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/v1480629108605/images/cartNext.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
+
+  .thumbnail {
+    width: 90px;
+    height: 50px;
+    background-color: darksalmon;
+    border: 1px black solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    top: 8px;
+  }
+
+  .arrow-down {
+    width: 18px;
+    height: 36px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background-image: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/v1480629108605/images/cartNext.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    margin-bottom: -7px;
+    cursor: pointer;
+  }
 
 }
