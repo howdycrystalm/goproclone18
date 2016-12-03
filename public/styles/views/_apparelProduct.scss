@@ -115,9 +115,12 @@
     top: 153px;
     margin-right: auto;
     margin-left: auto;
-    // @include flexSetUp(flex-start, center);
+    display: flex;
   }
 
+  //==============================================================================//
+  //                               Thumbnails                                     //
+  //==============================================================================//
   .vertical-thumbs {
     width: 92px;
     height: 366px;
@@ -169,6 +172,25 @@
     transform: rotate(90deg);
     margin-bottom: -7px;
     cursor: pointer;
+  }
+
+  //==============================================================================//
+  //                                Main Image                                    //
+  //==============================================================================//
+  .main-image {
+    width: 657px;
+    height: 100%;
+    background-color: mediumpurple;
+    margin: 0 10px;
+  }
+
+  //==============================================================================//
+  //                           Details Box on Right                               //
+  //==============================================================================//
+  .details-box {
+    width: 430px;
+    height: 100%;
+    background-color: darkseagreen;
   }
 
 }
