@@ -1,9 +1,10 @@
 <section class="apparelProduct-container">
   <section class="sticky-header">
+    <!-- <div ng-repeat="title in products">{{title}}</div> -->
     <div class="product-name">Insulated Jacket</div>
-    <div class="delivery-box">
-      <div class="delivery-truck"></div>
-      <div class="delivery-text">Free 2-Day Shipping +<p> Free Returns</p></div>
+      <div class="delivery-box">
+        <div class="delivery-truck"></div>
+        <div class="delivery-text">Free 2-Day Shipping +<p> Free Returns</p></div>
       </div>
       <div class="plus-box">
         <div class="plus-logo"></div>
@@ -22,10 +23,16 @@
       <div class="thumbnail"></div>
       <div class="arrow-down"></div>
     </div>
-    <div class="main-image">
+    <div class="main-image-container">
+      <img ng-repeat="photo in photos" class="image" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+      <div class="zoom"></div>
     </div>
     <div class="details-box">
+      <div class="paypal-info-box">
+        <p style="color: #666666">Qualifies for</p>
+        <div class="pp-logo-size"></div>
+        <p style="color: #009FDF">What is this?</p>
     </div>
-
+  </div>
   </section>
 </section>
