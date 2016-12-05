@@ -39,6 +39,11 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
       controller: 'cartCtrl',
       url:'/cart'
    })
+   .state('checkout', {
+      templateUrl: './views/checkout.html',
+      controller: 'checkoutCtrl',
+      url:'/checkout'
+   })
 
 
 });
