@@ -175,7 +175,7 @@
   //==============================================================================//
   .main-image-container {
     width: 657px;
-    height: 420px;
+    // max-height: 420px;
     background-color: mediumpurple;
     margin: 0 10px;
   }
@@ -330,4 +330,25 @@
     vertical-align: middle;
     line-height: 36px;
   }
+
+  //==============================================================================//
+  //                                 Tabs                                         //
+  //==============================================================================//
+
+  .bottom-container {
+    width: 1200px;
+    background: paleturquoise;
+    position: absolute;
+    top: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+  }
+
+  .tabs {
+    width: 100px;
+    height: 75px;
+    background-color: palevioletred;
+  }
+
 }

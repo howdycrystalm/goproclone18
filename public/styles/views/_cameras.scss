@@ -33,7 +33,6 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
         margin: auto;
     }
 
@@ -118,14 +117,33 @@
     //===============================================================================//
     .sessions-container {
       width: 84%;
+      height: 100vh;
       background: tan;
       text-align: center;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
       margin: auto;
     }
+
+    .left-half {
+      width: 41%;
+      position: absolute;
+    }
+
+    .hero5-session-image {
+      width: 60%;
+      margin-top: -29%;
+    }
+
+    .right-half {
+      width: 41%;
+      position: absolute;
+      right: 8vw;
+    }
+
+    .session-image {
+      width: 60%;
+      margin-top: -29%;
+    }
+
     //==============================================================================//
     //                          Comparison Chart                                    //
     //==============================================================================//
