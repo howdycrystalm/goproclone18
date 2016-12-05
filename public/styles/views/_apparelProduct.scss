@@ -143,14 +143,27 @@
   .thumbnail {
     width: 90px;
     height: 50px;
-    background-color: darksalmon;
+    background-color: #FFFFFF;
     border: 1px black solid;
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
     top: 8px;
+    @include flexSetUp(center);
   }
 
+.img-proportion {
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+.img-proportion2 {
+  max-height: 400px;
+  position: absolute;
+  // @include flexSetUp(center, center);
+
+}
   .arrow-down {
     width: 18px;
     height: 36px;
@@ -175,30 +188,26 @@
   //==============================================================================//
   .main-image-container {
     width: 657px;
-    // max-height: 420px;
     background-color: mediumpurple;
     margin: 0 10px;
+    position: relative;
+    @include flexSetUp(center, center)
   }
 
-  .image {
-    background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg');
-    background-repeat: no-repeat;
-  }
-
-// .image {
-//   max-width: 100%;
-//   max-height: 100%;
-//   object-fit: contain;
-//   background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg');
-//   background-repeat: no-repeat;
-// }
+  // .image {
+  //   background-repeat: no-repeat;
+  //   width: 100%;
+  //   height: auto;
+  //   position: relative;
+  //   @include flexSetUp(center)
+  // }
 
   .zoom {
     width: 36px;
     height: 36px;
     background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/v1480629108605/images/interface/zoom_gray_36x36.png');
     background-repeat: no-repeat;
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     margin-left: 5px;
     cursor: pointer;
@@ -331,24 +340,5 @@
     line-height: 36px;
   }
 
-  //==============================================================================//
-  //                                 Tabs                                         //
-  //==============================================================================//
-
-  .bottom-container {
-    width: 1200px;
-    background: paleturquoise;
-    position: absolute;
-    top: 600px;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-  }
-
-  .tabs {
-    width: 100px;
-    height: 75px;
-    background-color: palevioletred;
-  }
 
 }
