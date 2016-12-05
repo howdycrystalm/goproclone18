@@ -20,7 +20,7 @@ app.use(cors());
 
 var UserCtrl = require('./controllers/UserCtrl');
 var cartCtrl = require('./controllers/cartCtrl');
-
+var apparelVCtrl = require('./controllers/apparelVCtrl');
 var passport = require('./services/passport');
 
 var isAuthed = function(req, res, next) {

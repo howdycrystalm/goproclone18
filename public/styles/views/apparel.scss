@@ -37,12 +37,17 @@
     justify-content: space-around;
     font-size: 24px;
     font-family: 'proxima-nova-rg', sans-serif;
-    .mens {
-
+    .gender {
+      z-index: 4;
+      div {
+        display: inline-block;
+      }
     }
-    .womens {
+  }
 
-    }
+  .img-size {
+    width: 150px;
+    height: 110px;
   }
 
 }
