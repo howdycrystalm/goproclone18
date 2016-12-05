@@ -1,16 +1,11 @@
-// @font-face {
-//   font-family: 'test';
-//   src: url('./fonts/proximanova-regular-webfont.woff') format('woff');
-//   //src: url('./public/styles/fonts/proximanova-regular-webfont.woff2') format('woff2');
-// }
 .cameras-container {
     -webkit-font-smoothing: antialiased;
-    background: red;
+    background: #F7F7F7;
     // nested
     .top-section {
         position: relative;
         margin-bottom: 60px;
-        background: purple;
+
     }
 
     .top-hero-box {
@@ -27,30 +22,55 @@
         display: block;
         margin: -173px auto auto;
     }
+
+    .header-text {
+      top: calc(45% - 74px);
+      width: 100%;
+      text-align: center;
+      color: #FFFFFF;
+      position: absolute;
+    }
+
+    .tagline-text {
+      font-family: 'proxima-nova-rg';
+      font-wight: bold;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    .header-text-styling {
+      font-family: $title;
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
     //==============================================================================//
     //                          HERO5 Section                                       //
     //==============================================================================//
 
     .hero-container {
         width: 84%;
-        height: 718px;
-        background: green;
+        background: #FFFFFF;
+        text-align: center;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        flex-direction: column; /*need?*/
         margin: auto;
-    }
-
-    .hero5-box {
         position: relative;
-        background-color: #fff;
-        text-align: center;
-        padding-bottom: 150px;
-        width: 100%;
     }
 
     .hero5-header-size {
         width: 100%;
+    }
+
+    .hero5-logo-position {
+      width: auto;
+      position: absolute;
+      top: 6.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
     }
 
     .logo {
@@ -60,12 +80,14 @@
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
-
     }
 
     .hero5-image {
       width: 35%;
       margin-top: -13%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
     }
 
     .title-font {
@@ -91,18 +113,103 @@
 
     .button-row {
       width: 100%;
-      height: 169px;
-      background: cyan;
+      height: 13.5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .solid-button {
+      width: 150px;
+      height: 52px;
+      background-color: $button-color;
+      color: #ffffff;
+      border-radius: 3px;
+      @include button-text()
+      @include flexSetUp(center, center);
+      margin-right: 10px;
+    }
+
+    .outline-button {
+      width: 150px;
+      height: 48px;
+      border: 2px solid $button-color;
+      color: $button-color;
+      @include button-text()
+      @include flexSetUp(center, center);
+      margin-left: 10px;
+    }
+
+    .compare-text {
+      @include button-text()
+      @include flexSetUp(center, center);
+      color: $fake-black;
+      margin-top: 24px;
+      text-transform: uppercase;
     }
     //===============================================================================//
     //                        HERO5 Session and Session Section                      //
     //===============================================================================//
-    .cam-landing-compare {
-        width: 95%;
-        height: 300px;
-        background: coral;
-        position: relative;
-        margin: auto;
+    .sessions-container {
+      width: 84%;
+      height: 100vh;
+      background: #F7F7F7;
+      text-align: center;
+      margin: auto;
+      padding-top: 6%;
+      padding-bottom: 4%;
+    }
+
+    .left-half {
+      width: 41%;
+      position: absolute;
+      background-color: #FFFFFF;
+    }
+
+    .hero5-session-image {
+      width: 60%;
+      margin-top: -29%;
+    }
+
+    .right-half {
+      width: 41%;
+      position: absolute;
+      right: 8vw;
+      background-color: #FFFFFF;
+    }
+
+    .session-image {
+      width: 60%;
+      margin-top: -29%;
+    }
+
+    //===============================================================================//
+    //                          Bottom Hero Image                                    //
+    //===============================================================================//
+    .bottom-hero-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 25px;
+      margin-bottom: 60px;
+    }
+
+    .bottom-text-styling {
+      font-family: $title;
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 11vh;
+    }
+
+    .compare-text-bottom {
+      @include button-text()
+      @include flexSetUp(center, center);
+      color: $fake-black;
+      margin-top: 24px;
+      padding-bottom: 72px;
+      text-transform: uppercase;
     }
     //==============================================================================//
     //                          Comparison Chart                                    //
@@ -138,20 +245,19 @@
     }
 
     .top-box-title {
-        //   font-family: $FUNMEDIUM;
+      font-family: $title;
         font-size: 26px;
         font-weight: bold;
-        color: #000000;
+        color: $fake-black;
         position: relative;
         top: 20px;
+        padding-bottom: 31px;
+        letter-spacing: 1px;
     }
 
     .top-box-price {
         font-family: $tagline, 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-        font-size: 18px;
-        line-height: 3em;
-        position: relative;
-        top: 18px;
+        font-size: 16px;
     }
 
     .top-learn-more-button {
@@ -184,7 +290,6 @@
 
     .learn-more-container {
         width: 100%;
-        background: blue;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -241,7 +346,6 @@
 
     .spec-container {
         width: 100%;
-        background: purple;
     }
 
     .top-two-spec-boxes {
@@ -451,4 +555,5 @@
     .spec-box-no-color {
         background: none;
     }
+
 }
