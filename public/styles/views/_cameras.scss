@@ -235,17 +235,19 @@
     }
 
     .top-box-title {
-        //   font-family: $FUNMEDIUM;
+      font-family: $title;
         font-size: 26px;
         font-weight: bold;
-        color: #000000;
+        color: $fake-black;
         position: relative;
         top: 20px;
+        padding-bottom: 31px;
+        letter-spacing: 1px;
     }
 
     .top-box-price {
         font-family: $tagline, 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .top-learn-more-button {
@@ -278,7 +280,6 @@
 
     .learn-more-container {
         width: 100%;
-        background: blue;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -335,7 +336,6 @@
 
     .spec-container {
         width: 100%;
-        background: purple;
     }
 
     .top-two-spec-boxes {
