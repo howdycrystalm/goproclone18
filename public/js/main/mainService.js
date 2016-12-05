@@ -6,9 +6,8 @@ angular.module("goApp").service('mainService', function($http) {
          method: 'GET',
          url: '/api/getItem/' + id
       }).then(function(response) {
-         console.log(response.data);
          response.data[0].count = 1;
-         return response.data;
+         return response.data[0];
       });
    };
 
@@ -38,4 +37,13 @@ angular.module("goApp").service('mainService', function($http) {
       }
       return total;
    };
+
+   this.removeItem = function(cart, id) {
+      for (var i = 0; i < cart.length; i++) {
+         if (cart[i].id === id) {
+            cart.splice(i, 1);
+            return cart;
+         }
+      }
+   }
 });

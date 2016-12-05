@@ -25,18 +25,26 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
    $scope.cart = [];
    $scope.subTotal = 0;
    $scope.items = 0;
+   $scope.shipping = 18;
 
    $scope.addToCart = function(id) {
       mainService.getItem(id)
          .then(function(response) {
-            console.log(response[0]);
-            $scope.cart=mainService.checkDouble($scope.cart, response[0]);
+            $scope.cart=mainService.checkDouble($scope.cart, response);
             $scope.subTotal=mainService.getSubTotal($scope.cart);
             $scope.items=mainService.getNumOfItems($scope.cart);
-            console.log($scope.cart);
-            console.log($scope.subTotal);
-            console.log($scope.items);
       })
+   }
+
+   $scope.removeFromCart = function(id) {
+      $scope.cart=mainService.removeItem($scope.cart, id);
+      $scope.subTotal=mainService.getSubTotal($scope.cart);
+      $scope.items=mainService.getNumOfItems($scope.cart);
+   }
+
+   $scope.updateTotal = function() {
+      $scope.subTotal=mainService.getSubTotal($scope.cart);
+      $scope.items=mainService.getNumOfItems($scope.cart);
    }
 
    $rootScope.$on('$stateChangeStart',
