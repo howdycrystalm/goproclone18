@@ -151,19 +151,12 @@
     top: 8px;
     @include flexSetUp(center);
   }
+  .thumb-proportion {
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
 
-.img-proportion {
-  max-height: 100%;
-  height: auto;
-  width: auto;
-}
-
-.img-proportion2 {
-  max-height: 400px;
-  position: absolute;
-  // @include flexSetUp(center, center);
-
-}
   .arrow-down {
     width: 18px;
     height: 36px;
@@ -194,13 +187,11 @@
     @include flexSetUp(center, center)
   }
 
-  // .image {
-  //   background-repeat: no-repeat;
-  //   width: 100%;
-  //   height: auto;
-  //   position: relative;
-  //   @include flexSetUp(center)
-  // }
+  .img-proportion {
+    max-height: 400px;
+    max-width: 657px;
+    position: absolute;
+  }
 
   .zoom {
     width: 36px;
