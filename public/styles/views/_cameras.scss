@@ -1,11 +1,10 @@
 .cameras-container {
     -webkit-font-smoothing: antialiased;
-    background: red;
+    background: #F7F7F7;
     // nested
     .top-section {
         position: relative;
         margin-bottom: 60px;
-        background: purple;
     }
 
     .top-hero-box {
@@ -28,16 +27,27 @@
 
     .hero-container {
         width: 84%;
-        background: green;
+        background: #FFFFFF;
         text-align: center;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        flex-direction: column; /*need?*/
         margin: auto;
+        position: relative;
     }
 
     .hero5-header-size {
         width: 100%;
+    }
+
+    .hero5-logo-position {
+      width: auto;
+      position: absolute;
+      top: 6.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
     }
 
     .logo {
@@ -47,12 +57,14 @@
       left: 50%;
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
-
     }
 
     .hero5-image {
       width: 35%;
       margin-top: -13%;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
     }
 
     .title-font {
@@ -79,7 +91,6 @@
     .button-row {
       width: 100%;
       height: 13.5vh;
-      background: cyan;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -91,6 +102,7 @@
       height: 52px;
       background-color: $button-color;
       color: #ffffff;
+      border-radius: 3px;
       @include button-text()
       @include flexSetUp(center, center);
       margin-right: 10px;
@@ -118,14 +130,17 @@
     .sessions-container {
       width: 84%;
       height: 100vh;
-      background: tan;
+      background: #F7F7F7;
       text-align: center;
       margin: auto;
+      padding-top: 6%;
+      padding-bottom: 4%;
     }
 
     .left-half {
       width: 41%;
       position: absolute;
+      background-color: #FFFFFF;
     }
 
     .hero5-session-image {
@@ -137,12 +152,17 @@
       width: 41%;
       position: absolute;
       right: 8vw;
+      background-color: #FFFFFF;
     }
 
     .session-image {
       width: 60%;
       margin-top: -29%;
     }
+
+    //===============================================================================//
+    //                        HERO5 Session and Session Section                      //
+    //===============================================================================//
 
     //==============================================================================//
     //                          Comparison Chart                                    //
@@ -487,5 +507,14 @@
 
     .spec-box-no-color {
         background: none;
+    }
+
+    //=======================
+    //=======================
+    //=======================
+    .full {
+      width: 84%;
+      position: relative;
+      background-color: salmon;
     }
 }
