@@ -35,10 +35,9 @@
       font-wight: bold;
       font-size: 22px;
       margin-top: 20px;
-
     }
 
-    .more-styling {
+    .header-text-styling {
       font-family: $title;
       font-size: 64px;
       font-weight: bold;
@@ -184,9 +183,24 @@
     }
 
     //===============================================================================//
-    //                        HERO5 Session and Session Section                      //
+    //                          Bottom Hero Image                                    //
     //===============================================================================//
+    .bottom-hero-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-top: 25px;
+      margin-bottom: 60px;
+      background-color: red;
+    }
 
+    .bottom-text-styling {
+      font-family: $title;
+      font-size: 64px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-top: 11vh;
+    }
     //==============================================================================//
     //                          Comparison Chart                                    //
     //==============================================================================//
