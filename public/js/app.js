@@ -32,7 +32,17 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
             .state('apparelProduct', {
                 templateUrl: './views/apparelProduct.html',
                 controller: 'apparelProductCtrl',
-                url: '/apparelProduct/:id'
+                url: '/apparel/:id'
+            })
+            .state('cart', {
+                templateUrl: './views/cart.html',
+                controller: 'cartCtrl',
+                url: '/cart'
+            })
+            .state('checkout', {
+                templateUrl: './views/checkout.html',
+                controller: 'checkoutCtrl',
+                url: '/checkout'
             })
 
 
