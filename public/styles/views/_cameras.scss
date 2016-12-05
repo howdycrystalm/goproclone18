@@ -5,6 +5,7 @@
     .top-section {
         position: relative;
         margin-bottom: 60px;
+
     }
 
     .top-hero-box {
@@ -144,7 +145,8 @@
       @include button-text()
       @include flexSetUp(center, center);
       color: $fake-black;
-      margin-bottom: 54px;
+      margin-top: 24px;
+      text-transform: uppercase;
     }
     //===============================================================================//
     //                        HERO5 Session and Session Section                      //
@@ -191,7 +193,6 @@
       position: relative;
       margin-top: 25px;
       margin-bottom: 60px;
-      background-color: red;
     }
 
     .bottom-text-styling {
@@ -200,6 +201,15 @@
       font-weight: bold;
       letter-spacing: 1px;
       margin-top: 11vh;
+    }
+
+    .compare-text-bottom {
+      @include button-text()
+      @include flexSetUp(center, center);
+      color: $fake-black;
+      margin-top: 24px;
+      padding-bottom: 72px;
+      text-transform: uppercase;
     }
     //==============================================================================//
     //                          Comparison Chart                                    //
