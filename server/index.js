@@ -55,6 +55,7 @@ app.post('/api/user', UserCtrl.read);
 app.get('/api/me', isAuthed, UserCtrl.me);
 app.put('/api/user/current', isAuthed, UserCtrl.update);
 app.get('/api/getItem/:id', cartCtrl.getItem);
+app.get('/api/getItems', apparelVCtrl.getItems);
 
 app.listen(port, function() {
     console.log('nailed it on port ' + port);
