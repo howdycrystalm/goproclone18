@@ -150,9 +150,9 @@
       </form>
    </div>
    <div class="column">
-      <div class="blocker" ng-hide="stepTwoFinished">&nbsp;</div>
+      <!-- <div class="blocker" ng-hide="stepTwoFinished">&nbsp;</div> -->
       <h2 class="col-heading">Step 3: Payment Options</h2>
-      <form action="/your-charge-code" method="POST" id="payment-form">
+      <form ng-submit="charge()" id="payment-form">
          <div class="row marg-top">
             <h2>Name on Card*</h2>
             <input type="text" name="Name_on_Card" value="" placeholder="Name" aria-required="true">
@@ -200,11 +200,15 @@
          <div class="row">
             <div class="half">
                <h2>Security Code*</h2>
-               <input maxlength="4" value="" placeholder="Enter Code" aria-required="true" type="text" size="4" data-stripe="cvc">
+               <input maxlength="4" placeholder="Enter Code" aria-required="true" type="text" size="4" data-stripe="cvc">
+            </div>
+            <div class="half">
+               <h2>Card Postal Code*</h2>
+               <input maxlength="6" placeholder="Enter Postal Code" size="6" data-stripe="address_zip">
             </div>
          </div>
          <div class="row">
-            <button class="button" type="submit" name="submit" value="Review And Complete"><h2>Review And complete</h2><h3>&#10095;</h3></button>
+            <button class="button submit" type="submit" value="Submit Payment"><h2>Review And complete</h2><h3>&#10095;</h3></button>
          </div>
       </form>
    </div>

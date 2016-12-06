@@ -1,9 +1,11 @@
-angular.module("goApp").controller('checkoutCtrl', function($scope, checkoutService) {
+angular.module("goApp").controller('checkoutCtrl', function($scope, checkoutService, stripe) {
    $scope.stepOneFinished = false;
    $scope.stepTwoFinished = false;
    $scope.stepTwoActive = false;
    $scope.deliveryAddress = {};
    $scope.billingAddress = {};
+   $scope.cardInfoform = {};
+
 
    $scope.clearStepOne = function(same) {
       $scope.stepOneFinished = true;
@@ -13,6 +15,8 @@ angular.module("goApp").controller('checkoutCtrl', function($scope, checkoutServ
        for (var i = 0; i < deliveryForm.length; i++) {
          $scope.deliveryAddress[deliveryForm.elements[i].name] = deliveryForm.elements[i].value;
        }
+
+       console.log($scope.deliveryAddress);
 
        if (same === true) {
           for (var i = 0; i < deliveryForm.length; i++) {
@@ -46,7 +50,11 @@ angular.module("goApp").controller('checkoutCtrl', function($scope, checkoutServ
       $scope.stepTwoActive = true;
    }
 
-   $scope.stripe = function() {
 
+   $scope.charge = function(event) {
+      console.log($scope.form);
+      $scope.form.find('.submit').prop('disabled', true);
+      Stripe.card.createToken($form, stripeResponseHandler);
    }
+
 });
