@@ -30,24 +30,51 @@
 }
 
 .apparel-container {
-  .clothing-switch {
-    margin: 34px 30px 30px 82px;
-    width: 690px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 24px;
-    font-family: 'proxima-nova-rg', sans-serif;
-    .gender {
-      z-index: 4;
-      div {
-        display: inline-block;
-      }
+    padding-left: 90px;
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+    .clothing-switch {
+        margin: 34px 30px 30px 12px;
+        width: 690px;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 24px;
+        font-family: 'proxima-nova-rg', sans-serif;
+
+        .gender {
+            z-index: 4;
+
+            div {
+                display: inline-block;
+            }
+        }
     }
-  }
 
-  .img-size {
-    width: 150px;
-    height: 110px;
-  }
-
+    .products {
+        display: inline-block;
+        padding: 10px;
+        .img-container {
+          width: 265px;
+          height: 352px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: white;
+          .img-size {
+              // width: auto;
+              // height: 350px;
+              // display: inline-block;
+              // margin-bottom: 10px;
+              // border: 1px solid #CCCCCC;
+              // margin-bottom: 12px;
+              // position: relative;
+              // overflow: hidden;
+              max-height: 100%;
+              max-width: 100%;
+              height: auto;
+              width: auto;
+          }
+        }
+    }
 }
