@@ -81,5 +81,33 @@
           border: 1px solid black;
           cursor: pointer;
         }
+        .circleBase {
+          border-radius: 50%;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
+    .type2 {
+        width: 26px;
+        height: 26px;
+        background: #ccc;
+        border: 3px solid #000;
     }
+
+    .Grey {
+      background: #ccc;
+    }
+
+    .Sand {
+      background: #e3c38a;
+    }
+
+    .Black {
+      background: black;
+    }
+
+    .Charcoal {
+      background: #666465;
+    }
+  }
 }

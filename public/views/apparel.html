@@ -15,17 +15,12 @@
   <!-- <div class="products" ng-repeat="product in products | filter: productFilter">
     <img src="{{product.url}}" class="img-size"/>
   </div> -->
-  <div class="">
-
-  </div>
   <div class="products" ng-repeat="product in products | filter: productFilter">
+    
     <div class="img-container">
       <img src="{{product.url}}" class="img-size"/>
-
     </div>
-    <ul>
-      <li type=''></li>
-    </ul>
+    <div class="circleBase type2 {{product.color_name}}"></div>
     <p>{{product.color_name}}</p>
     <div class="">{{product.title}}</div>
   </div>
