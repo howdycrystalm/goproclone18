@@ -7,7 +7,8 @@ var paths = {
     jsSource: ['./public/js/**/*.js'],
     sassSource: ['./public/styles/**/*.scss'],
     indexSource: ['./public/index.html'],
-    viewsSource: ['./public/views/**/*.html']
+    viewsSource: ['./public/views/**/*.html'],
+    querySource: ['./queries/**/*.sql']
 };
 
 gulp.task('sass', function() {
@@ -24,6 +25,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./dist'))
 });
 
+gulp.task('queries', function() {
+    gulp.src(paths.querySource)
+        .pipe(gulp.dest("./server/db"))
+        .pipe(gulp.dest("./db"))
+})
+
 gulp.task('views', function() {
     gulp.src(paths.viewsSource)
         .pipe(gulp.dest("./dist/views"))
@@ -39,6 +46,9 @@ gulp.task('watch', function() {
     gulp.watch(paths.sassSource, ['sass']);
     gulp.watch(paths.indexSource, ['index']);
     gulp.watch(paths.viewsSource, ['views']);
+    gulp.watch(paths.querySource, ['queries']);
 });
 
-gulp.task('default', ['js', 'sass', 'index', 'views', 'watch']);
+gulp.task('default', ['js', 'sass', 'index', 'views', 'queries',
+    'watch'
+]);
