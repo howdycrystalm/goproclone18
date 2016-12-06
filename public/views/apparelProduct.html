@@ -21,9 +21,9 @@
     <section class="product-container">
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
-            <div ng-repeat="image in dummyData.img">
+            <div ng-repeat="image in dummyData.img track by $index">
               <div class="thumbnail">
-                <img class="thumb-proportion" src="{{image}}" alt= "view1"/>
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="selectedImage=image"/>
               </div>
             </div>
             <div class="arrow-down"></div>
@@ -35,9 +35,8 @@
             <div class="zoom"></div>
         </div> -->
         <div class="main-image-container">
-          <img class="img-proportion" src="{{dummyData.img[3]}}"/>
+          <img class="img-proportion" ng-src="{{slectedImage}}"/>
         </div>
-
 
         <div class="details-box">
             <div class="paypal-info-box">

@@ -5,21 +5,21 @@ angular.module("goApp")
         //product title
         // $scope.title = "title";
         // Temporary Photos
-        $scope.photos = [{
-                src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg',
-                desc: 'view1'
-            }, {
-                src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw92894cf2/hi-res/Apparel_InsulatedJacket_men_PDP_2.jpg',
-                desc: 'view2'
-            }, {
-                src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw9694eed5/hi-res/Apparel_InsulatedJacket_men_PDP_3.jpg',
-                desc: 'view3'
-            }, {
-                src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw81486695/hi-res/Apparel_InsulatedJacket_men_PDP_4.jpg',
-                desc: 'view4'
-            }
-
-        ];
+        // $scope.photos = [{
+        //         src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg',
+        //         desc: 'view1'
+        //     }, {
+        //         src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw92894cf2/hi-res/Apparel_InsulatedJacket_men_PDP_2.jpg',
+        //         desc: 'view2'
+        //     }, {
+        //         src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw9694eed5/hi-res/Apparel_InsulatedJacket_men_PDP_3.jpg',
+        //         desc: 'view3'
+        //     }, {
+        //         src: 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw81486695/hi-res/Apparel_InsulatedJacket_men_PDP_4.jpg',
+        //         desc: 'view4'
+        //     }
+        //
+        // ];
 
         $scope.dummyData = {
             img: ['http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw92894cf2/hi-res/Apparel_InsulatedJacket_men_PDP_2.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw9694eed5/hi-res/Apparel_InsulatedJacket_men_PDP_3.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw81486695/hi-res/Apparel_InsulatedJacket_men_PDP_4.jpg'],
@@ -30,6 +30,8 @@ angular.module("goApp")
             colors: ['']
         };
 
+        // initial image index
+        $scope.slectedImage = $scope.dummyData.img[0];
 
 
 
