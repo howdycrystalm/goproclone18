@@ -8,3 +8,11 @@
    width: $width;
    height: $height;
 }
+
+
+@mixin button-text() {
+  font-family: 'proxima-nova-medium';
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+}

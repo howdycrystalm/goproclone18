@@ -45,5 +45,14 @@ angular.module("goApp").service('mainService', function($http) {
             return cart;
          }
       }
-   }
+   };
+
+   this.getItems = function() {
+     return $http ({
+       method: 'GET',
+        url: '/api/getItems'
+      }).then(function(response) {
+        return response.data
+      });
+   };
 });
