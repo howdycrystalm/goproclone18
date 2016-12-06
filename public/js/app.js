@@ -50,7 +50,4 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
                 controller: 'checkoutCtrl',
                 url: '/checkout'
             })
-
-
-
     });
