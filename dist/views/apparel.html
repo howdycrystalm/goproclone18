@@ -21,6 +21,9 @@
   <div class="products" ng-repeat="product in products | filter: productFilter">
     <div class="img-container">
       <img src="{{product.url}}" class="img-size"/>
+
     </div>
+    <p>{{product.color_name}}</p>
+    <div class="">{{product.title}}</div>
   </div>
 </div>

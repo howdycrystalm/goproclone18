@@ -61,6 +61,7 @@
           justify-content: center;
           align-items: center;
           background: white;
+          border: 1px solid #CCCCCC;
           .img-size {
               // width: auto;
               // height: 350px;
@@ -75,6 +76,10 @@
               height: auto;
               width: auto;
           }
+        }
+        .img-container:hover {
+          border: 1px solid black;
+          cursor: pointer;
         }
     }
 }
