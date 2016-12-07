@@ -5,6 +5,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
    $scope.subTotal = 0;
    $scope.items = 0;
    $scope.shipping = 18;
+   $scope.total = 0;
 
    $scope.addToCart = function(id, size) {
       mainService.getItem(id, size)
@@ -12,6 +13,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
             $scope.cart=mainService.checkDouble($scope.cart, response);
             $scope.subTotal=mainService.getSubTotal($scope.cart);
             $scope.items=mainService.getNumOfItems($scope.cart);
+            $scope.total = parseInt($scope.shipping) + parseInt($scope.subTotal);
       })
    }
 
@@ -19,11 +21,13 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
       $scope.cart=mainService.removeItem($scope.cart, id);
       $scope.subTotal=mainService.getSubTotal($scope.cart);
       $scope.items=mainService.getNumOfItems($scope.cart);
+      $scope.total = parseInt($scope.shipping) + parseInt($scope.subTotal);
    }
 
    $scope.updateTotal = function() {
       $scope.subTotal=mainService.getSubTotal($scope.cart);
       $scope.items=mainService.getNumOfItems($scope.cart);
+      $scope.total = parseInt($scope.shipping) + parseInt($scope.subTotal);
    }
 
    $rootScope.$on('$stateChangeStart',
