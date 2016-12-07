@@ -21,6 +21,7 @@ app.use(cors());
 var UserCtrl = require('./controllers/UserCtrl');
 var cartCtrl = require('./controllers/cartCtrl');
 var apparelVCtrl = require('./controllers/apparelVCtrl');
+var productCtrl = require('./controllers/productCtrl');
 var passport = require('./services/passport');
 
 var isAuthed = function(req, res, next) {
@@ -56,6 +57,8 @@ app.get('/api/me', isAuthed, UserCtrl.me);
 app.put('/api/user/current', isAuthed, UserCtrl.update);
 app.get('/api/getItem/:id', cartCtrl.getItem);
 app.get('/api/getItems', apparelVCtrl.getItems);
+app.get('/api/getProduct/:id/:gender', productCtrl.getProduct);
+
 
 app.listen(port, function() {
     console.log('nailed it on port ' + port);

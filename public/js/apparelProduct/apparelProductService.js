@@ -6,15 +6,12 @@ angular.module('goApp')
         // CRUD FUNCTIONS
         // ============================================================
 
-
-        //***********adding dots to image of map in edit view***********//
-        this.title = function() {
+       this.getProduct = function() {
             return $http({
                 method: 'GET',
-                url: '/title',
-                //data: checkpoints
+                url: '/getProduct/:id/:gender',
             }).then(function(response) {
-                return response.data;
+                return response;
             });
         };
 
