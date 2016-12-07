@@ -1,6 +1,7 @@
 angular.module("goApp")
-    .controller('apparelProductCtrl', function($scope, apparelProductService) { //might not need ngAnimate
-        // $scope.test1 = "apparel products CTRL works";
+.controller('apparelProductCtrl', function($scope, apparelProductService, $stateParams) { //might not need ngAnimate
+        $scope.test = "apparel products CTRL works"
+        console.log($stateParams.id, $stateParams.gender);
 
         //product title
         // $scope.title = "title";
