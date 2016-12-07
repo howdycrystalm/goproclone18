@@ -1,5 +1,7 @@
-angular.module("goApp", ['ui.router', 'ngAnimate'])
-    .config(function($stateProvider, $urlRouterProvider) {
+angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
+    .config(function($stateProvider, $urlRouterProvider, stripeProvider) {
+
+      stripeProvider.setPublishableKey('pk_test_upr0RKazytFni5QJKYQzO1JP');
 
         $urlRouterProvider.otherwise('/');
         $stateProvider
@@ -38,13 +40,14 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
             .state('apparelProduct', {
                 templateUrl: './views/apparelProduct.html',
                 controller: 'apparelProductCtrl',
-                // url: '/apparel/:id'
+                url: '/apparel/:id/:gender',
                 resolve: {
                   getProduct: function(apparelProductService, $stateParams) {
 
                     return apparelProductService.getProduct($stateParams.id, $stateParams.gender);
                   }
                 }
+
             })
             .state('cart', {
                 templateUrl: './views/cart.html',
@@ -56,7 +59,4 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
                 controller: 'checkoutCtrl',
                 url: '/checkout'
             })
-
-
-
     });

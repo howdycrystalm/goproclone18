@@ -8,24 +8,23 @@
 <div class="apparel-container">
   <div class="clothing-switch">
     <div class="gender">
-      <div class="" ng-click="gender='male'">Men's Apparel</div>
-      <div class="" ng-click="gender='female'">| Women's Apparel</div>
+      <div class="" ng-click="gender='Male'">Men's Apparel</div>
+      <div class="" ng-click="gender='Female'">| Women's Apparel</div>
     </div>
   </div>
   <!-- <div class="products" ng-repeat="product in products | filter: productFilter">
     <img src="{{product.url}}" class="img-size"/>
   </div> -->
-  <div class="">
-
-  </div>
   <div class="products" ng-repeat="product in products | filter: productFilter">
-    <div class="img-container">
-      <img src="{{product.url}}" class="img-size"/>
 
+    <div class="img-container">
+      <img ng-src="{{product.img_url}}" ui-sref="apparelProduct({id: product.id, gender: product.gender})" class="img-size"/>
     </div>
-    <ul>
-      <li type=''></li>
-    </ul>
+    <div class="circle-container">
+      <div class="circleBase type2 {{color.color}}" ng-repeat="color in product.colors"></div>
+    </div>
+
+
     <p>{{product.color_name}}</p>
     <div class="">{{product.title}}</div>
   </div>

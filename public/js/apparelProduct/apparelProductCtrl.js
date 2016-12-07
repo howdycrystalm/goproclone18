@@ -7,9 +7,10 @@ angular.module("goApp")
           .then(function(response) {
             $scope.response = response.data.
           })
+
         }
         $scope.getProduct();
-        
+
         // $scope.dummyData = {
         //     img: ['http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw796dc8b1/thumbnails/InsulatedJacket_Men_thumbnail_LP.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw92894cf2/hi-res/Apparel_InsulatedJacket_men_PDP_2.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw9694eed5/hi-res/Apparel_InsulatedJacket_men_PDP_3.jpg', 'http://demandware.edgesuite.net/aasj_prd/on/demandware.static/-/Sites-gopro-products/default/dw81486695/hi-res/Apparel_InsulatedJacket_men_PDP_4.jpg'],
         //     count: 1,

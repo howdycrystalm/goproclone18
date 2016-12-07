@@ -5,7 +5,8 @@ var massive = require('massive');
 var config = require('./config.js');
 var session = require('express-session')
 var app = module.exports = express();
-
+var stripeKey = require('./stripeSecretKeys');
+var stripe = require('stripe')(stripeKey.secretKey);
 var port = 3000;
 
 var connectionString = config.MASSIVE_URI;
@@ -58,6 +59,10 @@ app.put('/api/user/current', isAuthed, UserCtrl.update);
 app.get('/api/getItem/:id', cartCtrl.getItem);
 app.get('/api/getItems', apparelVCtrl.getItems);
 app.get('/api/getProduct/:id/:gender', productCtrl.getProduct);
+
+
+//stripe - payment
+app.post('/api/payment', cartCtrl.processPayment);
 
 
 app.listen(port, function() {
