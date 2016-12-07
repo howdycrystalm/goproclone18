@@ -1,7 +1,7 @@
 angular.module("goApp")
-    .controller('apparelProductCtrl', function($scope, apparelProductService) { //might not need ngAnimate
+    .controller('apparelProductCtrl', function($scope, apparelProductService, $stateParams) { //might not need ngAnimate
         $scope.test = "apparel products CTRL works"
-
+        console.log($stateParams.id, $stateParams.gender);
         //product title
         $scop.title = title;
         // Temporary Photos
