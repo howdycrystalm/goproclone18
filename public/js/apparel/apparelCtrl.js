@@ -7,7 +7,7 @@ angular.module("goApp").controller('apparelCtrl', function($scope, mainService, 
     $scope.productFilter = function(product) {
         if (product.gender === $scope.gender || product.gender === 'NULL') {
             console.log($scope.gender);
-            console.log(product);
+            // console.log(product);
             return product;
         }
 
