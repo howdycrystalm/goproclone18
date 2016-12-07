@@ -40,8 +40,9 @@ angular.module("goApp", ['ui.router', 'ngAnimate'])
                 controller: 'apparelProductCtrl',
                 // url: '/apparel/:id'
                 resolve: {
-                  getProduct: function(apparelProductService) {
-                    return apparelProductService.getProduct();
+                  getProduct: function(apparelProductService, $stateParams) {
+
+                    return apparelProductService.getProduct($stateParams.id, $stateParams.gender);
                   }
                 }
             })

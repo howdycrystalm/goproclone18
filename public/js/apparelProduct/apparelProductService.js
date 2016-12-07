@@ -6,7 +6,7 @@ angular.module('goApp')
         // CRUD FUNCTIONS
         // ============================================================
 
-       this.getProduct = function() {
+       this.getProduct = function(id, gender) {
             return $http({
                 method: 'GET',
                 url: '/getProduct/:id/:gender',
