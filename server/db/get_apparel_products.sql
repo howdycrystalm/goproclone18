@@ -1,7 +1,15 @@
-select products.title, products.price, apparel.color_name, apparel.gender,
-pictures.url, pictures.image_view, products.id, pictures.state
-from products
-join apparel
-on products.id = apparel.product_id
+select * from products
 join pictures
-on pictures.product_id = products.id order by products.id;
+on products.id = pictures.product_id
+where view = true;
+
+
+
+-- select products.title, products.price, pictures.gender, pictures.img_url, apparel.color_hex, colors.color, products.id, pictures.view
+-- from products
+-- join apparel
+-- on products.id = apparel.product_id
+-- join pictures
+-- on products.id = pictures.product_id
+-- join colors
+-- on products.id = colors.product_id;
