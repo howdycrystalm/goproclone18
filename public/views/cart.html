@@ -21,7 +21,7 @@
          </div>
          <div class="right">
             <div class="one">
-               <h2>{{item.title}}</h2>
+               <h2>{{item.size}} {{item.title}}</h2>
                <h3>Availibility: In Stock</h3>
             </div>
             <div class="two">
@@ -65,10 +65,10 @@
       <div class="button" ng-click="addToCart(2)">
          <h2>add id 2</h2>
       </div>
-      <div class="button" ng-click="addToCart(4)">
+      <div class="button" ng-click="addToCart(4, 'Small')">
          <h2>add id 4</h2>
       </div>
-      <div class="button" ng-click="addToCart(6)">
+      <div class="button" ng-click="addToCart(6, 'Large')">
          <h2>add id 6</h2>
       </div>
    </div>

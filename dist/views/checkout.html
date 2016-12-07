@@ -150,22 +150,22 @@
       </form>
    </div>
    <div class="column">
-      <div class="blocker" ng-hide="stepTwoFinished">&nbsp;</div>
+      <div class="blocker" ng-hide="stepTwoFinished"></div>
       <h2 class="col-heading">Step 3: Payment Options</h2>
-      <form action="/your-charge-code" method="POST" id="payment-form">
+      <form ng-submit="charge()" id="payment_form">
          <div class="row marg-top">
             <h2>Name on Card*</h2>
-            <input type="text" name="Name_on_Card" value="" placeholder="Name" aria-required="true">
+            <input type="text" name="name" value="" placeholder="Name" required>
          </div>
          <div class="row">
             <h2>Card Number*</h2>
-            <input type="text" size="20" data-stripe="number">
+            <input type="text" size="20" ng-model="payment.card.number" placeholder="Card Number" required>
          </div>
          <div class="row">
             <div class="half">
                <h2>Expiration Date:*</h2>
-               <select class="smaller" aria-required="true" type="text"  data-stripe="exp_month">
-							<option class="select-option" label="January" value="01">January</option>
+               <select class="smaller" ng-model="payment.card.exp_month" type="text" data-stripe="exp_month">
+							<option selected class="select-option" label="January" value="01">January</option>
 							<option class="select-option" label="February" value="02">February</option>
 							<option class="select-option" label="March" value="03">March</option>
 							<option class="select-option" label="April" value="04">April</option>
@@ -180,7 +180,7 @@
 					</select>
             </div>
             <div class="half">
-               <select class="input-select no-label" aria-required="true" type="text" data-stripe="exp_year">
+               <select class="input-select no-label" ng-model="payment.card.exp_year" type="text">
 							<option class="select-option" label="2016" value="16">2016</option>
 							<option class="select-option" label="2017" value="17">2017</option>
 							<option class="select-option" label="2018" value="18">2018</option>
@@ -200,11 +200,11 @@
          <div class="row">
             <div class="half">
                <h2>Security Code*</h2>
-               <input maxlength="4" value="" placeholder="Enter Code" aria-required="true" type="text" size="4" data-stripe="cvc">
+               <input ng-model="payment.card.cvc" maxlength="4" placeholder="Enter Code" type="text" size="4" name="cvc">
             </div>
          </div>
          <div class="row">
-            <button class="button" type="submit" name="submit" value="Review And Complete"><h2>Review And complete</h2><h3>&#10095;</h3></button>
+            <button class="button submit" type="submit"><h2>Review And complete</h2><h3>&#10095;</h3></button>
          </div>
       </form>
    </div>
