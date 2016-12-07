@@ -16,11 +16,11 @@
     <img src="{{product.url}}" class="img-size"/>
   </div> -->
   <div class="products" ng-repeat="product in products | filter: productFilter">
-    
+
     <div class="img-container">
-      <img src="{{product.url}}" class="img-size"/>
+      <img ng-src="{{product.img_url}}" ui-sref="apparelProduct({id: product.id, gender: product.gender})" class="img-size"/>
     </div>
-    <div class="circleBase type2 {{product.color_name}}"></div>
+    <div class="circleBase type2 {{color.color}}" ng-repeat="color in product.colors"></div>
     <p>{{product.color_name}}</p>
     <div class="">{{product.title}}</div>
   </div>

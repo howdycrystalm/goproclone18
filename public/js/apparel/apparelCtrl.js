@@ -1,10 +1,11 @@
 angular.module("goApp").controller('apparelCtrl', function($scope, mainService, products) {
 
     $scope.products = products;
-    $scope.gender = 'male';
-    $scope.state = 1;
+    console.log(products);
+    $scope.gender = 'Male';
+
     $scope.productFilter = function(product) {
-        if ((product.gender === $scope.gender || product.gender === null) && product.state === $scope.state) {
+        if (product.gender === $scope.gender || product.gender === 'NULL') {
             console.log($scope.gender);
             console.log(product);
             return product;

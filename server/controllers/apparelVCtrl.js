@@ -12,7 +12,7 @@ module.exports = {
 
             function async(i) {
                 if (i >= products.length) {
-                    fin();
+                    return fin();
                 }
 
                 db.get_colors([products[i].id], function(err, colors) {
