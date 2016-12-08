@@ -46,7 +46,7 @@ angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
 
                     return apparelProductService.getProduct($stateParams.id, $stateParams.gender);
                   }
-                }
+               }
 
             })
             .state('cart', {
