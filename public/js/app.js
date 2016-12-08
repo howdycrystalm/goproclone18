@@ -42,9 +42,10 @@ angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
                 controller: 'apparelProductCtrl',
                 url: '/apparel/:id/:gender',
                 resolve: {
-                  getProduct: function(apparelProductService, $stateParams) {
-
-                    return apparelProductService.getProduct($stateParams.id, $stateParams.gender);
+                  return getProduct: function(apparelProductService, $stateParams) {
+                    console.log($stateParams.id, $stateParams.gender);
+                    
+                     apparelProductService.getProduct($stateParams.id, $stateParams.gender);
                   }
                 }
 
