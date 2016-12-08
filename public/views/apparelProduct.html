@@ -24,8 +24,8 @@
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
-              <div class="thumbnail">
-                <img class="thumb-proportion" ng-src="{{product.img_url}}" ng-click="selectedImage=image"/>
+              <div class="thumbnail" ng-repeat="image in thumbs">
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="selectedImage=image"/>
               </div>
             </div>
             <div class="arrow-down"></div>
