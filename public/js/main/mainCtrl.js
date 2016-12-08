@@ -14,8 +14,8 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
       $scope.total = 0;
    }
 
-   $scope.addToCart = function(id, size) {
-      mainService.getItem(id, size)
+   $scope.addToCart = function(id, amount, size) {
+      mainService.getItem(id, amount, size)
          .then(function(response) {
             $scope.cart=mainService.checkDouble($scope.cart, response);
             console.log($scope.cart);
