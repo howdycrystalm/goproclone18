@@ -16,8 +16,6 @@ angular.module("goApp").controller('checkoutCtrl', function($scope, checkoutServ
          $scope.deliveryAddress[deliveryForm.elements[i].name] = deliveryForm.elements[i].value;
        }
 
-       console.log($scope.deliveryAddress);
-
        if (same === true) {
           for (var i = 0; i < deliveryForm.length; i++) {
             billingForm[i].value = deliveryForm[i].value;
