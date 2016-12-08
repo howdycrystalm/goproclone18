@@ -41,8 +41,6 @@ angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
                 templateUrl: './views/apparelProduct.html',
                 controller: 'apparelProductCtrl',
                 url: '/apparel/:id/:gender'
-
-
             })
             .state('cart', {
                 templateUrl: './views/cart.html',

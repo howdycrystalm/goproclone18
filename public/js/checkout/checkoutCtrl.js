@@ -67,6 +67,7 @@ $scope.charge = function () {
      imageUrl: "http://www.sv411.com/wp-content/uploads/GoPro-Logo.jpg",
      confirmButtonText: "Continue exporing GoBro"
     })
+    $scope.zeroOut();
     $state.go('home');
  })
  .catch(function (err) {
