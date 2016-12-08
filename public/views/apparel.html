@@ -15,16 +15,30 @@
   <!-- <div class="products" ng-repeat="product in products | filter: productFilter">
     <img src="{{product.url}}" class="img-size"/>
   </div> -->
+
   <div class="products" ng-repeat="product in products | filter: productFilter">
 
     <div class="img-container">
       <img ng-src="{{product.img_url}}" ui-sref="apparelProduct({id: product.id, gender: product.gender})" class="img-size"/>
     </div>
-    <div class="circle-container">
-      <div class="circleBase type2 {{color.color}}" ng-repeat="color in product.colors"></div>
+    <div class="circle-wrapper">
+      <div class="circle-container">
+        <div class="circleBase type2 {{color.color}}" ng-repeat="color in product.colors"></div>
+      </div>
     </div>
 
+
     <p>{{product.color_name}}</p>
-    <div class="">{{product.title}}</div>
+    <div class="product-details">
+      <div class="product-title">{{product.title}}</div>
+      <div class="product-price"><h2>US${{product.price}}</h2>
+        <div class="plus-wrap">
+          <img  ng-src="https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw104cb3bc/images/subscription/newgppluspricelogo.png" alt="">
+          <h2>Save 20%</h2>
+        </div>
+      </div>
+
+
+    </div>
   </div>
 </div>
