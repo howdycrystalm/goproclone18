@@ -3,6 +3,11 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var annotate = require('gulp-ng-annotate');
 
+var uglify = require('gulp-uglify');
+var rename = require('gulp-rename');
+var cssmin = require('gulp-cssmin');
+var htmlmin = require('gulp-htmlmin');
+
 var paths = {
     jsSource: ['./public/js/**/*.js'],
     sassSource: ['./public/styles/**/*.scss'],
@@ -15,6 +20,8 @@ gulp.task('sass', function() {
     return gulp.src(paths.sassSource)
         .pipe(sass())
         .pipe(concat('bundle.css'))
+        .pipe(cssmin())
+        .pipe(rename({extname: ".min.css"}))
         .pipe(gulp.dest('./dist'));
 });
 
@@ -22,6 +29,8 @@ gulp.task('js', function() {
     return gulp.src(paths.jsSource)
         .pipe(concat('bundle.js'))
         .pipe(annotate())
+        .pipe(uglify())
+        .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest('./dist'))
 });
 
@@ -33,12 +42,14 @@ gulp.task('queries', function() {
 
 gulp.task('views', function() {
     gulp.src(paths.viewsSource)
-        .pipe(gulp.dest("./dist/views"))
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest("./dist/views"))
 })
 
 gulp.task('index', function() {
     gulp.src(paths.indexSource)
-        .pipe(gulp.dest("./dist"))
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest("./dist"))
 })
 
 gulp.task('watch', function() {
