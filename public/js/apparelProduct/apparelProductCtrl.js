@@ -5,7 +5,7 @@ angular.module("goApp")
         $scope.getProduct = function() {
           apparelProductService.getProduct()
           .then(function(response) {
-            $scope.response = response.data.
+            $scope.response = response.data;
           })
 
         }

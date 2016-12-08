@@ -16,7 +16,7 @@
    <div class="items-incart" ng-repeat="item in cart">
          <div class="left">
             <div class="img-container">
-               <img src="{{item.url}}" alt="">
+               <img src="{{item.img_url}}" alt="">
             </div>
          </div>
          <div class="right">
@@ -55,21 +55,6 @@
          <div class="row">
             <h4>Prices shown reflects USD. Price excludes sales tax.</h4>
          </div>
-      </div>
-   </div>
-
-   <div class="dummie">
-      <div class="button" ng-click="addToCart(1)">
-         <h2>add id 1</h2>
-      </div>
-      <div class="button" ng-click="addToCart(2)">
-         <h2>add id 2</h2>
-      </div>
-      <div class="button" ng-click="addToCart(4, 'Small')">
-         <h2>add id 4</h2>
-      </div>
-      <div class="button" ng-click="addToCart(6, 'Large')">
-         <h2>add id 6</h2>
       </div>
    </div>
 </div>
