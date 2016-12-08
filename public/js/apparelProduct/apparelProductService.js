@@ -7,12 +7,15 @@ angular.module('goApp')
         // ============================================================
 
        this.getProduct = function(id, gender) {
+            //logic
             return $http({
                 method: 'GET',
-                url: '/getProduct/:id/:gender',
+                url: '/api/getProduct/' + id + "/" + gender
             }).then(function(response) {
-                return response;
+              //logic
+                return response.data;
             });
+            
         };
 
     });
