@@ -40,14 +40,8 @@ angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
             .state('apparelProduct', {
                 templateUrl: './views/apparelProduct.html',
                 controller: 'apparelProductCtrl',
-                url: '/apparel/:id/:gender',
-                resolve: {
-                  return getProduct: function(apparelProductService, $stateParams) {
-                    console.log($stateParams.id, $stateParams.gender);
-                    
-                     apparelProductService.getProduct($stateParams.id, $stateParams.gender);
-                  }
-                }
+                url: '/apparel/:id/:gender'
+
 
             })
             .state('cart', {
