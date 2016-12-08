@@ -84,9 +84,13 @@
         }
         .circle-container {
           display: flex;
+          justify-content: space-around;
+          max-width: 100px;
+          width: auto;
+          margin: 0 auto;
           .circleBase {
             border-radius: 50%;
-            margin: 0 auto;
+            // margin: 0 auto;
             margin-top: 20px;
           }
 
