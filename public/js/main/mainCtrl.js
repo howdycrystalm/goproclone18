@@ -5,7 +5,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
    $scope.subTotal = 0;
    $scope.items = 0;
    $scope.shipping = 18;
-   $scope.total = 0;
+   $scope.total = 18;
 
    $scope.zeroOut = function () {
       $scope.cart = [];
@@ -34,7 +34,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
 
    $scope.updateTotal = function() {
       $scope.subTotal=mainService.getSubTotal($scope.cart);
-      $scope.items=mainService.getNumOfItems($scope.cart);
+      $scope.items = mainService.getNumOfItems($scope.cart);
       $scope.total = parseInt($scope.shipping) + parseInt($scope.subTotal);
    }
 
