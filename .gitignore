@@ -5,4 +5,7 @@ bundle.css
 .DS_Store
 db
 stripeSecretKeys.js
-sweetalert-master
+bundle.min.css
+bundle.min.js
+dist/index.html
+dist/views

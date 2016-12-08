@@ -1,7 +1,7 @@
 angular.module("goApp", ['ui.router', 'ngAnimate', 'angular-stripe'])
     .config(function($stateProvider, $urlRouterProvider, stripeProvider) {
 
-      stripeProvider.setPublishableKey('pk_test_upr0RKazytFni5QJKYQzO1JP');
+      stripeProvider.setPublishableKey('pk_test_Y8LhLNUJyD0m1Zthhv3Q1ijz');
 
         $urlRouterProvider.otherwise('/');
         $stateProvider
