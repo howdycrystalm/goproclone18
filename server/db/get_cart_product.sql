@@ -1,5 +1,5 @@
-SELECT products.id, products.title, products.price, pictures.url
+SELECT products.id, products.title, products.price, pictures.img_url
 FROM products
 JOIN pictures
-ON products.id = pictures.product_id AND pictures.image_view='view1'
+ON products.id = pictures.product_id AND pictures.view = true
 Where products.id = $1;

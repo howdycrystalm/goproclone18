@@ -18,6 +18,7 @@ angular.module("goApp").controller('mainCtrl', function($scope, $state, $timeout
       mainService.getItem(id, size)
          .then(function(response) {
             $scope.cart=mainService.checkDouble($scope.cart, response);
+            console.log($scope.cart);
             $scope.subTotal=mainService.getSubTotal($scope.cart);
             $scope.items=mainService.getNumOfItems($scope.cart);
             $scope.total = parseInt($scope.shipping) + parseInt($scope.subTotal);
