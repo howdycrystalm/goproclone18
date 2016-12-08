@@ -13,4 +13,9 @@ angular.module("goApp")
              })
           }() //<-- () automatically invokes
 
+          $scope.getThumbs = function() {
+            apparelProductService.getThumbs($stateParams.id, $stateParams.gender).then(function(response){
+              $scope.thumbs = response[0]''
+            })
+          }()
     });

@@ -1,3 +1,4 @@
+
 <section class="apparelProduct-container">
 
     <section class="sticky-header">
@@ -23,8 +24,9 @@
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
+              <div ng-repeat="something1 in somethingTable.somethingColumn">
               <div class="thumbnail">
-                <img class="thumb-proportion" ng-src="{{product.img_url}}" ng-click="selectedImage=image"/>
+                <img class="thumb-proportion" ng-repeat="{{soemthing1}}" ng-click="selectedImage=image"/>
               </div>
             </div>
             <div class="arrow-down"></div>
