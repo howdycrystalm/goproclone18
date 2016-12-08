@@ -1,7 +1,7 @@
 <section class="apparelProduct-container">
     <section class="sticky-header">
         <!-- <div ng-repeat="title in products">{{title}}</div> -->
-        <div class="product-name">Insulated Jacket</div>
+        <div class="product-name">{{getProduct.title}}</div>
         <div class="delivery-box">
             <div class="delivery-truck"></div>
             <div class="delivery-text">Free 2-Day Shipping +
@@ -11,7 +11,7 @@
         <div class="plus-box">
             <div class="plus-logo"></div>
             <div class="sale-text">Save 20%</div>
-            <div class="price-text">US$199.99</div>
+            <div class="price-text">US${{getProduct.price}}</div>
             <div class="add-button">Add To Cart</div>
         </div>
         </div>
@@ -21,18 +21,22 @@
     <section class="product-container">
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
-            <div class="thumbnail"></div>
-            <div class="thumbnail"></div>
-            <div class="thumbnail"></div>
-            <div class="thumbnail"></div>
+            <div ng-repeat="image in getProduct.img track by $index">
+              <div class="thumbnail">
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="selectedImage=image"/>
+              </div>
+            </div>
             <div class="arrow-down"></div>
         </div>
-        <div class="main-image-container">
+        <!-- <div class="main-image-container"> -->
             <!-- <img ng-repeat="photo in photos" class="image" ng-show="isActive($index)" ng-src="{{photo.src}}" /> -->
-            <div class="image"></div>
+            <!-- <div class="image"></div>
+              <img class="img-proportion" src="{{dummyData.img[0]}}" alt= "view1"/>
             <div class="zoom"></div>
+        </div> -->
+        <div class="main-image-container">
+          <img class="img-proportion" ng-src="{{slectedImage}}"/>
         </div>
-
 
         <div class="details-box">
             <div class="paypal-info-box">
@@ -40,10 +44,7 @@
                 <div class="pp-logo-size"></div>
                 <p style="color: #009FDF">What is this?</p>
             </div>
-            <div class="description-box">
-                The Insulated Jacket is a limited edition GoPro/686 GLCR Avenue Down Jacket. It’s made of water resistant DWR (that stands for durable water repellant) coated cire fabric throughout the body, waterproof infiDRY® 20K fabric on the shoulders and hood and
-                600 Powerfill Down Insulation. Also equipped with a custom inner chest pocket (for your GoPro or your phone), a front hood adjustment, bottom hem drawcord adjustment and an audio cord outlet.
-            </div>
+            <div class="description-box">{{getProduct.desc}}</div>
             <div class="titles color-position">color</div>
             <div class="circle-color"></div>
             <div class="titles size-position">size</div>
@@ -61,11 +62,5 @@
                     <div class="size-boxes minus"></div>
                 </div>
         </div>
-      </section>
-
-      <section class="bottom-container">
-        <div class="tabs">
-
-        </div>
-      </section>
+    </section>
 </section>
