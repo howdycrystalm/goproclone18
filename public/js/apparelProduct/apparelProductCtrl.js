@@ -3,6 +3,12 @@ angular.module("goApp")
         // $scope.test1 = "apparel products CTRL works";
 
         $scope.getProduct = function() {
+
+            apparelProductService.getProduct()
+                .then(function(response) {
+                    $scope.response = response.data;
+                })
+
             apparelProductService.getProduct()
                 .then(function(response) {
                     $scope.response = response.data;
