@@ -146,8 +146,22 @@
             width: 48%;
             font-size: 16px;
             padding-top: 10px;
-            display: flex;
-            justify-content: flex-end;
+            text-align: right;
+            h2 {
+              height: 20px;
+            }
+            .plus-wrap {
+              width: 129px;
+              img {
+                height: 10px;
+              }
+              h2 {
+                color: #009fdf;
+                font-weight: bold;
+                font-size: 15px;
+                display: inline;
+              }
+            }
           }
         }
     }
