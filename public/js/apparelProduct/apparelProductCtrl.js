@@ -19,8 +19,9 @@ angular.module("goApp")
                 for (var i = 0; i < response.length; i++) {
                     $scope.thumbs.push(response[i].img_url)
                 }
-                console.log(response);
-                console.log($scope.thumbs); //always console log your response
+
+                // console.log("this is response", response);
+                console.log("this is $scope.thumbs", $scope.thumbs); //always console log your response
             })
         }()
 
