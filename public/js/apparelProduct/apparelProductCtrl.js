@@ -12,12 +12,13 @@ angular.module("goApp")
             }, 100)
             //originally tried passing params through function(), but params passed through fn have to be placeholder so instead passed through line 20
         $scope.getProduct = function() { //this fn automatically invokes because we need the obect on page load
-                apparelProductService.getProduct($stateParams.id, $stateParams.gender).then(function(response) { //we're able to pass $stateParams through this fn's params
-                    $scope.product = response[0]; //save the response on scope, after figuring out what the pathways is via console log
-                    $scope.productImg = response[0].img_url;
-                    console.log($scope.productImg + " I AM IMAGE");
-                })
-            }() //<-- () automatically invokes
+            apparelProductService.getProduct($stateParams.id, $stateParams.gender).then(function(response) { //we're able to pass $stateParams through this fn's params
+                $scope.product = response[0]; //save the response on scope, after figuring out what the pathways is via console log
+                $scope.productImg = response[0].img_url;
+                console.log($scope.productImg + " I AM IMAGE");
+            })
+        };
+        $scope.getProduct();
 
         $scope.imgSwitch = function(theImage) { //this function is setting url to selectedImage
             $scope.selectedImage = theImage;
@@ -31,9 +32,17 @@ angular.module("goApp")
                     $scope.thumbs.push(response[i].img_url)
                 }
                 $scope.selectedImage = $scope.thumbs[0];
-                // console.log("this is response", response);
                 console.log("this is $scope.thumbs", $scope.thumbs); //always console log your response
             })
-        }()
+        };
+        $scope.getThumbs();
+
+        $scope.getColorSwatches = function() {
+            apparelProductService.getColorSwatches($stateParams.id).then(function(response) {
+                console.log("can i get a", response);
+                $scope.colorSwatches = response;
+            })
+        };
+        $scope.getColorSwatches();
 
     });

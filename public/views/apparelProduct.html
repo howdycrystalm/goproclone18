@@ -43,7 +43,8 @@
             </div>
             <div class="description-box">{{product.description}}</div>
             <div class="titles color-position">color</div>
-            <div class="circle-color"></div>
+            <div class="circle-color {{colorSwatches[0].color}}"></div>
+            <!-- {{colorSwatches}} -->
             <div class="titles size-position">size</div>
             <div class="size-container">
                 <div class="size-boxes">s</div>
@@ -55,19 +56,8 @@
                 <div class="titles quantity-position">quantity</div>
                 <div class="quantity-container">
                     <button class="size-boxes plus" ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1"></button>
-                    <div class="counter">{{ count }}</div>
+                    <div class="counter">{{count}}</div>
                     <button class="size-boxes minus" ng-click="count = count + 1" ng-init="count = 1"></button>
-
-                    <!-- <button ng-click="count = count + 1" ng-init="count=1">
-                    Increment
-                    </button>
-                    count:
-                    <button ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1">
-                      Decrement
-                    </button> -->
-
-
-
                 </div>
         </div>
     </section>
