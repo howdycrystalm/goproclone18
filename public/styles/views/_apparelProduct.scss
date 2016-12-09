@@ -296,6 +296,8 @@
     text-align: center;
     vertical-align: middle;
     line-height: 36px;
+    input: focus;
+    outline: none;
   }
 
   .quantity-position {
@@ -320,8 +322,10 @@
 
   .counter {
     width: 65px;
-    height: 36px;
+    height: 34px;
     border: 1px #666666 solid;
+    border-right: none;
+    border-left: none;
     font-family: $title;
     font-size: 16px;
     text-transform: uppercase;
@@ -329,6 +333,7 @@
     text-align: center;
     vertical-align: middle;
     line-height: 36px;
+
   }
 
 
