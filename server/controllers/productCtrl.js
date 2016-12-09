@@ -3,16 +3,31 @@ var db = app.get('db');
 
 module.exports = {
 
-  getProduct: function(req, res, next) {
-    db.get_product_by_id([req.params.id, req.params.gender], function(err, product) {
+    getProduct: function(req, res, next) {
+        db.get_product_by_id([req.params.id], function(err, product) {
 
-      if (err) {
+            if (err) {
 
-        return res.status(401).send(err);
+                return res.status(401).send(err);
 
-      }
+            }
 
-      res.status(200).json(product);
-    })
-  }
+            res.status(200).json(product);
+        })
+    },
+    getThumbs: function(req, res, next) {
+        db.get_thumbs([req.params.id, req.params.gender], function(err, product) {
+
+            if (err) {
+                console.log(err);
+                return res.status(401).send(err);
+
+            }
+
+            res.status(200).json(product);
+        })
+    }
+
+
+    //////
 }
