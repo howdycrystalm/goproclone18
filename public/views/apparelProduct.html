@@ -2,7 +2,6 @@
 <section class="apparelProduct-container">
 
     <section class="sticky-header">
-        <!-- <div ng-repeat="title in products">{{title}}</div> -->
         <div class="product-name">{{product.title}}</div>
         <div class="delivery-box">
             <div class="delivery-truck"></div>
@@ -19,26 +18,21 @@
         </div>
     </section>
 
-
+<button type="button" name="button" ng-click="getProduct()"></button>
     <section class="product-container">
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
               <div class="thumbnail" ng-repeat="image in thumbs">
-                <img class="thumb-proportion" ng-src="{{image}}" ng-click="selectedImage=image"/>
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="thumbs($index)"/>
               </div>
             </div>
             <div class="arrow-down"></div>
         </div>
-        <!-- <div class="main-image-container"> -->
-            <!-- <img ng-repeat="photo in photos" class="image" ng-show="isActive($index)" ng-src="{{photo.src}}" /> -->
-            <!-- <div class="image"></div>
-              <img class="img-proportion" src="{{dummyData.img[0]}}" alt= "view1"/>
-            <div class="zoom"></div>
-        </div> -->
         <div class="main-image-container">
-          <img class="img-proportion" ng-src="{{product.img_url}}"/>
+          <img class="img-proportion" ng-src="{{productImg}}"/>
         </div>
+        {{p}}
 
         <div class="details-box">
             <div class="paypal-info-box">
@@ -59,10 +53,18 @@
             <p style="color:#666666; font-family: proxima-nova-medium; font-size: 14px; margin-left: 22px; margin-top: 10px;">Select a color and size to add item to cart.
                 <div class="titles quantity-position">quantity</div>
                 <div class="quantity-container">
-                    <div class="size-boxes plus"></div>
-                    <div class="counter">1</div>
-                    <div class="size-boxes minus"></div>
+                    <div class="size-boxes plus" ng-click="count = count + 1" ng-init="count=0"></div>
+                    <div class="counter">1{{ count }}</div>
+                    <div class="size-boxes minus" ng-click="count = count - 1" ng-init="count = 0" ng-disabled="count == 0"></div>
                 </div>
+                <!-- <button ng-click="count = count + 1" ng-init="count=0">
+                Increment
+              </button>
+              count: {{ count }}
+                <button ng-click="count = count - 1" ng-init="count = 0" ng-disabled="count == 0">
+                Decrement
+              </button> -->
+
         </div>
     </section>
 
