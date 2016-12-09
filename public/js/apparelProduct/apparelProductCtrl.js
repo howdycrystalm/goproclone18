@@ -20,9 +20,8 @@ angular.module("goApp")
             }() //<-- () automatically invokes
 
         $scope.imgSwitch = function(theImage) {
-            apparelProductService.getProduct($stateParams.id, $stateParams.gender).then(function(response) { //we're able to pass $stateParams through this fn's params
-                $scope.productImg = response[0].img_url;
-            })
+            console.log("TURKEY");
+            console.log(theImage);
         }
 
         $scope.getThumbs = function() {
@@ -36,7 +35,7 @@ angular.module("goApp")
             })
         }()
 
-
+        console.log("thumbs up", $scope.thumbs);
 
 
     });
