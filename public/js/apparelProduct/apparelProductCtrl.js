@@ -19,13 +19,14 @@ angular.module("goApp")
                 })
             }() //<-- () automatically invokes
 
-        $scope.imgSwitch = function(theImage) {
-            console.log("TURKEY");
-            console.log(theImage);
+        $scope.imgSwitch = function(theImage) { //this function is setting url to selectedImage
+            $scope.selectedImage = theImage;
         }
 
         $scope.getThumbs = function() {
             apparelProductService.getThumbs($stateParams.id, $stateParams.gender).then(function(response) {
+                console.log("i wanna see if getting anything back", response)
+                $scope.images = response;
                 for (var i = 0; i < response.length; i++) {
                     $scope.thumbs.push(response[i].img_url)
                 }

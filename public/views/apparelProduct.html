@@ -25,14 +25,14 @@
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
               <div class="thumbnail" ng-repeat="image in thumbs">
-                <img class="thumb-proportion" ng-src="{{image}}" ng-click="selectedImage=image"/>
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="imgSwitch(image)"/>
               </div>
             </div>
             <div class="arrow-down"></div>
         </div>
 
         <div class="main-image-container">
-          <img class="img-proportion" ng-src="{{product.img_url}}"/>
+          <img class="img-proportion" src="{{selectedImage}}"/>
         </div>
 
         <div class="details-box">
