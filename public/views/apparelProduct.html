@@ -24,20 +24,15 @@
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
-              <div class="thumbnail">
-                <img class="thumb-proportion" ng-src="{{product.img_url}}" ng-click="selectedImage=image"/>
+              <div class="thumbnail" ng-repeat="image in thumbs">
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="imgSwitch(image)"/>
               </div>
             </div>
             <div class="arrow-down"></div>
         </div>
-        <!-- <div class="main-image-container"> -->
-            <!-- <img ng-repeat="photo in photos" class="image" ng-show="isActive($index)" ng-src="{{photo.src}}" /> -->
-            <!-- <div class="image"></div>
-              <img class="img-proportion" src="{{dummyData.img[0]}}" alt= "view1"/>
-            <div class="zoom"></div>
-        </div> -->
+
         <div class="main-image-container">
-          <img class="img-proportion" ng-src="{{product.img_url}}"/>
+          <img class="img-proportion" src="{{selectedImage}}"/>
         </div>
 
         <div class="details-box">
@@ -59,9 +54,20 @@
             <p style="color:#666666; font-family: proxima-nova-medium; font-size: 14px; margin-left: 22px; margin-top: 10px;">Select a color and size to add item to cart.
                 <div class="titles quantity-position">quantity</div>
                 <div class="quantity-container">
-                    <div class="size-boxes plus"></div>
-                    <div class="counter">1</div>
-                    <div class="size-boxes minus"></div>
+                    <button class="size-boxes plus" ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1"></button>
+                    <div class="counter">{{ count }}</div>
+                    <button class="size-boxes minus" ng-click="count = count + 1" ng-init="count = 1"></button>
+
+                    <!-- <button ng-click="count = count + 1" ng-init="count=1">
+                    Increment
+                    </button>
+                    count:
+                    <button ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1">
+                      Decrement
+                    </button> -->
+
+
+
                 </div>
         </div>
     </section>

@@ -6,16 +6,27 @@ angular.module('goApp')
         // CRUD FUNCTIONS
         // ============================================================
 
-       this.getProduct = function(id, gender) {
+        this.getProduct = function(id) {
             //logic
             return $http({
                 method: 'GET',
-                url: '/api/getProduct/' + id + "/" + gender
+                url: '/api/getProduct/' + id
             }).then(function(response) {
-              //logic
+                //logic
                 return response.data;
             });
-            
+
+        };
+        this.getThumbs = function(id, gender) {
+            //logic
+            return $http({
+                method: 'GET',
+                url: '/api/getThumbs/' + id + "/" + gender
+            }).then(function(response) {
+                //logic
+                return response.data;
+            });
+
         };
 
     });

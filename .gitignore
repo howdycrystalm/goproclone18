@@ -1,11 +1,4 @@
 node_modules
 config.js
-bundle.js
-bundle.css
 .DS_Store
-db
 stripeSecretKeys.js
-bundle.min.css
-bundle.min.js
-dist/index.html
-dist/views
