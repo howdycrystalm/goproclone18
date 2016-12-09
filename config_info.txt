@@ -1,0 +1,7 @@
+In the server folder, there should be a config.js file which is hidden in .gitignore
+The info below lives in the config.js file.
+
+module.exports = {
+   MASSIVE_URI: 'postgres://clnjbjhn:ZUJPD5AVHLOX6Kih4k9deEeaXl941MHW@elmer.db.elephantsql.com:5432/clnjbjhn',
+   SESSION_SECRET: 'joebiden the one and only'
+}

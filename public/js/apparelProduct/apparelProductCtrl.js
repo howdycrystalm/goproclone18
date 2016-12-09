@@ -29,13 +29,10 @@ angular.module("goApp")
                 for (var i = 0; i < response.length; i++) {
                     $scope.thumbs.push(response[i].img_url)
                 }
-
+                $scope.selectedImage = $scope.thumbs[0];
                 // console.log("this is response", response);
                 console.log("this is $scope.thumbs", $scope.thumbs); //always console log your response
             })
         }()
-
-        console.log("thumbs up", $scope.thumbs);
-
 
     });
