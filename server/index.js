@@ -56,7 +56,7 @@ app.post('/api/register', UserCtrl.register);
 app.post('/api/user', UserCtrl.read);
 app.get('/api/me', isAuthed, UserCtrl.me);
 app.put('/api/user/current', isAuthed, UserCtrl.update);
-app.get('/api/getItem/:id', cartCtrl.getItem);
+app.get('/api/getItem/:id/:prodid', cartCtrl.getItem);
 app.get('/api/getItems', apparelVCtrl.getItems);
 app.get('/api/getProduct/:id', productCtrl.getProduct);
 app.get('/api/getThumbs/:id/:gender', productCtrl.getThumbs);

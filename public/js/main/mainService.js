@@ -1,13 +1,13 @@
 angular.module("goApp").service('mainService', function($http) {
 
 
-   this.getItem = function(id, amount, size) {
+   this.getItem = function(id, prodid, amount, size) {
       return $http({
          method: 'GET',
-         url: '/api/getItem/' + id
+         url: '/api/getItem/' + id + '/' + prodid
       }).then(function(response) {
          response.data[0].count = amount;
-         if (size !== "0") {
+         if (size !== "null") {
             response.data[0].size = size;
          }
          return response.data[0];

@@ -4,6 +4,7 @@ angular.module("goApp")
         var id = $stateParams.id;
         var gender = $stateParams.gender;
         $scope.cartId = 0;
+        $scope.prodid = 0;
         $scope.size = 0;
         $scope.count = 1;
         $scope.thumbs = [];
@@ -52,8 +53,10 @@ angular.module("goApp")
           }
             for (var i = 0; i < $scope.images.length; i++) {
                 if ($scope.images[i].img_url === $scope.images[colorValue].img_url) {
-                    $scope.cartId = $scope.images[colorValue].id;
+                    $scope.prodid = $scope.images[colorValue].id;
+                    $scope.cartId = $scope.images[colorValue].product_id;
                     console.log($scope.cartId);
+                    console.log($scope.images);
                     $scope.selectedImage = $scope.images[i].img_url;
                     return;
                 }
