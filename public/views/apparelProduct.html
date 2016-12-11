@@ -14,7 +14,8 @@
             <div class="plus-logo"></div>
             <div class="sale-text">Save 20%</div>
             <div class="price-text">US${{product.price}}</div>
-            <div class="add-button">Add To Cart</div>
+            <div class="add-button" ng-hide="cartId !== 0 && size !== 0">Add To Cart</div>
+            <div class="add-button-green" ng-click="addToCart(cartId, prodid, count, size)" ng-show="cartId !== 0 && size !== 0">Add To Cart &#10095</div>
         </div>
         </div>
     </section>
@@ -42,33 +43,25 @@
                 <p style="color: #009FDF">What is this?</p>
             </div>
             <div class="description-box">{{product.description}}</div>
+            <div class="margin">
             <div class="titles color-position">color</div>
-            <div class="circle-color"></div>
+            <div class="circle-color {{color.color}}" ng-repeat="color in colorSwatches track by $index" ng-click="colorImageSelect($index)" ng-class="{'blue-border': $index === selected}"></div>
+
             <div class="titles size-position">size</div>
             <div class="size-container">
-                <div class="size-boxes">s</div>
-                <div class="size-boxes">m</div>
-                <div class="size-boxes">l</div>
-                <div class="size-boxes">xl</div>
+                <div class="size-boxes" ng-click="size = 'Small'" ng-class="{'border-blue': size === 'Small'}">s</div>
+                <div class="size-boxes" ng-click="size = 'Medium'" ng-class="{'border-blue': size === 'Medium'}">m</div>
+                <div class="size-boxes" ng-click="size = 'Large'" ng-class="{'border-blue': size === 'Large'}">l</div>
+                <div class="size-boxes" ng-click="size = 'Extra Large'" ng-class="{'border-blue': size === 'Extra Large'}">xl</div>
             </div>
             <p style="color:#666666; font-family: proxima-nova-medium; font-size: 14px; margin-left: 22px; margin-top: 10px;">Select a color and size to add item to cart.
                 <div class="titles quantity-position">quantity</div>
                 <div class="quantity-container">
                     <button class="size-boxes plus" ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1"></button>
-                    <div class="counter">{{ count }}</div>
+                    <div class="counter">{{count}}</div>
                     <button class="size-boxes minus" ng-click="count = count + 1" ng-init="count = 1"></button>
-
-                    <!-- <button ng-click="count = count + 1" ng-init="count=1">
-                    Increment
-                    </button>
-                    count:
-                    <button ng-click="count = count - 1" ng-init="count = 1" ng-disabled="count == 1">
-                      Decrement
-                    </button> -->
-
-
-
                 </div>
+              </div>
         </div>
     </section>
 

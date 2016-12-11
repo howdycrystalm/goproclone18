@@ -26,6 +26,19 @@ module.exports = {
 
             res.status(200).json(product);
         })
+    },
+
+    getColorSwatches: function(req, res, next) {
+        db.get_color_by_id([req.params.id], function(err, product) {
+            if (err) {
+                console.log(err);
+                return res.status(401).send(err);
+
+            }
+
+            res.status(200).json(product);
+
+        })
     }
 
 

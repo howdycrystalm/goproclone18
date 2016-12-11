@@ -28,5 +28,13 @@ angular.module('goApp')
             });
 
         };
+        this.getColorSwatches = function(id) {
+            return $http({
+                method: 'GET',
+                url: '/api/getColorSwatches/' + id
+            }).then(function(response) {
+                return response.data;
+            });
+        };
 
     });
