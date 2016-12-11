@@ -86,33 +86,36 @@
   }
 
   .add-button {
-    width: 119px;
+    width: 125px;
     height: 19px;
-    background-color: #999999;
     border-radius: 2px;
-    color: #FFFFFF;
+    background-color: #999999;
+    color: #FFF;
     font-family: $title;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-size: 15px;
     margin-left: 21px;
     margin-top: -9px;
-    padding-top: 11px;
-    padding-left: 11px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    text-transform: uppercase;
+
   }
 
   .add-button-green {
-    width: 119px;
+    width: 125px;
     height: 19px;
-    background-color: #7ed321;
     border-radius: 2px;
-    color: #FFFFFF;
+    background-color: #7ed321;
+    color: #FFF;
     font-family: $title;
-    font-size: 14px;
-    text-transform: uppercase;
+    font-size: 15px;
     margin-left: 21px;
     margin-top: -9px;
-    padding-top: 11px;
-    padding-left: 11px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+    padding-left: 8px;
+    text-transform: uppercase;
     cursor: pointer;
   }
   //==============================================================================//
@@ -216,9 +219,10 @@
     height: 36px;
     background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/v1480629108605/images/interface/zoom_gray_36x36.png');
     background-repeat: no-repeat;
-    // position: absolute;
     bottom: 0;
     margin-left: 5px;
+    position: absolute;
+    left: 0;
     cursor: pointer;
   }
 
@@ -279,27 +283,28 @@
     margin-top: 25px;
   }
 
-  .margin {
-    margin-left: 24px;
-  }
+  .swatch-position {
+    width:60px;
+    margin-left: 22px;
+    display:flex;
+    justify-content: space-between;
+}
 
   .circle-color {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    // background-color: #000000;
-    margin-left: 24px;
+    // margin-left: 24px;
     margin-top: 5px;
     display: inline-block;
     cursor: pointer;
-    border: 3px none ;
   }
 
   .blue-border {
-    width: 21px;
-    height: 21px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    border: 3px solid $med-blue;
+    box-shadow:0px 0px 0px 3px $med-blue inset;
   }
 
   .Grey {
@@ -334,7 +339,7 @@
     user-select: none;
     cursor: pointer;
     .border-blue {
-      border: solid 3px $med-blue;
+      box-shadow:0px 0px 0px 3px $med-blue inset;
     }
   }
 
