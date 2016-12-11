@@ -34,7 +34,14 @@
 
         <div class="main-image-container">
           <img class="img-proportion" src="{{selectedImage}}"/>
-          <div class="zoom"></div>
+     <!-- //==============================================================================//
+          //                                Modal                                         //
+          //==============================================================================// -->
+          <div class="zoom" ng-click="showModal=!showModal"></div>
+          <div class="fade" ng-click="showModal=!showModal" ng-show="showModal"></div>
+     <!-- //==============================================================================//
+          //                                Modal                                         //
+          //==============================================================================// -->
         </div>
 
         <div class="details-box">

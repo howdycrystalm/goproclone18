@@ -9,6 +9,7 @@ angular.module("goApp")
         $scope.count = 1;
         $scope.thumbs = [];
         $scope.selected = 3;
+        $scope.showModal = false; /* modal test */
 
         $scope.productImg = {};
         $timeout(function() {}, 100)
