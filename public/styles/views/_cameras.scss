@@ -130,6 +130,8 @@
       @include button-text()
       @include flexSetUp(center, center);
       margin-right: 10px;
+      user-select: none;
+      cursor: pointer;
     }
 
     .outline-button {
