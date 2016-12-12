@@ -9,8 +9,6 @@ module.exports = {
     //pull product from database to give cart info//
 
    getItem: function(req, res, next) {
-        // var products = req.body;
-        console.log('i fired');
      if(req.params.id > 3) {
         db.get_cart_product([req.params.id, req.params.prodid], function(err, product) {
             res.status(200).json(product);
