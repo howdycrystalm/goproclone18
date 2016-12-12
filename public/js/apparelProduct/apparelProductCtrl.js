@@ -9,9 +9,10 @@ angular.module("goApp")
         $scope.count = 1;
         $scope.thumbs = [];
         $scope.selected = 3;
+        $scope.showModal = false; /* modal test */
+        $scope.selectedIndex = 0;
 
         $scope.productImg = {};
-        $timeout(function() {}, 100)
             //originally tried passing params through function(), but params passed through fn have to be placeholder so instead passed through line 20
         $scope.getProduct = function() { //this fn automatically invokes because we need the obect on page load
             apparelProductService.getProduct($stateParams.id, $stateParams.gender).then(function(response) { //we're able to pass $stateParams through this fn's params
@@ -21,8 +22,10 @@ angular.module("goApp")
         };
         $scope.getProduct();
 
-        $scope.imgSwitch = function(theImage) { //this function is setting url to selectedImage
+        $scope.imgSwitch = function(theImage, index) { //this function is setting url to selectedImage
             $scope.selectedImage = theImage;
+            console.log("I AM MEEEEE!!!", index);
+            $scope.selectedIndex = index;
         }
 
         $scope.getThumbs = function() {
@@ -61,6 +64,31 @@ angular.module("goApp")
                     return;
                 }
             }
-        }
+        };
+        // show next image
+        $scope.showNext = function (incOrDec) {
+          var i = $scope.selectedIndex;
+          console.log(i);
+          var thumbs = $scope.thumbs;
+
+          if (incOrDec === '+') {
+            if (i === thumbs.length - 1) {
+              i = 0
+            } else {
+              i++;
+            }
+          }
+          if (incOrDec === '-') {
+            if (i === 0) {
+              i = thumbs.length - 1;
+            } else {
+              i--;
+            }
+          }
+
+          console.log(thumbs,i);
+          $scope.selectedImage = thumbs[i];
+          $scope.selectedIndex = i;
+        };
 
     });
