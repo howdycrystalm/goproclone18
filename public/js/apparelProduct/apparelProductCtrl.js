@@ -10,6 +10,8 @@ angular.module("goApp")
         $scope.thumbs = [];
         $scope.selected = 3;
         $scope.showModal = false; /* modal test */
+        $scope._Index = 0; /*modal test*/
+
         $scope.productImg = {};
             //originally tried passing params through function(), but params passed through fn have to be placeholder so instead passed through line 20
         $scope.getProduct = function() { //this fn automatically invokes because we need the obect on page load
@@ -61,5 +63,9 @@ angular.module("goApp")
                 }
             }
         };
-
+        // show next image
+        $scope.showNext = function () {
+        $scope._Index = ($scope._Index < $scope.images.length - 1) ? ++$scope._Index : 0;
+        };
+        
     });

@@ -34,24 +34,25 @@
 
         <div class="main-image-container">
           <img class="img-proportion" src="{{selectedImage}}"/>
-     <!-- //==============================================================================//
-          //                              START  Modal                                    //
-          //==============================================================================// -->
           <div class="zoom" ng-click="showModal=!showModal"></div>
-        </div>
 
+        </div>
+        <!-- //==============================================================================//
+             //                              START  Modal                                    //
+             //==============================================================================// -->
           <div class="modal-bg" ng-click="showModal=!showModal" ng-show="showModal">
             <span class="close" ng-click="closeModal()">&times;</span>
             <div class="modal-image-container">
               <img class="modal-image-proportion" src="{{selectedImage}}"/>
+              <a class="prev" ng-click="{{selectedImage[i] + 1}}">&#10094;</a>
+              <a class="next" ng-click="showNext()">&#10095;</a>
             </div>
 
   <!-- <a class="prev" ng-repeat="image in thumbs" ng-click="imgSwitch(image)">&#10094;</a>
   <a class="next" ng-repeat="image in thumbs" ng-click="imgSwitch(image)">&#10095;</a> -->
-  <a class="prev" ng-click="imgSwitch(image)">&#10094;</a>
-  <a class="next" ng-click="imgSwitch(image)">&#10095;</a>
+
+
             </div>
-</div>
      <!-- //==============================================================================//
           //                             END  Modal                                       //
           //==============================================================================// -->
