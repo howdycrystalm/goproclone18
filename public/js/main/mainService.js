@@ -16,8 +16,8 @@ angular.module("goApp").service('mainService', function($http) {
 
    this.checkDouble = function(cart, data) {
       for (var i = 0; i < cart.length; i++) {
-         if(cart[i].id === data.id) {
-            cart[i].count++;
+         if(cart[i].id === data.id && cart[i].size === data.size) {
+            cart[i].count += data.count;
             return cart;
          }
       }
