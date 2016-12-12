@@ -25,8 +25,8 @@
         <div class="vertical-thumbs">
             <div class="arrow-up"></div>
             <div> <!--changed getproduct.img to theproducts, took out ng-repeat-->
-              <div class="thumbnail" ng-repeat="image in thumbs">
-                <img class="thumb-proportion" ng-src="{{image}}" ng-click="imgSwitch(image)"/>
+              <div class="thumbnail" ng-repeat="image in thumbs track by $index">
+                <img class="thumb-proportion" ng-src="{{image}}" ng-click="imgSwitch(image, $index)"/> <!-- $index to show current index of thumbs array for modal-->
               </div>
             </div>
             <div class="arrow-down"></div>
@@ -40,12 +40,12 @@
         <!-- //==============================================================================//
              //                              START  Modal                                    //
              //==============================================================================// -->
-          <div class="modal-bg" ng-click="showModal=!showModal" ng-show="showModal">
-            <span class="close" ng-click="closeModal()">&times;</span>
+          <div class="modal-bg" ng-show="showModal">
+            <span class="close" ng-click="showModal = !showModal">&times;</span>
             <div class="modal-image-container">
               <img class="modal-image-proportion" src="{{selectedImage}}"/>
-              <a class="prev" ng-click="{{$index + 1}}">&#10094;</a>
-              <a class="next" ng-click="{{$index - 1}}">&#10095;</a>
+              <a class="prev" ng-click="showNext('-')">&#10094;</a>
+              <a class="next" ng-click="showNext('+')">&#10095;</a>
             </div>
             </div>
 

@@ -10,7 +10,7 @@ angular.module("goApp")
         $scope.thumbs = [];
         $scope.selected = 3;
         $scope.showModal = false; /* modal test */
-        $scope._Index = 0; /*modal test*/
+        $scope.selectedIndex = 0;
 
         $scope.productImg = {};
             //originally tried passing params through function(), but params passed through fn have to be placeholder so instead passed through line 20
@@ -22,8 +22,10 @@ angular.module("goApp")
         };
         $scope.getProduct();
 
-        $scope.imgSwitch = function(theImage) { //this function is setting url to selectedImage
+        $scope.imgSwitch = function(theImage, index) { //this function is setting url to selectedImage
             $scope.selectedImage = theImage;
+            console.log("I AM MEEEEE!!!", index);
+            $scope.selectedIndex = index;
         }
 
         $scope.getThumbs = function() {
@@ -64,8 +66,29 @@ angular.module("goApp")
             }
         };
         // show next image
-        $scope.showNext = function () {
-        $scope._Index = ($scope._Index < $scope.thumbs.length - 1) ? ++$scope._Index : 0;
+        $scope.showNext = function (incOrDec) {
+          var i = $scope.selectedIndex;
+          console.log(i);
+          var thumbs = $scope.thumbs;
+
+          if (incOrDec === '+') {
+            if (i === thumbs.length - 1) {
+              i = 0
+            } else {
+              i++;
+            }
+          }
+          if (incOrDec === '-') {
+            if (i === 0) {
+              i = thumbs.length - 1;
+            } else {
+              i--;
+            }
+          }
+
+          console.log(thumbs,i);
+          $scope.selectedImage = thumbs[i];
+          $scope.selectedIndex = i;
         };
 
     });
