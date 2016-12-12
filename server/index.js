@@ -42,7 +42,7 @@ app.use(passport.session());
 
 //passport endpoints
 app.post('/api/login', passport.authenticate('local', {
-    successRedirect: '/me'
+    successRedirect: '/api/me'
 }));
 
 app.get('/api/logout', function(req, res, next) {

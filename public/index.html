@@ -9,7 +9,7 @@
    </head>
    <body ng-controller="mainCtrl">
 
-         <banner class="center" state=stateName products=cart subtot='subTotal' incart='items' ng-class="{'hide': stateName === 'loggin'}"></banner>
+         <banner class="center" state=stateName products=cart subtot='subTotal' incart='items' islogged="login" displayname="name" ng-class="{'hide': stateName === 'loggin'}"></banner>
 
          <ui-view></ui-view>
 
