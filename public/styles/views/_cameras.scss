@@ -271,9 +271,10 @@
         width: 144px;
         min-height: 35px;
         background: #00b8fd;
-        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-family: $title;
+        font-weight: bold;
         font-size: 12px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: #FFFFFF;
         display: -webkit-flex;
         -webkit-align-items: center;
@@ -286,9 +287,10 @@
         width: 144px;
         min-height: 35px;
         background: #00b8fd;
-        font-family: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
+        font-family: $title;
+        font-weight: bold;
         font-size: 12px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: #FFFFFF;
         display: -webkit-flex;
         -webkit-align-items: center;
