@@ -1,10 +1,10 @@
 angular.module("goApp").service('mainService', function($http) {
 
 
-   this.getItem = function(id, amount, size) {
+   this.getItem = function(id, prodid, amount, size) {
       return $http({
          method: 'GET',
-         url: '/api/getItem/' + id
+         url: '/api/getItem/' + id + '/' + prodid
       }).then(function(response) {
          response.data[0].count = amount;
          if (size !== "null") {
@@ -16,8 +16,8 @@ angular.module("goApp").service('mainService', function($http) {
 
    this.checkDouble = function(cart, data) {
       for (var i = 0; i < cart.length; i++) {
-         if(cart[i].id === data.id) {
-            cart[i].count++;
+         if(cart[i].id === data.id && cart[i].size === data.size) {
+            cart[i].count += data.count;
             return cart;
          }
       }

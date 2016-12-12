@@ -1,4 +1,4 @@
-SELECT pictures.img_url, pictures.gender, pictures.id
+SELECT pictures.img_url, pictures.gender, pictures.product_id, pictures.id
 FROM products
 JOIN pictures
 ON products.id = pictures.product_id

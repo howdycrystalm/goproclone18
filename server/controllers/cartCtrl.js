@@ -9,11 +9,16 @@ module.exports = {
     //pull product from database to give cart info//
 
    getItem: function(req, res, next) {
-        // var products = req.body;
-
-     db.get_cart_product([req.params.id], function(err, product) {
-         res.status(200).json(product);
-     });
+     if(req.params.id > 3) {
+        db.get_cart_product([req.params.id, req.params.prodid], function(err, product) {
+            res.status(200).json(product);
+        });
+      }
+      else {
+         db.get_cameras([req.params.id], function(err, product) {
+            res.status(200).json(product);
+         })
+      }
     },
 
    processPayment: function(req, res, next) {
