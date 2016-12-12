@@ -1,6 +1,7 @@
 .apparelProduct-container {
   -webkit-font-smoothing: antialiased;
-  height: 100vw;
+  height: 100vh;
+  width: 100vw;
   background: red;
   @include flexSetUp(center, center);
 
@@ -400,27 +401,65 @@
   //==============================================================================//
 
   .modal-bg {
-    background-color: none;
-    width: 1200px;
-    height: 100vh;
-  }
-
-  .modal-bg-active {
-    background: rgba(0, 0, 0, .5);
-    width: 1200px;
-    height: 100vh;
-  }
-  .fade {
-    background-color: black;
+    background: rgba(0, 0, 0, .75);
     z-index: 99;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    opacity: 0.75;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include flexSetUp(center, center);
   }
+  .modal-image-container {
+    background-color: lightcyan;
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    @include flexSetUp(center, center);
+  }
+
+  .modal-image-proportion {
+    max-height: 100%;
+    height: auto;
+    width: auto;
+  }
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    font-size: 53px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  }
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
 
 
 }

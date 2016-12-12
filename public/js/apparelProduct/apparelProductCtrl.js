@@ -10,9 +10,7 @@ angular.module("goApp")
         $scope.thumbs = [];
         $scope.selected = 3;
         $scope.showModal = false; /* modal test */
-
         $scope.productImg = {};
-        $timeout(function() {}, 100)
             //originally tried passing params through function(), but params passed through fn have to be placeholder so instead passed through line 20
         $scope.getProduct = function() { //this fn automatically invokes because we need the obect on page load
             apparelProductService.getProduct($stateParams.id, $stateParams.gender).then(function(response) { //we're able to pass $stateParams through this fn's params
@@ -62,6 +60,6 @@ angular.module("goApp")
                     return;
                 }
             }
-        }
+        };
 
     });
