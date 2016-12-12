@@ -7,7 +7,7 @@ var session = require('express-session')
 var app = module.exports = express();
 var stripeKey = require('./stripeSecretKeys');
 var stripe = require('stripe')(stripeKey.secretKey);
-var port = 80;
+var port = 3000;
 
 var connectionString = config.MASSIVE_URI;
 var db = massive.connectSync({
@@ -42,7 +42,7 @@ app.use(passport.session());
 
 //passport endpoints
 app.post('/api/login', passport.authenticate('local', {
-    successRedirect: '/me'
+    successRedirect: '/api/me'
 }));
 
 app.get('/api/logout', function(req, res, next) {

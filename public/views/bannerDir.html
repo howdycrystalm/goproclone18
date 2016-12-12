@@ -19,7 +19,9 @@
       </div>
       <div class="bottom">
          <ul>
-            <li><a ui-sref="loggin">Login/Register</a></li>
+            <li ng-hide="islogged"><a ui-sref="loggin">Login/Register</a></li>
+            <li ng-show="islogged"><a ui-sref="loggin">{{displayname}}</a></li>
+            <!-- <li><a ui-sref="loggin">Login/Register</a></li> -->
             <li>Support</li>
             <li>US <div class="down-arrow"></div></li>
             <li ng-click="cartShow = !cartShow" class="hover"><img src="http://shop.spacex.com/media/queldorei/shopper/new_cart_icon.png" alt="">
