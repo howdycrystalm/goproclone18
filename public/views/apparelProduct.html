@@ -44,8 +44,9 @@
             <span class="close" ng-click="closeModal()">&times;</span>
             <div class="modal-image-container">
               <img class="modal-image-proportion" src="{{selectedImage}}"/>
-              <a class="prev" ng-click="{{selectedImage[i] + 1}}">&#10094;</a>
-              <a class="next" ng-click="showNext()">&#10095;</a>
+              <a class="prev" ng-click="{{$index + 1}}">&#10094;</a>
+              <a class="next" ng-click="{{$index - 1}}">&#10095;</a>
+            </div>
             </div>
 
   <!-- <a class="prev" ng-repeat="image in thumbs" ng-click="imgSwitch(image)">&#10094;</a>
