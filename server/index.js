@@ -7,7 +7,7 @@ var session = require('express-session')
 var app = module.exports = express();
 var stripeKey = require('./stripeSecretKeys');
 var stripe = require('stripe')(stripeKey.secretKey);
-var port = 3000;
+var port = 80;
 
 var connectionString = config.MASSIVE_URI;
 var db = massive.connectSync({
