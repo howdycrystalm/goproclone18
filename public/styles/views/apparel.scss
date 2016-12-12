@@ -33,7 +33,7 @@
 }
 
 .apparel-container {
-    padding-left: 90px;
+    // padding-left: 90px;
     width: 1200px;
     margin: auto auto 50px;
 
@@ -57,115 +57,122 @@
         }
     }
 
-    .products {
-        display: inline-block;
-        padding: 10px;
-        height: 535px;
+    .test {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
 
-        .img-container {
-            width: 265px;
-            height: 352px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: white;
-            border: 1px solid #CCCCCC;
-            overflow: hidden;
+      .products {
+          display: inline-block;
+          padding: 10px;
+          height: 535px;
 
-            .img-size {
-                // width: auto;
-                // height: 350px;
-                // display: inline-block;
-                // margin-bottom: 10px;
-                // border: 1px solid #CCCCCC;
-                // margin-bottom: 12px;
-                // position: relative;
-                // overflow: hidden;
-                max-height: 100%;
-                // max-width: 100%;
-                height: auto;
-                width: auto;
-            }
-        }
+          .img-container {
+              width: 265px;
+              height: 352px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: white;
+              border: 1px solid #CCCCCC;
+              overflow: hidden;
 
-        .img-container:hover {
-            border: 1px solid black;
-            cursor: pointer;
-        }
-
-        .circle-wrapper {
-            border-bottom: 1px solid #ccc;
-
-            .circle-container {
-                display: flex;
-                justify-content: space-around;
-                max-width: 100px;
-                width: auto;
-                margin: 0 auto;
-                padding-bottom: 12px;
-
-                .circleBase {
-                    border-radius: 50%;
-                    // margin: 0 auto;
-                    margin-top: 20px;
-                }
-
-                .type2 {
-                    width: 24px;
-                    height: 24px;
-                    background: #ccc;
-                    // border: 3px solid #000;
-                }
-
-                .Grey {
-                    background: #ccc;
-                }
-
-                .Sand {
-                    background: #e3c38a;
-                }
-
-                .Black {
-                    background: black;
-                }
-
-                .Charcoal {
-                    background: #666465;
-                }
-            }
-        }
-        .product-details {
-          min-height: 132px;
-          display: flex;
-          .product-title {
-            display: flex;
-            font-family: 'proxima-nova-rg', sans-serif;
-            width: 52%;
-            font-size: 16px;
-            padding-top: 10px;
-          }
-          .product-price {
-            font-family: 'proxima-nova-rg', sans-serif;
-            width: 48%;
-            font-size: 16px;
-            padding-top: 10px;
-            text-align: right;
-            h2 {
-              height: 20px;
-            }
-            .plus-wrap {
-              width: 129px;
-              img {
-                height: 10px;
+              .img-size {
+                  // width: auto;
+                  // height: 350px;
+                  // display: inline-block;
+                  // margin-bottom: 10px;
+                  // border: 1px solid #CCCCCC;
+                  // margin-bottom: 12px;
+                  // position: relative;
+                  // overflow: hidden;
+                  max-height: 100%;
+                  // max-width: 100%;
+                  height: auto;
+                  width: auto;
               }
+          }
+
+          .img-container:hover {
+              border: 1px solid black;
+              cursor: pointer;
+          }
+
+          .circle-wrapper {
+              border-bottom: 1px solid #ccc;
+
+              .circle-container {
+                  display: flex;
+                  justify-content: space-around;
+                  max-width: 100px;
+                  width: auto;
+                  margin: 0 auto;
+                  padding-bottom: 12px;
+
+                  .circleBase {
+                      border-radius: 50%;
+                      // margin: 0 auto;
+                      margin-top: 20px;
+                  }
+
+                  .type2 {
+                      width: 24px;
+                      height: 24px;
+                      background: #ccc;
+                      // border: 3px solid #000;
+                  }
+
+                  .Grey {
+                      background: #ccc;
+                  }
+
+                  .Sand {
+                      background: #e3c38a;
+                  }
+
+                  .Black {
+                      background: black;
+                  }
+
+                  .Charcoal {
+                      background: #666465;
+                  }
+              }
+          }
+          .product-details {
+            min-height: 132px;
+            display: flex;
+            .product-title {
+              display: flex;
+              font-family: 'proxima-nova-rg', sans-serif;
+              width: 52%;
+              font-size: 16px;
+              padding-top: 10px;
+            }
+            .product-price {
+              font-family: 'proxima-nova-rg', sans-serif;
+              width: 48%;
+              font-size: 16px;
+              padding-top: 10px;
+              text-align: right;
               h2 {
-                color: #009fdf;
-                font-weight: bold;
-                font-size: 15px;
-                display: inline;
+                height: 20px;
+              }
+              .plus-wrap {
+                width: 129px;
+                img {
+                  height: 10px;
+                }
+                h2 {
+                  color: #009fdf;
+                  font-weight: bold;
+                  font-size: 15px;
+                  display: inline;
+                }
               }
             }
           }
-        }
+      }
     }
+
 }
