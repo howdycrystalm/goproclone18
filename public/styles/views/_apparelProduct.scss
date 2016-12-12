@@ -1,7 +1,7 @@
 .apparelProduct-container {
   -webkit-font-smoothing: antialiased;
   height: 800px;
-  background: red;
+  background: #FFFFFF;
   @include flexSetUp(center, center);
 
   .sticky-header {
@@ -133,7 +133,6 @@
   .product-container {
     max-width: 1200px;
     height: 533px;
-    background: tan;
     position: absolute;
     top: 153px;
     margin-right: auto;
@@ -147,7 +146,6 @@
   .vertical-thumbs {
     width: 92px;
     height: 366px;
-    background: palevioletred;
     cursor: pointer;
   }
 
@@ -172,7 +170,7 @@
     width: 90px;
     height: 50px;
     background-color: #FFFFFF;
-    border: 1px black solid;
+    border: 1px #cccccc solid;
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
@@ -184,6 +182,7 @@
     max-height: 100%;
     height: auto;
     width: auto;
+   overflow: hidden;
   }
 
   .arrow-down {
@@ -210,7 +209,6 @@
   //==============================================================================//
   .main-image-container {
     width: 657px;
-    background-color: mediumpurple;
     margin: 0 10px;
     position: relative;
     @include flexSetUp(center, center)
@@ -225,6 +223,7 @@
   .zoom {
     width: 36px;
     height: 36px;
+    // filter:brightness(90%);
     background: url('http://demandware.edgesuite.net/aasj_prd/on/demandware.static/Sites-GoPro-Site/-/default/v1480629108605/images/interface/zoom_gray_36x36.png');
     background-repeat: no-repeat;
     bottom: 0;
@@ -240,12 +239,10 @@
   .details-box {
     width: 430px;
     height: 100%;
-    background-color: darkseagreen;
   }
 
   .paypal-info-box {
     height: 12px;
-    background-color: slategrey;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -270,7 +267,6 @@
 
   .description-box {
     width: 94%;
-    background-color: darkturquoise;
     font-family: $title;
     font-size: 14px;
     color: #666666;
@@ -339,7 +335,6 @@
     margin-top: 5px;
     margin-left: 22px;
     width: 232px;
-    background-color: papayawhip;
     display: flex;
     align-items: center;
     justify-content: space-between;;
@@ -354,7 +349,7 @@
   .size-boxes {
     width: 52px;
     height: 36px;
-    border: 1px #666666 solid;
+    border: 1px #cccccc solid;
     font-family: $title;
     font-size: 15px;
     text-transform: uppercase;
@@ -375,7 +370,6 @@
   .quantity-container {
     @extend .size-container;
     width: 159px;
-    background-color: lightseagreen;
   }
 
   .plus {
@@ -390,7 +384,7 @@
   .counter {
     width: 65px;
     height: 34px;
-    border: 1px #666666 solid;
+    border: 1px #cccccc solid;
     border-right: none;
     border-left: none;
     font-family: $title;
@@ -419,7 +413,6 @@
     @include flexSetUp(center, center);
   }
   .modal-image-container {
-    background-color: lightcyan;
     width: 700px;
     height: 600px;
     overflow: hidden;
