@@ -1,21 +1,23 @@
 angular.module("goApp").service('mainService', function($http) {
 
 
-   this.getItem = function(id) {
+   this.getItem = function(id, prodid, amount, size) {
       return $http({
          method: 'GET',
-         url: '/api/getItem/' + id
+         url: '/api/getItem/' + id + '/' + prodid
       }).then(function(response) {
-         console.log(response.data);
-         response.data[0].count = 1;
-         return response.data;
+         response.data[0].count = amount;
+         if (size !== "null") {
+            response.data[0].size = size;
+         }
+         return response.data[0];
       });
    };
 
    this.checkDouble = function(cart, data) {
       for (var i = 0; i < cart.length; i++) {
-         if(cart[i].id === data.id) {
-            cart[i].count++;
+         if(cart[i].id === data.id && cart[i].size === data.size) {
+            cart[i].count += data.count;
             return cart;
          }
       }
@@ -37,5 +39,23 @@ angular.module("goApp").service('mainService', function($http) {
          total += parseInt(cart[i].count);
       }
       return total;
+   };
+
+   this.removeItem = function(cart, id) {
+      for (var i = 0; i < cart.length; i++) {
+         if (cart[i].id === id) {
+            cart.splice(i, 1);
+            return cart;
+         }
+      }
+   };
+
+   this.getItems = function() {
+     return $http ({
+       method: 'GET',
+        url: '/api/getItems'
+      }).then(function(response) {
+        return response.data
+      });
    };
 });

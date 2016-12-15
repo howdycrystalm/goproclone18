@@ -21,8 +21,8 @@ passport.use(new LocalStrategy({
     passwordField: 'password'
 }, function(email, password, done) {
     email = email.toLowerCase();
-
-    db.user.user_search_email([email], function(err, user) {
+    console.log(email);
+    db.user_search_email([email], function(err, user) { //add.user
         user = user[0];
 
         // If err, return err
@@ -44,7 +44,7 @@ passport.serializeUser(function(user, done) {
     done(null, user.id);
 });
 passport.deserializeUser(function(id, done) {
-    db.user.user_search_id([id], function(err, user) {
+    db.user_search_id([id], function(err, user) {
         done(err, user[0]);
     });
 });

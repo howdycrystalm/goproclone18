@@ -5,8 +5,9 @@ var massive = require('massive');
 var config = require('./config.js');
 var session = require('express-session')
 var app = module.exports = express();
-
-var port = 3000;
+var stripeKey = require('./stripeSecretKeys');
+var stripe = require('stripe')(stripeKey.secretKey);
+var port = 80;
 
 var connectionString = config.MASSIVE_URI;
 var db = massive.connectSync({
@@ -20,7 +21,8 @@ app.use(cors());
 
 var UserCtrl = require('./controllers/UserCtrl');
 var cartCtrl = require('./controllers/cartCtrl');
-
+var apparelVCtrl = require('./controllers/apparelVCtrl');
+var productCtrl = require('./controllers/productCtrl');
 var passport = require('./services/passport');
 
 var isAuthed = function(req, res, next) {
@@ -40,7 +42,7 @@ app.use(passport.session());
 
 //passport endpoints
 app.post('/api/login', passport.authenticate('local', {
-    successRedirect: '/me'
+    successRedirect: '/api/me'
 }));
 
 app.get('/api/logout', function(req, res, next) {
@@ -54,7 +56,16 @@ app.post('/api/register', UserCtrl.register);
 app.post('/api/user', UserCtrl.read);
 app.get('/api/me', isAuthed, UserCtrl.me);
 app.put('/api/user/current', isAuthed, UserCtrl.update);
-app.get('/api/getItem/:id', cartCtrl.getItem);
+app.get('/api/getItem/:id/:prodid', cartCtrl.getItem);
+app.get('/api/getItems', apparelVCtrl.getItems);
+app.get('/api/getProduct/:id', productCtrl.getProduct);
+app.get('/api/getThumbs/:id/:gender', productCtrl.getThumbs);
+app.get('/api/getColorSwatches/:id', productCtrl.getColorSwatches);
+
+
+//stripe - payment
+app.post('/api/payment', cartCtrl.processPayment);
+
 
 app.listen(port, function() {
     console.log('nailed it on port ' + port);

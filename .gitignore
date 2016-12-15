@@ -1,4 +1,4 @@
 node_modules
 config.js
-bundle.js
-bundle.css
+.DS_Store
+stripeSecretKeys.js
