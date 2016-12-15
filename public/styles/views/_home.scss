@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Miriam+Libre');
-$font: 'Roboto', sans-serif;
+
 .top-banner {
   height: 860px;
   background-color: white;
@@ -36,7 +36,7 @@ $font: 'Roboto', sans-serif;
       flex-direction: column;
       margin: 150px 0 80px 0;
       p {
-        font-family: $font;
+        font-family: $title;
         margin-bottom: 25px;
         color: white;
 
@@ -46,7 +46,7 @@ $font: 'Roboto', sans-serif;
     .text-banner-bottom {
       margin-top: 56px;
       h2 {
-        font-family: $font;
+        font-family: $title;
         font-size: 50px;
         color: $fake-black;
         font-weight: bolder;
@@ -54,7 +54,7 @@ $font: 'Roboto', sans-serif;
       }
       p {
         text-align: center;
-        font-family: $font;
+        font-family: $title;
         font-size: 20px;
         color: $fake-black;
         padding-bottom: 30px;
@@ -66,7 +66,7 @@ $font: 'Roboto', sans-serif;
 .button-wrapper {
   padding-bottom: 50px;
   .button {
-    width: 63px;
+    width: 64px;
     background: #009fdf;
     margin: 0 auto;
     padding: 15px 40px;
@@ -74,7 +74,7 @@ $font: 'Roboto', sans-serif;
     color: white;
     font-weight: 700;
     font-size: 12px;
-    font-family: $font;
+    font-family: $title;
     text-align: center;
   }
   .button:hover {
@@ -171,7 +171,7 @@ $font: 'Roboto', sans-serif;
           height: 100%;
           h2 {
             font-size: 35px;
-            font-family: $font;
+            font-family: $title;
             color: $fake-black;
             font-weight: bolder;
             margin-bottom: 30px;
@@ -194,7 +194,7 @@ $font: 'Roboto', sans-serif;
               color: white;
               font-weight: 700;
               font-size: 12px;
-              font-family: $font;
+              font-family: $title;
               text-align: center;
             }
             .button:hover {
@@ -220,7 +220,7 @@ $font: 'Roboto', sans-serif;
       flex-direction: column;
         .text-stuff {
           font-size: 54px;
-          font-family: $font;
+          font-family: $title;
           color: white;
           text-transform: uppercase;
           letter-spacing: 1.5px;
