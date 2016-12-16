@@ -54,7 +54,7 @@
       }
       p {
         text-align: center;
-        font-family: $title;
+        font-family: $tagline;
         font-size: 20px;
         color: $fake-black;
         padding-bottom: 30px;
@@ -110,7 +110,7 @@
       .drone-text {
         @include flexSetUp(flex-start, center);
         flex-direction: column;
-        font-family: sans-serif;
+        font-family: $title;
         font-weight: bolder;
         margin-top: 30px;
         color: #333333;
@@ -178,7 +178,7 @@
           }
           p {
             font-size: 16px;
-            font-family: sans-serif;
+            font-family: $tagline;
             color: $fake-black;
             line-height: 30px;
             margin-bottom: 30px;
