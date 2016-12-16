@@ -13,7 +13,7 @@ $font: 'Roboto';
 .login-page-wrapper {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: overlay;
     .login-wrapper {
         .logo-login {
             max-width: 145px;
@@ -23,7 +23,7 @@ $font: 'Roboto';
 
         .sign-in {
             text-align: center;
-            padding-top: 75px;
+            padding-top: 50px;
             font-size: 30px;
             font-family: $font;
             color: white;
@@ -94,6 +94,7 @@ $font: 'Roboto';
         }
         .center-spacer {
           text-align: center;
+          height: 300px;
           .or-spacer1 {
             width: 200px;
             display: inline-block;
@@ -165,7 +166,8 @@ $font: 'Roboto';
             text-align: center;
             color: white;
             font-family: 'proxima-nova-light',sans-serif;
-            margin-top: 40px;
+            margin-top: 20px;
+            margin-bottom: 40px;
 
           }
           .sign-up-link {
