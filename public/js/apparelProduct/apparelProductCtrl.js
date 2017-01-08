@@ -1,5 +1,5 @@
 angular.module("goApp")
-    .controller('apparelProductCtrl', function($scope, apparelProductService, $stateParams, $timeout) { //might not need ngAnimate
+    .controller('apparelProductCtrl', function($scope, apparelProductService, $stateParams, $timeout) { 
 
         var id = $stateParams.id;
         var gender = $stateParams.gender;
@@ -9,7 +9,7 @@ angular.module("goApp")
         $scope.count = 1;
         $scope.thumbs = [];
         $scope.selected = 3;
-        $scope.showModal = false; /* modal test */
+        $scope.showModal = false;
         $scope.selectedIndex = 0;
 
         $scope.productImg = {};
