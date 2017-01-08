@@ -2,7 +2,7 @@
   -webkit-font-smoothing: antialiased;
   height: 800px;
   background: #FFFFFF;
-  @include flexSetUp(center, center);
+  // @include flexSetUp(center, center);
 
   .sticky-header {
     max-width:1180px; /*1200 minus the padding*/
@@ -18,9 +18,11 @@
     margin-left: auto;
     border-radius:3px;
     @include flexSetUp(flex-start, center);
+
   }
 
   .product-name {
+    width: 115px;
     font-family: $title;
     font-size: 30px;
     color: #000000;
@@ -30,9 +32,9 @@
     width: 185px;
     height: 33px;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    left: 345px;
+    // flex-direction: row;
+    position: relative;
+    left: 219px;
   }
 
   .delivery-truck {
@@ -52,13 +54,13 @@
   }
 
   .plus-box {
-    width: 486px;
-    height: 33px;
+    // width: 477px;
+    // height: 33px;
     display: flex;
-    flex-direction: row;
-    position: absolute;
-    margin-top: 6px;
-    margin-left: 702px;
+    // flex-direction: row;
+    position: relative;
+    margin-top: 9px;
+    left: 402px;
   }
 
   .plus-logo {
