@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joebiden123456/GoProClone.git"
+    "url": "git+https://github.com/howdycrystalm/GoProClone-1.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joebiden123456/GoProClone/issues"
+    "url": "https://github.com/howdycrystalm/GoProClone-1/issues"
   },
-  "homepage": "https://github.com/joebiden123456/GoProClone#readme",
+  "homepage": "https://github.com/howdycrystalm/GoProClone-1#readme",
   "dependencies": {
     "angular": "^1.5.9",
     "angular-stripe": "^4.2.12",

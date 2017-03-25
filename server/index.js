@@ -7,7 +7,8 @@ var session = require('express-session')
 var app = module.exports = express();
 var stripeKey = require('./stripeSecretKeys');
 var stripe = require('stripe')(stripeKey.secretKey);
-var port = 80; //crystal changes to 3000 when working locally
+
+var config = require('./config');
 
 var connectionString = config.MASSIVE_URI;
 var db = massive.connectSync({
@@ -67,6 +68,6 @@ app.get('/api/getColorSwatches/:id', productCtrl.getColorSwatches);
 app.post('/api/payment', cartCtrl.processPayment);
 
 
-app.listen(port, function() {
-    console.log('nailed it on port ' + port);
+app.listen(config.serverPort, function() {
+  console.log('nailed it on port', config.serverPort);
 })
