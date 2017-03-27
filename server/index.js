@@ -63,7 +63,6 @@ app.get('/api/getProduct/:id', productCtrl.getProduct);
 app.get('/api/getThumbs/:id/:gender', productCtrl.getThumbs);
 app.get('/api/getColorSwatches/:id', productCtrl.getColorSwatches);
 
-
 //stripe - payment
 app.post('/api/payment', cartCtrl.processPayment);
 
