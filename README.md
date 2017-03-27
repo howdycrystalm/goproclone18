@@ -1,7 +1,7 @@
 # GoProClone
 
 ##Hosted Site
-[GoBro.us](http://gobro.us)
+[fopro.me](http://fopro.me)
 ##Original Site
 [GoPro.com](http://gopro.com)
 
