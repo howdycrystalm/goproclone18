@@ -468,7 +468,7 @@
   align-items: center;
 
   .left {
-    width: 555px;
+    width: 475px;
     font-size: .875rem;
     font-family: $header-link;
     font-weight: bold;
@@ -485,5 +485,12 @@
   }
   .logo {
     @include width-height(100px, 35px);
+  }
+
+  .plus {
+    @include width-height(71px, 10px);
+  }
+  .search-icon {
+    @include width-height(14px, 14px);
   }
 }
