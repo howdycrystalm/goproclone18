@@ -137,24 +137,33 @@
       <li><i class="fas fa-search"></i></li>
     </ul>
   </div>
+    <div class="right-container">
   <div class="right">
     <div class="top">Free 2-Day Shipping + Free Returns</div>
     <div class="bottom">
-        <ul>
-          <!-- uncomment code below when have angular set up -->
-          <!-- <li ng-hide="islogged"><a ui-sref="loggin">Login/Register</a></li> -->
-          <!-- <li ng-show="islogged"><a ui-sref="loggin">{{displayname}}</a></li> -->
-          <li><a ui-sref="loggin">Log in/Register</a></li>
-          <li>Support</li>
-          <li>EN <i class="fas fa-caret-down"></i></li>
-          <li ng-click="cartShow = !cartShow" class="hover">
-            <i class="fas fa-shopping-cart"></i>
-              <!-- uncomment code below when have angular set up -->
-              <!-- <div class="cart-total" ng-class="{'hide': incart <= 0}">
-                <h2>{{incart}}</h2>
-              </div> -->
-          </li>
-        </ul>
+      <ul>
+        <!-- uncomment code below when have angular set up -->
+        <!-- <li ng-hide="islogged"><a ui-sref="loggin">Login/Register</a></li> -->
+        <!-- <li ng-show="islogged"><a ui-sref="loggin">{{displayname}}</a></li> -->
+        <li><a ui-sref="loggin">Log in/Register</a></li>
+        <li>Support</li>
+        <li>EN <i class="fas fa-caret-down"></i></li>
+            <!-- legacy code -->
+            <!-- <div class="cart-total" ng-class="{'hide': incart <= 0}"> -->
+        <!-- <li class="cart-total">
+          <h2>{{incart}}</h2>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+    <div class="cart-container">
+      <div ng-click="cartShow = !cartShow" class="hover">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <div class="cart-total">
+        <h2>{{incart}}</h2>
+      </div>
     </div>
   </div>
 </nav>
