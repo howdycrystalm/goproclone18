@@ -955,7 +955,7 @@ var alertTypes = ['error', 'warning', 'info', 'success', 'input', 'prompt'];
 var setParameters = function setParameters(params) {
   var modal = (0, _handleSwalDom.getModal)();
 
-  var $title = modal.querySelector('h2');
+  var $main = modal.querySelector('h2');
   var $text = modal.querySelector('p');
   var $cancelBtn = modal.querySelector('button.cancel');
   var $confirmBtn = modal.querySelector('button.confirm');
@@ -963,7 +963,7 @@ var setParameters = function setParameters(params) {
   /*
    * Title
    */
-  $title.innerHTML = params.html ? params.title : (0, _handleDom.escapeHtml)(params.title).split('\n').join('<br>');
+  $main.innerHTML = params.html ? params.title : (0, _handleDom.escapeHtml)(params.title).split('\n').join('<br>');
 
   /*
    * Text

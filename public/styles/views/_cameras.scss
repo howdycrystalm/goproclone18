@@ -39,7 +39,7 @@
     }
 
     .header-text-styling {
-      font-family: $title;
+      font-family: $main;
       font-size: 64px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -92,7 +92,7 @@
     }
 
     .title-font {
-      font-family: $title;
+      font-family: $main;
       font-weight: bold;
       font-size: 36px;
       margin-top: 3vh;
@@ -128,7 +128,7 @@
       color: #ffffff;
       border-radius: 3px;
       @include button-text()
-      @include flexSetUp(center, center);
+      @include flex-set-up(center, center);
       margin-right: 10px;
       user-select: none;
       cursor: pointer;
@@ -140,13 +140,13 @@
       border: 2px solid $button-color;
       color: $button-color;
       @include button-text()
-      @include flexSetUp(center, center);
+      @include flex-set-up(center, center);
       margin-left: 10px;
     }
 
     .compare-text {
       @include button-text()
-      @include flexSetUp(center, center);
+      @include flex-set-up(center, center);
       color: $fake-black;
       margin-top: 5px;
       text-transform: uppercase;
@@ -203,7 +203,7 @@
     }
 
     .bottom-text-styling {
-      font-family: $title;
+      font-family: $main;
       font-size: 64px;
       font-weight: bold;
       letter-spacing: 1px;
@@ -212,7 +212,7 @@
 
     .compare-text-bottom {
       @include button-text()
-      @include flexSetUp(center, center);
+      @include flex-set-up(center, center);
       color: $fake-black;
       margin-top: 24px;
       padding-bottom: 72px;
@@ -252,7 +252,7 @@
 }
 
     .top-box-title {
-      font-family: $title;
+      font-family: $main;
         font-size: 26px;
         font-weight: bold;
         color: $fake-black;
@@ -271,7 +271,7 @@
         width: 144px;
         min-height: 35px;
         background: #00b8fd;
-        font-family: $title;
+        font-family: $main;
         font-weight: bold;
         font-size: 12px;
         letter-spacing: 1px;
@@ -287,7 +287,7 @@
         width: 144px;
         min-height: 35px;
         background: #00b8fd;
-        font-family: $title;
+        font-family: $main;
         font-weight: bold;
         font-size: 12px;
         letter-spacing: 1px;
@@ -384,7 +384,7 @@
         text-align: center;
         line-height: 1.5em;
         font-size: 13px;
-        font-family: $title;
+        font-family: $main;
         position: relative;
         top: 100px;
         color: #666666;
@@ -404,7 +404,7 @@
         text-align: center;
         line-height: 1.5em;
         font-size: 13px;
-        font-family: $title;
+        font-family: $main;
         position: relative;
         top: 28px;
         color: #666666;
@@ -417,7 +417,7 @@
         text-align: center;
         line-height: 1.5em;
         font-size: 13px;
-        font-family: $title;
+        font-family: $main;
         position: relative;
         top: 28px;
         color: #FFFFFF;

@@ -3,31 +3,30 @@
 @font-face {
   font-family: 'proxima-nova-rg';
   src: url('./fonts/proximanova-regular-webfont.woff') format('woff'),
-       url('./fonts/proximanova-regular-webfont.woff2') format('woff2'),
+    url('./fonts/proximanova-regular-webfont.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'proxima-nova-light';
   src: url('./fonts/proximanova-light-webfont.woff') format('woff'),
-       url('./fonts/proximanova-light-webfont.woff2') format('woff2'),
+    url('./fonts/proximanova-light-webfont.woff2') format('woff2');
 }
 @font-face {
   font-family: 'proxima-nova-medium';
   src: url('./fonts/proximanova-medium-webfont.woff') format('woff'),
-       url('./fonts/proximanova-medium-webfont.woff2') format('woff2');
+    url('./fonts/proximanova-medium-webfont.woff2') format('woff2');
 }
 
-$header-link: 'Miriam Libre', sans-serif ; //use all caps, bold SHOP APPS WATCH
+$header-link: 'Miriam Libre', sans-serif; //use all caps, bold SHOP APPS WATCH
 $header-text: 'Roboto', sans-serif; //use medium for Login/Register Support US, also use for dropdown Cameras, Drones, etc.
 
 $button-color: #00b8fd;
-$med-blue: #009FDF;
-$dark-blue: #005DAC;
-$white: #FFFFFF;
+$med-blue: #009fdf;
+$dark-blue: #005dac;
+$white: #ffffff;
 $fake-black: #333333;
 $black: #000000;
-$light-grey: #F7F7F7;
-
+$light-grey: #f7f7f7;
 
 //==============================================================================//
 //                               Header Text                                    //
@@ -41,8 +40,8 @@ $header-font-size: 14px;
 //                             Body Text                                        //
 //==============================================================================//
 
-$title: 'proxima-nova-medium', 'Tahoma', 'Helvetica', sans-serif;
-$title-size: 48px;
+$main: 'proxima-nova-medium', 'Tahoma', 'Helvetica', sans-serif;
+$main-size: 48px;
 $tagline: 'proxima-nova-rg', 'Open Sans', 'Helvetica', sans-serif;
 $tagline-size: 18px;
 $button-text: 'Open Sans', 'Tahoma', 'Helvetica', sans-serif;
@@ -55,6 +54,6 @@ $button-text-size: 12px;
 
 $footer-title: 'Miriam Libre', 'Tahoma', 'Helvetica', sans-serif;
 $footer-title-size: 15px;
-$footer-tag: 'Roboto','Tahoma', 'Helvetica', sans-serif; //if possible, make Roboto Light weight
+$footer-tag: 'Roboto', 'Tahoma', 'Helvetica', sans-serif; //if possible, make Roboto Light weight
 $footer-tag-size: 14px;
 $footer-link: 'Helvetica', 'Tahoma', sans-serif;

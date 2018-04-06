@@ -2,7 +2,7 @@
   -webkit-font-smoothing: antialiased;
   height: 800px;
   background: #FFFFFF;
-  // @include flexSetUp(center, center);
+  // @include flex-set-up(center, center);
 
   .sticky-header {
     max-width:1180px; /*1200 minus the padding*/
@@ -17,13 +17,13 @@
     margin-right: auto;
     margin-left: auto;
     border-radius:3px;
-    @include flexSetUp(flex-start, center);
+    @include flex-set-up(flex-start, center);
 
   }
 
   .product-name {
     width: 300px;
-    font-family: $title;
+    font-family: $main;
     font-size: 30px;
     color: #000000;
   }
@@ -89,7 +89,7 @@
     border-radius: 2px;
     background-color: #999999;
     color: #FFF;
-    font-family: $title;
+    font-family: $main;
     font-size: 15px;
     margin-left: 21px;
     margin-top: -9px;
@@ -105,7 +105,7 @@
     border-radius: 2px;
     background-color: #7ed321;
     color: #FFF;
-    font-family: $title;
+    font-family: $main;
     font-size: 15px;
     margin-left: 21px;
     margin-top: -9px;
@@ -172,7 +172,7 @@
     margin-bottom: 10px;
     position: relative;
     top: 8px;
-    @include flexSetUp(center);
+    @include flex-set-up(center);
     cursor: pointer;
   }
   .thumb-proportion {
@@ -208,7 +208,7 @@
     width: 657px;
     margin: 0 10px;
     position: relative;
-    @include flexSetUp(center, center)
+    @include flex-set-up(center, center)
   }
 
   .img-proportion {
@@ -246,7 +246,7 @@
     position: absolute;
     right: 0;
     justify-content: flex-end;
-    font-family: $title;
+    font-family: $main;
     font-size: 11px;
     margin-top: 26px;
 
@@ -265,7 +265,7 @@
 
   .description-box {
     width: 94%;
-    font-family: $title;
+    font-family: $main;
     font-size: 14px;
     color: #666666;
     margin-left: 26px;
@@ -276,7 +276,7 @@
   .titles {
     text-transform: uppercase;
     color: #666666;
-    font-family: $title;
+    font-family: $main;
     font-size: 18px;
   }
 
@@ -348,7 +348,7 @@
     width: 52px;
     height: 36px;
     border: 1px #cccccc solid;
-    font-family: $title;
+    font-family: $main;
     font-size: 15px;
     text-transform: uppercase;
     color: #666666;
@@ -385,7 +385,7 @@
     border: 1px #cccccc solid;
     border-right: none;
     border-left: none;
-    font-family: $title;
+    font-family: $main;
     font-size: 16px;
     text-transform: uppercase;
     color: #666666;
@@ -409,13 +409,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include flexSetUp(center, center);
+    @include flex-set-up(center, center);
   }
   .modal-image-container {
     width: 700px;
     height: 600px;
     overflow: hidden;
-    @include flexSetUp(center, center);
+    @include flex-set-up(center, center);
   }
 
   .modal-image-proportion {

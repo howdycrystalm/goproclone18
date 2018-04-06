@@ -8,7 +8,7 @@
 
    .top-labels {
       @include width-height(1138px, 40px);
-      @include flexSetUp(space-between, center);
+      @include flex-set-up(space-between, center);
       background-color: white;
       padding: 10px 30px;
       z-index: 5;
@@ -20,17 +20,17 @@
       margin-left: auto;
       border: $fake-black 1px solid;
       h2 {
-         font-family: $title;
+         font-family: $main;
          font-size: 25px;
       }
       .buttons {
-         @include flexSetUp(center, center);
+         @include flex-set-up(center, center);
 
          a {
             text-decoration: none;
          }
          .button-clear {
-           @include flexSetUp(center, center);
+           @include flex-set-up(center, center);
            @include width-height(160px, 30px);
            margin: 0 6px;
            background: white;
@@ -40,7 +40,7 @@
            transition: color 0.3s;
            transition: background 0.3s;
            h2 {
-             font-family: $title;
+             font-family: $main;
              font-size: 14px;
              font-weight: 500;
              text-transform: uppercase;
@@ -52,7 +52,7 @@
            color: white;
          }
          .button-green {
-           @include flexSetUp(space-between, center);
+           @include flex-set-up(space-between, center);
            @include width-height(120px, 38px);
            background: #00b300;
 
@@ -77,11 +77,11 @@
       margin: 0 15px;
       padding: 15px 0;
       border-bottom: 1px #d3d3d3 solid;
-      @include flexSetUp();
+      @include flex-set-up();
       .left {
          .img-container {
             @include width-height(174px, 174px);
-            @include flexSetUp(center, center);
+            @include flex-set-up(center, center);
             border: 1px #d3d3d3 solid;
             img {
                max-height: 100%;
@@ -95,21 +95,21 @@
          margin-left: 25px;
          width: 100%;
          height: 100%;
-         @include flexSetUp(flex-start, center);
+         @include flex-set-up(flex-start, center);
 
             .one {
-               @include flexSetUp();
+               @include flex-set-up();
                flex-direction: column;
                width: 38%;
                h2 {
-                  font-family: $title;
+                  font-family: $main;
                   font-weight: bold;
                   font-size: 20px;
                   color: $med-blue;
                }
                h3 {
                   margin-top: 10px;
-                  font-family: $title;
+                  font-family: $main;
                   color: #999999;
                   font-size: 13px;
                }
@@ -125,7 +125,7 @@
                h2 {
                   text-transform: uppercase;
                   margin-top: 10px;
-                  font-family: $title;
+                  font-family: $main;
                   font-size: 14px;
                   cursor: pointer;
                }
@@ -134,7 +134,7 @@
                width: 15%;
                h2 {
                   font-weight: normal;
-                  font-family: $title;
+                  font-family: $main;
                   font-size: 20px;
                   color: black;
                }
@@ -143,30 +143,30 @@
    }
 
    .total {
-      @include flexSetUp(flex-end);
+      @include flex-set-up(flex-end);
       .subTotal {
-         @include flexSetUp(flex-start);
+         @include flex-set-up(flex-start);
          flex-direction: column;
          @include width-height(375px, 200px);
          margin-right: 20px;
          .row {
-            @include flexSetUp(space-between, center);
+            @include flex-set-up(space-between, center);
             width: 100%;
             margin-top: 25px;
             h2 {
-               font-family: $title;
+               font-family: $main;
                font-weight: bold;
                font-size: 20px;
                color: black;
             }
             h3 {
-               font-family: $title;
+               font-family: $main;
                font-weight: lighter;
                font-size: 18px;
                color: $fake-black
             }
             h4 {
-               font-family: $title;
+               font-family: $main;
                font-size: 12px;
                color: black;
                margin-top: -25px;

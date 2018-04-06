@@ -1,4 +1,4 @@
-@mixin flexSetUp($justify: flex-start, $align: flex-start) {
+@mixin flex-set-up($justify: flex-start, $align: flex-start) {
   display: flex;
   justify-content: $justify;
   align-items: $align;

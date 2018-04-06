@@ -4,7 +4,7 @@
    margin: auto;
    margin-top: 85px;
    background: white;
-   @include flexSetUp(space-around);
+   @include flex-set-up(space-around);
 
    .column {
       width: 30%;
@@ -32,7 +32,7 @@
          border-bottom: 15px #666 solid;
          width: 100%;
          text-align: center;
-         font-family: $title;
+         font-family: $main;
          font-size: 18px;
          margin-top: 20px;
       }
@@ -40,7 +40,7 @@
          background: white;
       }
       form {
-         @include flexSetUp(center);
+         @include flex-set-up(center);
          flex-wrap: wrap;
          background: #e7e7e7;
          width: 100%;
@@ -58,7 +58,7 @@
          }
          .row {
             width: 90%;
-            @include flexSetUp();
+            @include flex-set-up();
             flex-wrap: wrap;
             margin-bottom: 15px;
             img {
@@ -67,14 +67,14 @@
                height: 27px;
             }
             h2 {
-               font-family: $title;
+               font-family: $main;
                font-size: 15px;
                font-weight: bold;
                margin-left: 3px;
                margin-bottom: 6px;
             }
             p {
-               font-family: $title;
+               font-family: $main;
                font-size: 14px;
                margin-left: 3px;
                margin-bottom: 6px;
@@ -95,10 +95,10 @@
             .right-special {
                width: 83%;
                span {
-                  @include flexSetUp(space-between);
+                  @include flex-set-up(space-between);
                   width: 100%;
                   .special-header {
-                     font-family: $title;
+                     font-family: $main;
                      font-size: 15px;
                      font-weight: bold;
                      margin-left: 4px;
@@ -140,7 +140,7 @@
             }
             .checkbox {
                @include width-height(24px, 24px);
-               @include flexSetUp(center, center);
+               @include flex-set-up(center, center);
                background: none repeat scroll 0 0 #d4d4d4;
                border: 1px solid #999999;
                border-radius: 2px;
@@ -169,7 +169,7 @@
             }
          }
          .button {
-           @include flexSetUp(space-between, center);
+           @include flex-set-up(space-between, center);
            @include width-height(100%, 38px);
            background: #009fdf;
            padding: 1px 5px;
@@ -177,7 +177,7 @@
            border-radius: 3px;
            border: none;
            h2 {
-              font-family: $title;
+              font-family: $main;
               font-size: 18px;
               margin-left: 10px;
               margin-bottom: 0;
@@ -203,7 +203,7 @@
            cursor: pointer;
          }
          .dcenter {
-            @include flexSetUp(flex-start, center);
+            @include flex-set-up(flex-start, center);
          }
       }
    }
