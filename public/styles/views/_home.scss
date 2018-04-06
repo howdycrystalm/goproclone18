@@ -256,6 +256,22 @@
 //         transform: translate(-50%, -50%);
 //       }
 //     }
-.image {
-  @include image("../../images/featured-image-gopro.png");
+* {
+  box-sizing: border-box;
+  //***** .home allots space for the nav bar *****//
+  .home {
+    @include width-height(100vw, 100vh);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 65px;
+
+    .jumbo-image {
+      width: 100vw;
+      max-width: 1200px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
