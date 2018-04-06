@@ -79,7 +79,7 @@ time,
 mark,
 audio,
 video {
-  // box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -87,11 +87,11 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-// *,
-// *:before,
-// *:after {
-//   box-sizing: inherit;
-// }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
