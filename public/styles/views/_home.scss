@@ -259,18 +259,24 @@
 //***** .home allots space for the nav bar *****//
 .home {
   width: 100vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-#section1 {
-  margin-top: 65px;
-}
 
-.jumbo-image {
-  width: 100vw;
-  max-width: 1200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  section {
+    margin: -2px 0px;
+  }
+
+  #section1 {
+    margin-top: 65px;
+  }
+
+  .jumbo-image {
+    width: 100vw;
+    max-width: 1200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
