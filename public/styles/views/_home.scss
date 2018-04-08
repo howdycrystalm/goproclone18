@@ -271,12 +271,14 @@
   #section1 {
     margin-top: 65px;
   }
+
   .product-container {
     @include flex-set-up(center, center);
     flex-direction: column;
     background: red;
     position: relative;
   }
+
   .section-image {
     width: 100vw;
     max-width: 1200px;
@@ -294,6 +296,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rebeccapurple;
 
     h1 {
       font-size: 1.6rem;
@@ -326,11 +329,13 @@
     flex-direction: row;
     align-items: center;
     text-transform: uppercase;
+    background: aqua;
 
     .button {
       @include width-height(150px, 45px);
       @include button-text() @include flex-set-up(center, center);
     }
+
     .solid-button {
       background-color: $button-color;
       color: $white;
@@ -351,6 +356,7 @@
       margin-left: 9px;
     }
   }
+
   .quick-stories-container {
     // @include width-height(155px, 70px);
     @include flex-set-up(center, center);
@@ -358,7 +364,7 @@
     font-family: $main;
     color: $white;
     position: absolute;
-    bottom: 20px;
+    background: orange;
 
     .logo {
       width: 90%;
@@ -375,19 +381,38 @@
     top: 15%;
   }
 
+  #section1-logo-position {
+    bottom: 20px;
+  }
+
   #section2-copy {
     top: 35%;
     left: 2.5%;
   }
 
-  #section3-copy {
-  }
-
-  #section4-copy {
-  }
-
   #section2-logo-position {
     bottom: 15.3%;
     right: 20.5%;
+  }
+
+  #section3-copy {
+    top: 35%;
+    // padding: 0 50px;
+    right: 5%;
+
+    h1 {
+      text-transform: uppercase;
+    }
+    span {
+      color: $button-color;
+    }
+  }
+
+  #section3-logo-position {
+    bottom: 15.5%;
+    left: 28%;
+  }
+
+  #section4-copy {
   }
 }
