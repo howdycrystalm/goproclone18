@@ -289,12 +289,11 @@
     font-family: $main;
     font-weight: 700;
     font-size: 1rem;
-    color: #ffffff;
+    color: $white;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 3px solid gold;
 
     h1 {
       font-size: 1.6rem;
@@ -334,15 +333,21 @@
     }
     .solid-button {
       background-color: $button-color;
-      color: #ffffff;
+      color: $white;
       margin-right: 9px;
       user-select: none;
       cursor: pointer;
     }
 
-    .outline-button {
+    .blue-outline-button {
       border: 2px solid $button-color;
       color: $button-color;
+      margin-left: 9px;
+    }
+
+    .white-outline-button {
+      border: 2px solid $white;
+      color: $white;
       margin-left: 9px;
     }
   }
@@ -351,7 +356,7 @@
     @include flex-set-up(center, center);
     flex-direction: column;
     font-family: $main;
-    color: #ffffff;
+    color: $white;
     position: absolute;
     bottom: 20px;
 
@@ -371,11 +376,18 @@
   }
 
   #section2-copy {
+    top: 35%;
+    left: 2.5%;
   }
 
   #section3-copy {
   }
 
   #section4-copy {
+  }
+
+  #section2-logo-position {
+    bottom: 15.3%;
+    right: 20.5%;
   }
 }
