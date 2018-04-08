@@ -296,7 +296,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rebeccapurple;
+    // background: rebeccapurple;
 
     h1 {
       font-size: 1.6rem;
@@ -320,6 +320,10 @@
     h3 {
       font-size: 1.3rem;
     }
+
+    span {
+      color: $button-color;
+    }
   }
 
   .buttons-container {
@@ -329,7 +333,7 @@
     flex-direction: row;
     align-items: center;
     text-transform: uppercase;
-    background: aqua;
+    // background: aqua;
 
     .button {
       @include width-height(150px, 45px);
@@ -403,9 +407,6 @@
     h1 {
       text-transform: uppercase;
     }
-    span {
-      color: $button-color;
-    }
   }
 
   #section3-logo-position {
@@ -414,5 +415,21 @@
   }
 
   #section4-copy {
+    top: 30%;
+    left: 13%;
+    text-align: center;
+    // line-height: 3.2rem;
+    // justify-content: space-between;
+    span {
+      top: 10px;
+    }
+    .buttons-container {
+      height: 77px;
+    }
+  }
+
+  #section4-logo-position {
+    bottom: 0;
+    left: 0;
   }
 }
