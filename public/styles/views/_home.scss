@@ -275,6 +275,7 @@
     @include flex-set-up(center, center);
     flex-direction: column;
     background: red;
+    position: relative;
   }
   .section-image {
     width: 100vw;
@@ -346,24 +347,27 @@
     }
   }
   .quick-stories-container {
-    @include width-height(165px, 70px);
+    // @include width-height(155px, 70px);
     @include flex-set-up(center, center);
     flex-direction: column;
     font-family: $main;
     color: #ffffff;
-    background: orange;
     position: absolute;
-    bottom: 0px;
+    bottom: 20px;
+
+    .logo {
+      width: 90%;
+    }
 
     h6 {
-      font-size: .625rem;
+      font-size: .6rem;
       letter-spacing: .5rem;
       text-transform: uppercase;
     }
   }
 
   #section1-copy {
-    top: 16%;
+    top: 15%;
   }
 
   #section2-copy {
