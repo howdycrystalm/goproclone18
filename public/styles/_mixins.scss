@@ -11,9 +11,9 @@
 
 @mixin button-text() {
   font-family: 'proxima-nova-medium';
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: .63rem;
+  letter-spacing: .0625rem;
 }
 
 @mixin image($link) {
