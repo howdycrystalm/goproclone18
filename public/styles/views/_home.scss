@@ -456,5 +456,26 @@
         margin-right: 0;
       }
     }
+
+    .product-image-container {
+      @include flex-set-up(center, center);
+      width: 44.5vw;
+      max-height: 245px;
+      margin-top: 17px;
+      background: darkgrey;
+    }
+    .product-image {
+      width: 49%;
+      height: 49%;
+    }
+
+    .hero-margin {
+      margin-bottom: 10px;
+      height: 50%;
+    }
+
+    .fusion-margin {
+      margin-bottom: 37px;
+    }
   }
 }
