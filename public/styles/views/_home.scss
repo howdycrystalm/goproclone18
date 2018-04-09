@@ -501,20 +501,25 @@
     //   }
     // }
     .card-container {
-      @include flex-set-up(space-evenly, center);
+      @include flex-set-up(center, center);
       flex-direction: row;
       width: 100vw;
       max-width: 1200px;
-      background: rebeccapurple;
+
+      // background: rebeccapurple;
     }
 
     .product-card {
       @include flex-set-up(center, center);
       flex-direction: column;
-      width: 275px;
       height: 100vh;
       max-height: 255px;
-      background: brown;
+      margin: 30px 27px 27px 0px;
+      // background: brown;
+    }
+    .product-image {
+      height: 65%;
+      max-height: 181px;
     }
   }
 }
