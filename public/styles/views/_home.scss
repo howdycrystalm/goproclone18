@@ -429,10 +429,10 @@
   }
 
   #section5-copy {
-    @include flex-set-up(center, center);
+    @include flex-set-up(space-evenly, center);
+    flex-direction: column;
     width: 100vw;
     max-width: 1200px;
-    flex-direction: column;
     font-family: $main;
     color: $fake-black;
     padding: 48px 20px;
@@ -457,27 +457,64 @@
       }
     }
 
-    .product-image-container {
+    // .product-image-container {
+    //   @include flex-set-up(center, center);
+    //   width: 44.5vw;
+    //   max-height: 245px;
+    //   margin-top: 17px;
+    //   background: darkgrey;
+    // }
+    // .product-image {
+    //   width: 49%;
+    //   height: 49%;
+    // }
+    //
+    // .hero-margin {
+    //   margin-bottom: 4px;
+    //   width: 45%;
+    //   height: 45%;
+    // }
+    //
+    // .fusion-margin {
+    //   margin-bottom: 35px;
+    //   margin-left: 17px;
+    // }
+    // .logo-container {
+    //   @include flex-set-up(space-evenly, center);
+    //   flex-direction: row;
+    //   width: 90vw;
+    //   background-color: pink;
+    //
+    //   .logo-width {
+    //     width: 144px;
+    //     height: 36;
+    //   }
+    //
+    //   .hero-logo-width {
+    //     width: 114px;
+    //     height: 27px;
+    //   }
+    //
+    //   .fusion-logo-width {
+    //     width: 164px;
+    //     height: 27px;
+    //   }
+    // }
+    .card-container {
+      @include flex-set-up(space-evenly, center);
+      flex-direction: row;
+      width: 100vw;
+      max-width: 1200px;
+      background: rebeccapurple;
+    }
+
+    .product-card {
       @include flex-set-up(center, center);
-      width: 44.5vw;
-      max-height: 245px;
-      margin-top: 17px;
-      background: darkgrey;
-    }
-    .product-image {
-      width: 49%;
-      height: 49%;
-    }
-
-    .hero-margin {
-      margin-bottom: 4px;
-      width: 45%;
-      height: 45%;
-    }
-
-    .fusion-margin {
-      margin-bottom: 35px;
-      margin-left: 17px;
+      flex-direction: column;
+      width: 275px;
+      height: 100vh;
+      max-height: 255px;
+      background: brown;
     }
   }
 }
