@@ -457,17 +457,14 @@
 
   .banner {
     @include width-height(100vw, 68px);
-    max-width: 1200px;
+    @include flex-set-up(space-between, center);
     background: $black;
     color: white;
     z-index: 15;
     position: fixed;
     margin: 0 auto;
     // padding: 2.25rem;
-    padding: 2.13rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 2.35rem;
 
     a {
       text-decoration: none;
@@ -517,10 +514,10 @@
       display: flex;
       //.right contains links and text
       .right {
-        width: 216px;
+        width: 235px;
         font-family: $header-text;
         font-weight: 300px;
-        font-size: .8125rem;
+        font-size: .875rem;
         margin-right: 30px;
 
         .top {
@@ -565,7 +562,7 @@
         h2 {
           margin-left: -2px;
           font-family: $button-text;
-          font-size: 12px;
+          font-size: .75rem;
         }
       }
     }
