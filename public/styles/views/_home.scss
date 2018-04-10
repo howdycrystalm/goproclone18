@@ -1,5 +1,5 @@
-// @import url('https://fonts.googleapis.com/css?family=Miriam+Libre');
-//
+@import url('https://fonts.googleapis.com/css?family=Miriam+Libre');
+
 // .top-banner {
 //   height: 860px;
 //   background-color: white;
@@ -23,7 +23,6 @@
 //     transform: translate(-50%, -50%);
 //   }
 //   .cameras {
-//
 //     @include flex-set-up(flex-start, center);
 //     flex-direction: column;
 //     width: 100%;
@@ -39,7 +38,6 @@
 //         font-family: $main;
 //         margin-bottom: 25px;
 //         color: white;
-//
 //       }
 //     }
 //
@@ -82,180 +80,176 @@
 //   }
 // }
 //
+// .photo-wrapper {
+//   background-color: #fff;
+//   width: 1200px;
+//   height: 670px;
+//   display: block;
+//   margin: auto;
+//   margin-top: 100px;
 //
+//   .super-div {
+//     @include flex-set-up(flex-start, center);
+//     flex-direction: column;
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 6;
 //
-//   .photo-wrapper {
-//     background-color: #FFF;
-//     width: 1200px;
-//     height: 670px;
-//     display: block;
-//     margin: auto;
-//     margin-top: 100px;
-//
-//     .super-div  {
+//     .karma {
+//       margin-top: 48px;
+//     }
+//     .drone {
+//       width: 500px;
+//       margin-top: 53px;
+//     }
+//     .drone-text {
 //       @include flex-set-up(flex-start, center);
 //       flex-direction: column;
-//       position: relative;
-//       width: 100%;
-//       height: 100%;
-//       z-index: 6;
-//
-//       .karma {
-//         margin-top: 48px;
+//       font-family: $main;
+//       font-weight: bolder;
+//       margin-top: 30px;
+//       color: #333333;
+//       margin-bottom: 60px;
+//       h2 {
+//         // padding-top: 450px;
+//         font-size: 35px;
+//         padding-bottom: 20px;
 //       }
-//       .drone {
-//         width: 500px;
-//         margin-top: 53px;
+//       p {
+//         font-weight: normal;
+//         padding-bottom: 7px;
 //       }
-//       .drone-text {
-//         @include flex-set-up(flex-start, center);
-//         flex-direction: column;
-//         font-family: $main;
-//         font-weight: bolder;
-//         margin-top: 30px;
-//         color: #333333;
-//         margin-bottom: 60px;
-//         h2 {
-//           // padding-top: 450px;
-//           font-size: 35px;
-//           padding-bottom: 20px;
-//         }
-//         p {
-//           font-weight: normal;
-//           padding-bottom: 7px
-//         }
-//       }
-//     }
-//
-//
-//     .img {
-//       position: absolute;
-//       width: 1200px;
-//     }
-//     .dual-camera {
-//       position: absolute;
-//       left: 0;
-//       right: 0;
-//       margin: 0 auto;
-//       margin-top: 163px;
 //     }
 //   }
 //
-//   .plus-info-box {
-//     background-color: #FFF;
+//   .img {
+//     position: absolute;
 //     width: 1200px;
-//     height: 650px;
-//     display: block;
-//     margin: auto;
-//     margin-top: 100px;
+//   }
+//   .dual-camera {
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     margin: 0 auto;
+//     margin-top: 163px;
+//   }
+// }
 //
-//     .top {
-//       height: 15%;
-//       @include flex-set-up(center, center);
-//       .plus-container {
-//         position: relative;
-//         padding-top: 0px;
-//         }
-//       }
+// .plus-info-box {
+//   background-color: #fff;
+//   width: 1200px;
+//   height: 650px;
+//   display: block;
+//   margin: auto;
+//   margin-top: 100px;
 //
-//       .bottom {
-//         display: flex;
-//         justify-content: flex-start;
-//         height: 85%;
-//         .left {
-//           width: 35%;
-//           color: #333333;
-//           @include flex-set-up(center);
-//           flex-direction: column;
-//           padding-left: 55px;
-//           height: 100%;
-//           h2 {
-//             font-size: 35px;
-//             font-family: $main;
-//             color: $fake-black;
-//             font-weight: bolder;
-//             margin-bottom: 30px;
-//           }
-//           p {
-//             font-size: 16px;
-//             font-family: $tagline;
-//             color: $fake-black;
-//             line-height: 30px;
-//             margin-bottom: 30px;
-//           }
-//           .button-box {
-//             padding-bottom: 50px;
-//             .button {
-//               width: 80px;
-//               background: #009fdf;
-//               margin: 0 auto;
-//               padding: 15px 40px;
-//               text-transform: uppercase;
-//               color: white;
-//               font-weight: 700;
-//               font-size: 12px;
-//               font-family: $main;
-//               text-align: center;
-//             }
-//             .button:hover {
-//               cursor: pointer;
-//             }
-//           }
-//         }
-//         .right {
-//           width: 75%;
-//           @include flex-set-up(center);
-//           flex-direction: column;
-//           margin-left: 100px;
-//         }
-//       }
+//   .top {
+//     height: 15%;
+//     @include flex-set-up(center, center);
+//     .plus-container {
+//       position: relative;
+//       padding-top: 0px;
 //     }
+//   }
 //
-//     .video-wrapper {
-//       background: url('http://www.deluxebattery.com/wp-content/uploads/2014/11/go-pro-photo-ideas-01.jpg') no-repeat center center;
-//       margin: 100px auto;
-//       width: 1200px;
-//       height: 650px;
-//       @include flex-set-up(center, center);
+//   .bottom {
+//     display: flex;
+//     justify-content: flex-start;
+//     height: 85%;
+//     .left {
+//       width: 35%;
+//       color: #333333;
+//       @include flex-set-up(center);
 //       flex-direction: column;
-//         .text-stuff {
-//           font-size: 54px;
-//           font-family: $main;
-//           color: white;
+//       padding-left: 55px;
+//       height: 100%;
+//       h2 {
+//         font-size: 35px;
+//         font-family: $main;
+//         color: $fake-black;
+//         font-weight: bolder;
+//         margin-bottom: 30px;
+//       }
+//       p {
+//         font-size: 16px;
+//         font-family: $tagline;
+//         color: $fake-black;
+//         line-height: 30px;
+//         margin-bottom: 30px;
+//       }
+//       .button-box {
+//         padding-bottom: 50px;
+//         .button {
+//           width: 80px;
+//           background: #009fdf;
+//           margin: 0 auto;
+//           padding: 15px 40px;
 //           text-transform: uppercase;
-//           letter-spacing: 1.5px;
+//           color: white;
+//           font-weight: 700;
+//           font-size: 12px;
+//           font-family: $main;
+//           text-align: center;
 //         }
-//         .play-button {
-//           padding-top: 30px;
-//         }
-//         .play-button:hover {
+//         .button:hover {
 //           cursor: pointer;
 //         }
-//       .awesome-vid {
-//         background-color: black;
-//         z-index: 100;
-//         // width:500px;
-//         // height: 281px;
-//         position: fixed;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//
-//
-//         }
-//
-//       .fade {
-//         background-color: black;
-//         z-index: 99;
-//         position: fixed;
-//         width: 100vw;
-//         height: 100vh;
-//         opacity: 0.75;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
 //       }
 //     }
+//     .right {
+//       width: 75%;
+//       @include flex-set-up(center);
+//       flex-direction: column;
+//       margin-left: 100px;
+//     }
+//   }
+// }
+//
+// .video-wrapper {
+//   background: url('http://www.deluxebattery.com/wp-content/uploads/2014/11/go-pro-photo-ideas-01.jpg')
+//     no-repeat center center;
+//   margin: 100px auto;
+//   width: 1200px;
+//   height: 650px;
+//   @include flex-set-up(center, center);
+//   flex-direction: column;
+//   .text-stuff {
+//     font-size: 54px;
+//     font-family: $main;
+//     color: white;
+//     text-transform: uppercase;
+//     letter-spacing: 1.5px;
+//   }
+//   .play-button {
+//     padding-top: 30px;
+//   }
+//   .play-button:hover {
+//     cursor: pointer;
+//   }
+//   .awesome-vid {
+//     background-color: black;
+//     z-index: 100;
+//     // width:500px;
+//     // height: 281px;
+//     position: fixed;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+//
+//   .fade {
+//     background-color: black;
+//     z-index: 99;
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     opacity: 0.75;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
 //***** .landing allots space for the nav bar *****//
 .landing {
   width: 100vw;
