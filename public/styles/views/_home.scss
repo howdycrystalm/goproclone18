@@ -24,7 +24,7 @@
 //   }
 //   .cameras {
 //
-//     @include flex-set-up(flex-start, center);
+//     @include flex-j-a(flex-start, center);
 //     flex-direction: column;
 //     width: 100%;
 //     left: 0;
@@ -32,7 +32,7 @@
 //     transform: translate(0, 0);
 //
 //     .text-banner {
-//       @include flex-set-up(flex-start, center);
+//       @include flex-j-a(flex-start, center);
 //       flex-direction: column;
 //       margin: 150px 0 80px 0;
 //       p {
@@ -93,7 +93,7 @@
 //     margin-top: 100px;
 //
 //     .super-div  {
-//       @include flex-set-up(flex-start, center);
+//       @include flex-j-a(flex-start, center);
 //       flex-direction: column;
 //       position: relative;
 //       width: 100%;
@@ -108,7 +108,7 @@
 //         margin-top: 53px;
 //       }
 //       .drone-text {
-//         @include flex-set-up(flex-start, center);
+//         @include flex-j-a(flex-start, center);
 //         flex-direction: column;
 //         font-family: $main;
 //         font-weight: bolder;
@@ -151,7 +151,7 @@
 //
 //     .top {
 //       height: 15%;
-//       @include flex-set-up(center, center);
+//       @include flex-j-a(center, center);
 //       .plus-container {
 //         position: relative;
 //         padding-top: 0px;
@@ -165,7 +165,7 @@
 //         .left {
 //           width: 35%;
 //           color: #333333;
-//           @include flex-set-up(center);
+//           @include flex-j-a(center);
 //           flex-direction: column;
 //           padding-left: 55px;
 //           height: 100%;
@@ -204,7 +204,7 @@
 //         }
 //         .right {
 //           width: 75%;
-//           @include flex-set-up(center);
+//           @include flex-j-a(center);
 //           flex-direction: column;
 //           margin-left: 100px;
 //         }
@@ -216,7 +216,7 @@
 //       margin: 100px auto;
 //       width: 1200px;
 //       height: 650px;
-//       @include flex-set-up(center, center);
+//       @include flex-j-a(center, center);
 //       flex-direction: column;
 //         .text-stuff {
 //           font-size: 54px;
@@ -262,7 +262,7 @@
 
 .landing {
   width: 100%;
-  @include flex-set-up(center, center);
+  @include flex-j-a(center, center);
   flex-direction: column;
   background-color: $white;
 
@@ -277,10 +277,10 @@
 
   .product-container {
     width: 100%;
-    @include flex-set-up(center, center);
+    @include flex-j-a(center, center);
     flex-direction: column;
     position: relative;
-    background-color: pink;
+    background-color: rebeccapurple;
   }
 
   .section-image {
@@ -305,16 +305,6 @@
       font-size: 1.875rem;
     }
 
-    h2 {
-      font-size: 3.75rem;
-      font-weight: 900;
-      padding: 15px;
-      -webkit-transform: scale(1.1, 1);
-      -moz-transform: scale(1.1, 1);
-      -ms-transform: scale(1.1, 1);
-      -o-transform: scale(1.1, 1);
-    }
-
     h3 {
       font-size: 1.375rem;
     }
@@ -324,15 +314,25 @@
     }
   }
 
+  h2 {
+    font-size: 3.75rem;
+    font-weight: 900;
+    padding: 15px;
+    -webkit-transform: scale(1.1, 1);
+    -moz-transform: scale(1.1, 1);
+    -ms-transform: scale(1.1, 1);
+    -o-transform: scale(1.1, 1);
+  }
+
   .buttons-container {
     @include width-height(320px, 68px);
-    @include flex-set-up(space-between, flex-end);
+    @include flex-j-a(space-between, flex-end);
     flex-direction: row;
     text-transform: uppercase;
 
     .button {
       @include width-height(150px, 50px);
-      @include button-text() @include flex-set-up(center, center);
+      @include button-text() @include flex-j-a(center, center);
     }
 
     .solid-button {
@@ -358,7 +358,7 @@
 
   .quick-stories-container {
     // @include width-height(155px, 70px);
-    @include flex-set-up(center, center);
+    @include flex-j-a(center, center);
     flex-direction: column;
     font-family: $main;
     color: $white;
@@ -374,6 +374,17 @@
       letter-spacing: .5rem;
       text-transform: uppercase;
     }
+  }
+
+  .product-card-container {
+    @include flex-j-a(center, center);
+    flex-direction: row;
+  }
+
+  .product-card {
+    @include width-height(275px, 255px);
+    @include flex-j-a(flex-end, center);
+    flex-direction: column;
   }
 
   #section1-copy {
@@ -422,100 +433,117 @@
       height: 77px;
     }
   }
+  #section5-copy {
+    padding: 48px 20px;
 
-  // #section5-copy {
-  //   @include flex-set-up(space-evenly, center);
-  //   flex-direction: column;
-  //   width: 100%;
-  //   // max-width: 1200px;
-  //   font-family: $main;
-  //   color: $fake-black;
-  //   padding: 48px 20px;
-  //   background: darkblue;
-  //
-  //   h2 {
-  //     font-size: 3.5rem;
-  //     font-weight: 900;
-  //     -webkit-transform: scale(1.07, 1);
-  //     -moz-transform: scale(1.07, 1);
-  //     -ms-transform: scale(1.07, 1);
-  //     -o-transform: scale(1.07, 1);
-  //     background-color: teal;
-  //   }
-  //
-  //   .buttons-container {
-  //     width: 131px;
-  //     padding-top: 37px;
-  //
-  //     .solid-button {
-  //       margin-right: 0;
-  //     }
-  //   }
-  //
-  //   // .product-image-container {
-  //   //   @include flex-set-up(center, center);
-  //   //   width: 44.5vw;
-  //   //   max-height: 245px;
-  //   //   margin-top: 17px;
-  //   //   background: darkgrey;
-  //   // }
-  //   // .product-image {
-  //   //   width: 49%;
-  //   //   height: 49%;
-  //   // }
-  //   //
-  //   // .hero-margin {
-  //   //   margin-bottom: 4px;
-  //   //   width: 45%;
-  //   //   height: 45%;
-  //   // }
-  //   //
-  //   // .fusion-margin {
-  //   //   margin-bottom: 35px;
-  //   //   margin-left: 17px;
-  //   // }
-  //   // .logo-container {
-  //   //   @include flex-set-up(space-evenly, center);
-  //   //   flex-direction: row;
-  //   //   width: 90vw;
-  //   //   background-color: pink;
-  //   //
-  //   //   .logo-width {
-  //   //     width: 144px;
-  //   //     height: 36;
-  //   //   }
-  //   //
-  //   //   .hero-logo-width {
-  //   //     width: 114px;
-  //   //     height: 27px;
-  //   //   }
-  //   //
-  //   //   .fusion-logo-width {
-  //   //     width: 164px;
-  //   //     height: 27px;
-  //   //   }
-  //   // }
-  //   .card-container {
-  //     @include flex-set-up(center, center);
-  //     flex-direction: row;
-  //     width: 100%;
-  //     // max-width: 1200px;
-  //
-  //     // background: rebeccapurple;
-  //   }
-  //
-  //   .product-card {
-  //     @include flex-set-up(center, center);
-  //     flex-direction: column;
-  //     height: 100%;
-  //     max-height: 255px;
-  //     margin: 30px 27px 27px 0px;
-  //     // background: brown;
-  //   }
-  //   .product-image {
-  //     height: 65%;
-  //     max-height: 181px;
-  //   }
-  // }
+    h2 {
+      font-family: $main;
+      color: $fake-black;
+    }
+
+    .buttons-container {
+      width: 160px;
+      margin: 0 auto;
+    }
+
+    .solid-button {
+      margin-right: 0px;
+    }
+  }
 }
+// #section5-copy {
+//   @include flex-j-a(space-evenly, center);
+//   flex-direction: column;
+//   width: 100%;
+//   // max-width: 1200px;
+//   font-family: $main;
+//   color: $fake-black;
+//   padding: 48px 20px;
+//   background: darkblue;
+//
+//   h2 {
+//     font-size: 3.5rem;
+//     font-weight: 900;
+//     -webkit-transform: scale(1.07, 1);
+//     -moz-transform: scale(1.07, 1);
+//     -ms-transform: scale(1.07, 1);
+//     -o-transform: scale(1.07, 1);
+//     background-color: teal;
+//   }
+//
+//   .buttons-container {
+//     width: 131px;
+//     padding-top: 37px;
+//
+//     .solid-button {
+//       margin-right: 0;
+//     }
+//   }
+//
+//   // .product-image-container {
+//   //   @include flex-j-a(center, center);
+//   //   width: 44.5vw;
+//   //   max-height: 245px;
+//   //   margin-top: 17px;
+//   //   background: darkgrey;
+//   // }
+//   // .product-image {
+//   //   width: 49%;
+//   //   height: 49%;
+//   // }
+//   //
+//   // .hero-margin {
+//   //   margin-bottom: 4px;
+//   //   width: 45%;
+//   //   height: 45%;
+//   // }
+//   //
+//   // .fusion-margin {
+//   //   margin-bottom: 35px;
+//   //   margin-left: 17px;
+//   // }
+//   // .logo-container {
+//   //   @include flex-j-a(space-evenly, center);
+//   //   flex-direction: row;
+//   //   width: 90vw;
+//   //   background-color: pink;
+//   //
+//   //   .logo-width {
+//   //     width: 144px;
+//   //     height: 36;
+//   //   }
+//   //
+//   //   .hero-logo-width {
+//   //     width: 114px;
+//   //     height: 27px;
+//   //   }
+//   //
+//   //   .fusion-logo-width {
+//   //     width: 164px;
+//   //     height: 27px;
+//   //   }
+//   // }
+//   .card-container {
+//     @include flex-j-a(center, center);
+//     flex-direction: row;
+//     width: 100%;
+//     // max-width: 1200px;
+//
+//     // background: rebeccapurple;
+//   }
+//
+//   .product-card {
+//     @include flex-j-a(center, center);
+//     flex-direction: column;
+//     height: 100%;
+//     max-height: 255px;
+//     margin: 30px 27px 27px 0px;
+//     // background: brown;
+//   }
+//   .product-image {
+//     height: 65%;
+//     max-height: 181px;
+//   }
+// }
+//}
 // }

@@ -4,7 +4,7 @@
    margin: auto;
    margin-top: 85px;
    background: white;
-   @include flex-set-up(space-around);
+   @include flex-j-a(space-around);
 
    .column {
       width: 30%;
@@ -40,7 +40,7 @@
          background: white;
       }
       form {
-         @include flex-set-up(center);
+         @include flex-j-a(center);
          flex-wrap: wrap;
          background: #e7e7e7;
          width: 100%;
@@ -58,7 +58,7 @@
          }
          .row {
             width: 90%;
-            @include flex-set-up();
+            @include flex-j-a();
             flex-wrap: wrap;
             margin-bottom: 15px;
             img {
@@ -95,7 +95,7 @@
             .right-special {
                width: 83%;
                span {
-                  @include flex-set-up(space-between);
+                  @include flex-j-a(space-between);
                   width: 100%;
                   .special-header {
                      font-family: $main;
@@ -140,7 +140,7 @@
             }
             .checkbox {
                @include width-height(24px, 24px);
-               @include flex-set-up(center, center);
+               @include flex-j-a(center, center);
                background: none repeat scroll 0 0 #d4d4d4;
                border: 1px solid #999999;
                border-radius: 2px;
@@ -169,7 +169,7 @@
             }
          }
          .button {
-           @include flex-set-up(space-between, center);
+           @include flex-j-a(space-between, center);
            @include width-height(100%, 38px);
            background: #009fdf;
            padding: 1px 5px;
@@ -203,7 +203,7 @@
            cursor: pointer;
          }
          .dcenter {
-            @include flex-set-up(flex-start, center);
+            @include flex-j-a(flex-start, center);
          }
       }
    }

@@ -128,7 +128,7 @@
       color: #ffffff;
       border-radius: 3px;
       @include button-text()
-      @include flex-set-up(center, center);
+      @include flex-j-a(center, center);
       margin-right: 10px;
       user-select: none;
       cursor: pointer;
@@ -140,13 +140,13 @@
       border: 2px solid $button-color;
       color: $button-color;
       @include button-text()
-      @include flex-set-up(center, center);
+      @include flex-j-a(center, center);
       margin-left: 10px;
     }
 
     .compare-text {
       @include button-text()
-      @include flex-set-up(center, center);
+      @include flex-j-a(center, center);
       color: $fake-black;
       margin-top: 5px;
       text-transform: uppercase;
@@ -212,7 +212,7 @@
 
     .compare-text-bottom {
       @include button-text()
-      @include flex-set-up(center, center);
+      @include flex-j-a(center, center);
       color: $fake-black;
       margin-top: 24px;
       padding-bottom: 72px;

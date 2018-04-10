@@ -1,4 +1,4 @@
-@mixin flex-set-up($justify: flex-start, $align: flex-start) {
+@mixin flex-j-a($justify: flex-start, $align: flex-start) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
