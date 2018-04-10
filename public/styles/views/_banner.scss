@@ -456,113 +456,122 @@
   box-sizing: border-box;
 
   .banner {
-    @include width-height(100vw, 68px);
-    @include flex-set-up(space-between, center);
-    background: $black;
-    color: white;
+    @include width-height(100%, 75px);
     z-index: 15;
     position: fixed;
-    margin: 0 auto;
-    // padding: 2.25rem;
-    padding: 2.35rem;
+    background: $black;
+    color: white;
 
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    a:hover {
-      text-decoration: none;
-      color: white;
-    }
-    a:visited {
-      text-decoration: none;
-      color: white;
-    }
-    //***** Left Container *****//
-    .left {
-      width: 475px;
-      font-size: .875rem;
-      font-family: $header-link;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: $white;
-      line-height: 35px;
-      padding-top: 10px;
-      margin-right: 20px;
+    .nav-container {
+      @include flex-set-up(space-between, center);
+      height: 75px;
+      max-width: 1222px;
+      margin: 0 auto;
+      padding: 0 20px;
 
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
+      a {
+        text-decoration: none;
+        color: white;
       }
-    }
-
-    .logo {
-      @include width-height(100px, 35px);
-    }
-
-    .plus {
-      @include width-height(71px, 10px);
-    }
-    .search-icon {
-      @include width-height(14px, 14px);
-    }
-
-    //***** Right Container *****//
-    //contains links, text, and cart on right side of banner
-    .right-container {
-      display: flex;
-      //.right contains links and text
-      .right {
-        width: 235px;
-        font-family: $header-text;
-        font-weight: 300px;
+      a:hover {
+        text-decoration: none;
+        color: white;
+      }
+      a:visited {
+        text-decoration: none;
+        color: white;
+      }
+      //***** Left Container *****//
+      .left {
+        width: 475px;
         font-size: .875rem;
-        margin-right: 30px;
+        font-family: $header-link;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 35px;
+        padding-top: 10px;
+        margin-right: 20px;
 
-        .top {
-          color: $med-blue;
-        }
-
-        .bottom {
-          color: white;
-          padding-top: 5px;
-
-          ul {
-            display: flex;
-            justify-content: space-between;
-            align-content: center;
-          }
-
-          .down-arrow {
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 5px 5px 0 5px;
-            border-color: #ffffff transparent transparent transparent;
-            margin-top: 5px;
-            margin-left: 5px;
-          }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
         }
       }
-      //.cart-container contains cart and red counter
-      .cart-container {
+
+      .logo {
+        @include width-height(100px, 35px);
+      }
+
+      .plus {
+        @include width-height(71px, 10px);
+      }
+      .search-icon {
+        @include width-height(14px, 14px);
+      }
+
+      //***** Right Container *****//
+      //contains links, text, and cart on right side of banner
+      .right-container {
         display: flex;
         position: relative;
-        top: 15px;
-      }
+        left: 8px;
+        //.right contains links and text
+        .right {
+          width: 220px;
+          font-family: $header-text;
+          font-weight: 300px;
+          font-size: .8rem;
+          margin-right: 30px;
+          margin-top: 5px;
 
-      .cart-total {
-        @include flex-set-up(center, center);
-        @include width-height(19px, 19px);
-        background-color: #f44243;
-        border-radius: 10px;
-        margin-left: 7px;
+          .top {
+            color: $med-blue;
+          }
 
-        h2 {
-          margin-left: -2px;
-          font-family: $button-text;
-          font-size: .75rem;
+          .bottom {
+            color: white;
+            padding-top: 5px;
+
+            ul {
+              display: flex;
+              justify-content: space-between;
+              align-content: center;
+              width: 234px;
+            }
+
+            .down-arrow {
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 5px 5px 0 5px;
+              border-color: #ffffff transparent transparent transparent;
+              margin-top: 5px;
+              margin-left: 5px;
+            }
+          }
+        }
+        //.cart-container contains cart and red counter
+        .cart-container {
+          display: flex;
+          position: relative;
+          top: 15px;
+          left: 10px;
+        }
+
+        .cart-total {
+          @include flex-set-up(center, center);
+          @include width-height(19px, 19px);
+          background-color: #f44243;
+          border-radius: 10px;
+          margin-left: 7px;
+
+          h2 {
+            margin-left: -2px;
+            font-family: $button-text;
+            font-size: .75rem;
+          }
         }
       }
     }
