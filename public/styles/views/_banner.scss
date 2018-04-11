@@ -483,7 +483,7 @@
       }
       //***** Left Container *****//
       .left {
-        width: 513px;
+        width: 518px;
         font-size: .875rem;
         font-family: $header-link;
         font-weight: bold;
@@ -500,7 +500,7 @@
         .li-spacing {
           @include flex-j-a(space-evenly, center);
           flex-direction: row;
-          margin-right: 8px;
+          margin-right: 1%;
         }
       }
 
@@ -526,9 +526,9 @@
           width: 220px;
           font-family: $header-text;
           font-weight: 300px;
-          font-size: .8rem;
+          font-size: .875rem;
           margin-right: 30px;
-          margin-top: 5px;
+          margin-top: 8px;
 
           .top {
             color: $med-blue;
@@ -560,7 +560,7 @@
         .cart-container {
           display: flex;
           position: relative;
-          top: 15px;
+          top: 27px;
           left: 10px;
         }
 
