@@ -483,20 +483,24 @@
       }
       //***** Left Container *****//
       .left {
-        width: 475px;
+        width: 513px;
         font-size: .875rem;
         font-family: $header-link;
         font-weight: bold;
         text-transform: uppercase;
         color: $white;
-        line-height: 35px;
-        padding-top: 10px;
         margin-right: 20px;
 
         ul {
           display: flex;
           justify-content: space-between;
           align-content: center;
+        }
+
+        .li-spacing {
+          @include flex-j-a(space-evenly, center);
+          flex-direction: row;
+          margin-right: 8px;
         }
       }
 
