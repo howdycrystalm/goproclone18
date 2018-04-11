@@ -451,19 +451,10 @@
     }
   }
 
-  // #section5-hero-image {
-  //   width: 276px;
-  //   padding: 10px;
-  // }
-
-  // #section5-fusion-image {
-  //   position: relative;
-  //   top: 64px;
-  // }
-  // #section5-fusion-product-card {
-  //   @include width-height(275px, 310px);
-  //   background: gold;
-  // }
+  #section5-fusion-image {
+    position: relative;
+    top: 5px;
+  }
 }
 // #section5-copy {
 //   @include flex-j-a(space-evenly, center);
