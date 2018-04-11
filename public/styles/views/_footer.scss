@@ -68,7 +68,7 @@
   .middle {
     @include flex-j-a();
     flex-direction: column;
-    margin: 45px 2% 0 2%;
+    margin: 45px 1.5% 0 1.5%;
     .top {
       @include flex-j-a(space-between, center);
       width: 100%;
@@ -76,8 +76,14 @@
       border-bottom: 1px white solid;
       .images {
         @include flex-j-a(space-between,center);
+        width: 32%;
+        padding-top: 32px;
         img {
           margin-right: 15px;
+          width: 24%;
+        }
+        .twitter-pinterest {
+          width: 35px;
         }
       }
       .right {
