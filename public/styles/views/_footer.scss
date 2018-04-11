@@ -1,112 +1,130 @@
 .droper {
-   position: absolute;
-   width: 100%;   
+  position: absolute;
+  width: 100%;
 }
 
 .footer {
-   @include width-height(100%, 435px);
-   color: white;
-   background: black;
+  width: 100%;
+  padding: 10px 40px;
+  color: white;
+  background: black;
 
-   .thirds {
-      @include flex-set-up(space-around, center);
-
-      .third {
-         @include width-height(30%, 150px);
-         @include flex-set-up(space-between);
-         flex-direction: column;
-         margin-top: 50px;
-         .top {
-            .header {
-               font-family: $footer-tag;
-               font-size: 14px;
-               font-weight: bold;
-               border-bottom: 1px white solid;
-               padding-bottom: 12px;
-               text-transform: uppercase;
-               span {
-                  margin-left: 10px;
-                  font-weight: 400;
-                  font-size: 14px;
-               }
-            }
-            .text {
-               margin-top: 12px;
-               font-family: $footer-link;
-               font-size: 15px;
-               font-weight: 100;
-               line-height: 24px;
-            }
-         }
-         .bottom {
-            color: pink;
-            @include flex-set-up(flex-start, center);
-            input {
-               @include width-height(130px, 24px);
-               padding-left: 5px;
-               border-radius: 2px;
-               border: none;
-            }
-            span {
-               font-family: $footer-tag;
-               text-transform: uppercase;
-               color: $med-blue;
-               font-size: 14px;
-               font-weight: 100;
-               line-height: 24px;
-            }
-            .submit {
-               margin-left: 20px;
-            }
-         }
-      }
-   }
-
-   .middle {
-      @include flex-set-up();
+  .thirds {
+    @include flex-j-a(space-around, center);
+    width: 100%;
+    padding-top: 33px;
+    .third {
+      @include width-height(32%, 150px);
+      display: flex;
       flex-direction: column;
-      margin: 45px 2% 0 2%;
+      justify-content: space-between;
       .top {
-         @include flex-set-up(space-between, center);
-         width: 100%;
-         padding-bottom: 5px;
-         border-bottom: 1px white solid;
-            .images {
-               @include flex-set-up(space-between,center);
-               img {
-                  margin-right: 15px;
-               }
-            }
-            .right {
-               font-family: $footer-tag;
-               font-size: 22px;
-               margin-bottom: -30px;
-               text-transform: capitalize;
-               span {
-                  font-size: 20px;
-               }
-            }
+        .header {
+          font-family: $footer-tag;
+          font-size: $font14px;
+          font-weight: bold;
+          border-bottom: 1px white solid;
+          padding-bottom: 12px;
+          text-transform: uppercase;
+          span {
+            margin-left: 10px;
+            font-weight: 400;
+            font-size: 14px;
+          }
+        }
+        .text {
+          margin-top: 7px;
+          font-family: $footer-link;
+          font-size: $font14px;
+          font-weight: 100;
+          line-height: 21px;
+        }
       }
-
       .bottom {
-         ul {
-            @include flex-set-up();
-            flex-wrap: wrap;
-            li {
-               font-family: $footer-tag;
-               margin-right: 18px;
-               margin-top: 18px;
-               text-transform: capitalize;
-               font-size: 12.5px;
-            }
-         }
-      }
-   }
+        color: pink;
+        @include flex-j-a(flex-start, center);
+        position: relative;
+        top: 14px;
+        input {
+          @include width-height(140px, 28px);
+          font-size: $font14px;
+          padding-left: 5px;
+          border-radius: 2px;
+          border: none;
+        }
+        span {
+          font-family: 'Helvetica', 'Tahoma', 'sans-serif';
+          text-transform: uppercase;
+          color: $med-blue;
+          font-size: $font14px;
+          font-weight: 100;
+        }
 
-   .bottom-box {
-      margin: 45px 0 0 2%;
-      font-family: $footer-tag;
-      font-size: 12px;
-      color: gray;
-   }
+        .submit {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .middle {
+    @include flex-j-a();
+    flex-direction: column;
+    margin: 45px 11px 0;
+    .top {
+      @include flex-j-a(space-between, center);
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px white solid;
+      .images {
+        @include flex-j-a(space-between,center);
+        width: 500px;
+        padding-top: 32px;
+        img {
+          margin-right: 15px;
+          width: 24%;
+        }
+        .twitter-pinterest {
+          width: 35px;
+        }
+      }
+      .right {
+        font-family: 'Helvetica', 'Tahoma', 'sans-serif';
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 57px;
+        text-transform: capitalize;
+        span {
+          font-size: 20px;
+          font-weight: 100;
+        }
+      }
+    }
+
+    .bottom {
+      ul {
+        @include flex-j-a();
+        flex-wrap: wrap;
+        bottom: 8px;
+        position: relative;
+        li {
+          font-family: 'Helvetica', 'Tahoma', 'sans-serif';
+          font-size: .75rem;
+          letter-spacing: .5px;
+          text-transform: capitalize;
+          font-weight: 100px;
+          margin-right: 18px;
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+
+  .bottom-box {
+    margin: 45px 0 0 9px;
+    font-family: 'Helvetica', 'Tahoma', 'sans-serif';
+    font-size: .75rem;
+    font-weight: 100px;
+    color: #3c3c3c;
+  }
 }
