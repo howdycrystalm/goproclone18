@@ -467,7 +467,7 @@
       height: 75px;
       max-width: 1222px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 44px 0 20px;
 
       a {
         text-decoration: none;
@@ -568,20 +568,22 @@
           @include flex-j-a(center, center);
           @include width-height(19px, 19px);
           background-color: #f44243;
-          border-radius: 10px;
-          margin-left: 7px;
+          border-radius: 50%;
+          position: absolute;
+          right: -37px;
+          bottom: -4px;
 
           h2 {
             margin-left: -2px;
             font-family: $button-text;
             font-size: .75rem;
           }
-
-          .cart-total:hover {
-            @include width-height(22px, 22px);
-            margin-top: 0px;
-            cursor: pointer;
-          }
+        }
+        .cart-total:hover {
+          position: absolute;
+          border: 3px solid #f44243;
+          cursor: pointer;
+          padding: 8px;
         }
       }
     }
