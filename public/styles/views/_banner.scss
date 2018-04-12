@@ -595,6 +595,9 @@
       }
     }
   }
+  /* ----------------------------------------------------------- */
+  /*  Dropdown                                                   */
+  /*------------------------------------------------------------ */
   .dropdown {
     @include width-height(1200px, 95px);
     @include flex-j-a();
@@ -670,5 +673,12 @@
         cursor: default;
       }
     }
+  }
+  .dropdown-partial {
+    top: 5px;
+  }
+
+  .dropdown-show {
+    top: 75px;
   }
 }
