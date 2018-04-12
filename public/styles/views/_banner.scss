@@ -454,7 +454,9 @@
 // }
 * {
   box-sizing: border-box;
-
+  /* ----------------------------------------------------------- */
+  /*  Banner (blk nav)                                           */
+  /*------------------------------------------------------------ */
   .banner {
     @include width-height(100%, 75px);
     z-index: 15;
@@ -481,7 +483,10 @@
         text-decoration: none;
         color: white;
       }
-      //***** Left Container *****//
+
+      /* Left Container
+      ------------------------------------------------------------- */
+
       .left {
         width: 518px;
         font-size: $font14px;
@@ -515,8 +520,10 @@
         @include width-height(14px, 14px);
       }
 
-      //***** Right Container *****//
+      /* Right Container
+      ------------------------------------------------------------- */
       //contains links, text, and cart on right side of banner
+
       .right-container {
         display: flex;
         position: relative;
