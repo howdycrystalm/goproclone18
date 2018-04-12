@@ -602,28 +602,23 @@
   /*  Dropdown                                                   */
   /*------------------------------------------------------------ */
   .dropdown {
-    @include width-height(1200px, 95px);
+    @include width-height(100%, 95px);
     @include flex-j-a();
     background-color: white;
     color: black;
     z-index: 9;
     position: fixed;
-    right: 0;
-    left: 0;
-    margin-right: auto;
-    margin-left: auto;
     top: -34px;
     transition: top 0.3s cubic-bezier(0.68, -0.01, 0.31, 1.31);
 
     .label {
       font-family: $header-text;
-      font-size: 14px;
+      font-size: $font14px;
       font-size: 900;
       text-transform: capitalize;
       margin-top: 4px;
     }
     .watch-small {
-      width: 580px;
       margin: auto;
       margin-bottom: -1px;
     }
@@ -641,15 +636,7 @@
         flex-direction: column;
         margin-top: 3px;
       }
-      .up-arrow {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 5px 5px 0 5px;
-        border-color: #ffffff transparent transparent transparent;
-        margin-top: 5px;
-        margin-left: 5px;
-      }
+
       li:hover {
         border-bottom: $med-blue solid 2px;
         margin-bottom: 0px;
