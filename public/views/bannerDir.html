@@ -31,7 +31,9 @@
             </li>
          </ul>
       </div>
-   </div>
+   </div>-->
+   <!-- Dropdown Cart-->
+   <!--************************************************************* -->
    <div class="dropdown-cart" ng-class="{'show-cart': cartShow === true}">
       <div class="top">
          <h2 ng-click="bob = !bob">Your cart</h2>
@@ -71,7 +73,8 @@
       </div>
    </div>
 </div>
-
+<!-- WHITE dropdown
+************************************************************* -->
 <div class="dropdown" ng-class="{'dropdown-show': hoverShop === true, 'dropdown-partial': state === 'cameras' || state === 'drones' || state === 'apparel' || state === 'apparelProduct'}" ng-mouseover="hoverShop=true; cartShow=false" ng-mouseleave="hoverShop=false">
    <ul class="shop-list">
       <a ui-sref="cameras"><li ng-class="{'highlighted': state === 'cameras'}">
@@ -105,7 +108,8 @@
 
    </ul>
 </div>
-
+<!-- Watch Dropdown
+************************************************************* -->
 <div class="dropdown" ng-class="{'dropdown-show': hoverWatch === true}" ng-mouseover="hoverWatch=true; cartShow=false" ng-mouseleave="hoverWatch=false">
    <div class="watch-small">
       <ul>
@@ -123,8 +127,9 @@
          </li></a>
       </ul>
    </div>
-</div> -->
-
+</div>
+<!-- Name of Section
+************************************************************* -->
 <!-- Banner
 ************************************************************* -->
 <div class="banner">
@@ -214,5 +219,45 @@
             <div class="label">stabilization</div>
          </li></a>
       </ul>
+   </div>
+</div>
+<!-- Dropdown Cart
+************************************************************* -->
+<div class="dropdown-cart" ng-class="{'show-cart': cartShow === true}">
+   <div class="top">
+      <h2 ng-click="bob = !bob">Your cart</h2>
+      <div class="close" ng-click="cartShow = !cartShow"></div>
+   </div>
+   <div class="mid">
+      <div class="empty" ng-class="{'show-thing': products.length <= 0}">
+         Your cart is empty.
+      </div>
+      <div class="full" ng-class="{'show-thing': products.length > 0}" ng-repeat="prod in products">
+         <div class="img">
+            <img src="{{prod.img_url}}" alt="">
+         </div>
+         <div class="quantitiy">
+            <h2>{{prod.count}}</h2>
+         </div>
+         <div class="name-price">
+            <a>{{prod.size}} {{prod.title}}</a>
+            <h3>{{prod.price * prod.count | currency}}</h2>
+         </div>
+      </div>
+   </div>
+   <div class="bot">
+      <div class="empty" ng-class="{'show-thing': products.length <= 0}">
+         <a ui-sref="cameras"><div class="button">
+            <h2>Shop</h2>
+            <h3>&#10095;</h3>
+         </div></a>
+      </div>
+      <div class="full" ng-class="{'show-thing': products.length > 0}">
+         <h4>Subtotal: {{subtot | currency}}</h4>
+         <a ui-sref="cart"><div class="button">
+            <h2 class="button-text">Checkout</h2>
+            <h3>&#10095;</h3>
+         </div></a>
+      </div>
    </div>
 </div>
