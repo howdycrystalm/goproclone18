@@ -8,6 +8,7 @@ module.exports = {
   //pull product from database to give cart info//
 
   getItem: function(req, res, next) {
+    //greater than 15 product IDs
     if (req.params.id > 15) {
       db.get_cart_product([req.params.id, req.params.prodid], function(
         err,
