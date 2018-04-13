@@ -12,7 +12,19 @@
          </div></a>
       </div>
    </div>
-
+<!-- Cart Table (column names)
+************************************************************* -->
+<!-- can't use li, try divs -->
+<div id="column-container">
+  <ul class="column-names">
+    <li>Product</li>
+    <li>Quantity</li>
+    <li>Price</li>
+    <li>Total Price</li>
+  </ul>
+</div>
+<!-- Items in cart
+************************************************************* -->
    <div class="items-incart" ng-repeat="item in cart">
          <div class="left">
             <div class="img-container">

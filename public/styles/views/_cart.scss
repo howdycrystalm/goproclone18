@@ -23,21 +23,6 @@
       flex-direction: column;
       background: tan;
 
-      // @include flex-j-a(space-between, center);
-      // background-color: white;
-      // padding: 10px 30px;
-      // z-index: 5;
-      // position: fixed;
-      // right: 0;
-      // left: 0;
-      // top: 80px;
-      // margin-right: auto;
-      // margin-left: auto;
-      // border: $fake-black 1px solid;
-      // h2 {
-      //   font-family: $main;
-      //   font-size: 25px;
-      // }
       .buttons {
         @include flex-j-a(flex-end, center);
         padding-bottom: 5px;
@@ -88,7 +73,20 @@
         }
       }
     }
-
+    /* Cart Table (column names)
+------------------------------------------------------------- */
+    #column-container {
+      width: 100%;
+      background: brown;
+    }
+    .column-names {
+      @include flex-j-a(space-between, center);
+      font-family: $main;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+    }
+    /* Items in cart
+------------------------------------------------------------- */
     .items-incart {
       margin: 0 15px;
       padding: 15px 0;
