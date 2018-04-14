@@ -15,14 +15,14 @@
 <!-- Cart Table (column names)
 ************************************************************* -->
 <!-- can't use li, try divs -->
-<div id="column-container">
-  <ul class="column-names">
-    <li>Product</li>
-    <li>Quantity</li>
-    <li>Price</li>
-    <li>Total Price</li>
-  </ul>
+<div class="table-header">
+    <div id="product">Product</div>
+    <div id="ghost-description"></div>
+    <div id="quantity">Quantity</div>
+    <div id="price">Price</div>
+    <div id="total-price">Total Price</div>
 </div>
+
 <!-- Items in cart
 ************************************************************* -->
    <div class="items-incart" ng-repeat="item in cart">
