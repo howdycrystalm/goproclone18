@@ -233,7 +233,9 @@
 //   margin-left: 9px;
 //   display: none;
 // }
-//
+/* ----------------------------------------------------------- */
+/*  Drop Down Cart                                            */
+/*------------------------------------------------------------ */
 // .dropdown-cart {
 //   @include width-height(355px, auto);
 //   flex-direction: column;
@@ -454,8 +456,7 @@
 // }
 * {
   box-sizing: border-box;
-
-  .banner {
+  -webkit-font-smoothing: antialiased .banner {
     @include width-height(100%, 75px);
     z-index: 15;
     position: fixed;
@@ -467,7 +468,7 @@
       height: 75px;
       max-width: 1222px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 44px 0 20px;
 
       a {
         text-decoration: none;
@@ -481,10 +482,14 @@
         text-decoration: none;
         color: white;
       }
-      //***** Left Container *****//
+
+      /* Left Container
+      ------------------------------------------------------------- */
+      //contains links, dropdowns
+
       .left {
         width: 518px;
-        font-size: .875rem;
+        font-size: $font14px;
         font-family: $header-link;
         font-weight: bold;
         text-transform: uppercase;
@@ -515,8 +520,10 @@
         @include width-height(14px, 14px);
       }
 
-      //***** Right Container *****//
-      //contains links, text, and cart on right side of banner
+      /* Right Container
+      ------------------------------------------------------------- */
+      //contains login, links, text, and cart on right side of banner
+
       .right-container {
         display: flex;
         position: relative;
@@ -526,7 +533,7 @@
           width: 220px;
           font-family: $header-text;
           font-weight: 300px;
-          font-size: .875rem;
+          font-size: $font14px;
           margin-right: 30px;
           margin-top: 8px;
 
@@ -568,8 +575,10 @@
           @include flex-j-a(center, center);
           @include width-height(19px, 19px);
           background-color: #f44243;
-          border-radius: 10px;
-          margin-left: 7px;
+          border-radius: 50%;
+          position: absolute;
+          right: -37px;
+          bottom: -4px;
 
           h2 {
             margin-left: -2px;
@@ -577,7 +586,307 @@
             font-size: .75rem;
           }
         }
+        .cart-total:hover {
+          position: absolute;
+          border: 3px solid #f44243;
+          cursor: pointer;
+          padding: 8px;
+        }
       }
     }
   }
+  /* ----------------------------------------------------------- */
+  /*  Dropdown                                                   */
+  /*------------------------------------------------------------ */
+  .dropdown {
+    @include width-height(100%, 95px);
+    @include flex-j-a();
+    background-color: white;
+    color: black;
+    z-index: 9;
+    position: fixed;
+    top: -34px;
+    transition: top 0.3s cubic-bezier(0.68, -0.01, 0.31, 1.31);
+
+    .label {
+      font-family: $header-text;
+      font-size: $font14px;
+      font-size: 900;
+      text-transform: capitalize;
+      margin-top: 4px;
+    }
+    .watch-small {
+      margin: auto;
+      margin-bottom: -1px;
+    }
+    .shop-list {
+      margin-top: 11px;
+    }
+
+    ul {
+      width: 100%;
+      @include flex-j-a(space-around);
+      flex-direction: row;
+      li {
+        width: 100%;
+        @include flex-j-a(flex-start, center);
+        flex-direction: column;
+        margin-top: 3px;
+      }
+
+      li:hover {
+        border-bottom: $med-blue solid 2px;
+        margin-bottom: 0px;
+        margin-top: 1px;
+      }
+      .highlighted {
+        border-bottom: $med-blue solid 2px;
+        margin-bottom: 0px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        margin-bottom: 3px;
+      }
+      a:hover {
+        text-decoration: none;
+        color: black;
+      }
+      a:visited {
+        text-decoration: none;
+        color: black;
+      }
+      .nono {
+        cursor: default;
+      }
+    }
+  }
+  // .dropdown-partial {
+  //   top: 5px;
+  // }
+
+  .dropdown-show {
+    top: 75px;
+  }
+}
+/* ----------------------------------------------------------- */
+/*  Drop Down Cart                                            */
+/*------------------------------------------------------------ */
+.dropdown-cart {
+  @include width-height(355px, auto);
+  flex-direction: column;
+  background-color: black;
+  padding: 10px 5px;
+  position: fixed;
+  right: 0px;
+  top: 75px;
+  z-index: 11;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.68, -0.01, 0.31, 1.31);
+
+  .top {
+    @include width-height(100%, 43px);
+    @include flex-j-a(space-between, center);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: white;
+    color: black;
+    margin-bottom: 1px;
+
+    h2 {
+      margin-left: 9px;
+      font-family: $button-text;
+      font-weight: bolder;
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 23px;
+      width: 20px;
+      height: 20px;
+    }
+    .close:hover {
+      cursor: pointer;
+    }
+    .close:before,
+    .close:after {
+      position: absolute;
+      left: 8px;
+      content: ' ';
+      height: 17px;
+      width: 2px;
+      background-color: #666666;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    }
+    .close:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .mid {
+    @include width-height(100%, auto);
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 1px 0;
+
+    .empty {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      font-family: $button-text;
+      font-size: 12px;
+      margin: 7px 0;
+    }
+
+    .full {
+      @include flex-j-a(flex-start, center);
+      margin: 10px 0;
+      display: none;
+      .img {
+        margin-left: 10px;
+        @include width-height(85px, auto);
+        @include flex-j-a(center, center);
+        overflow: hidden;
+        height: 120px;
+        img {
+          max-height: 100%;
+          height: auto;
+          width: auto;
+          @media (min-width: 1400px) {
+            height: 50px;
+          }
+          @media (min-width: 1250px) {
+            max-height: 100%;
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+      .quantitiy {
+        @include flex-j-a(flex-start, center);
+        h2 {
+          color: black;
+          font-size: 16px;
+          font-family: $button-text;
+          margin-left: 20px;
+        }
+      }
+      .name-price {
+        @include flex-j-a(flex-start);
+        flex-direction: column;
+        margin-left: 20px;
+        a {
+          font-size: 14px;
+          font-size: bold;
+          font-family: $button-text;
+          color: $med-blue;
+          margin-bottom: 5px;
+        }
+        h3 {
+          color: gray;
+          font-family: $button-text;
+          font-size: 14px;
+        }
+      }
+    }
+    .show-thing {
+      display: flex;
+    }
+  }
+
+  .bot {
+    width: 100%;
+    height: auto;
+    @include flex-j-a(center, center);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+
+    .empty {
+      @include width-height(100%, 76px);
+      @include flex-j-a(center, center);
+      display: none;
+      a {
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .button {
+        @include flex-j-a(space-between, center);
+        @include width-height(300px, 38px);
+        background: #009fdf;
+
+        padding: 1px 10px;
+        color: white;
+        border-radius: 3px;
+        h2 {
+          font-family: $button-text;
+          font-size: 16px;
+          margin-left: 6px;
+        }
+        h3 {
+          font-family: $button-text;
+          font-size: 16px;
+          margin-right: 6px;
+        }
+      }
+      .button:hover {
+        cursor: pointer;
+      }
+    }
+    .full {
+      @include width-height(100%, 100px);
+      @include flex-j-a(center, center);
+      flex-direction: column;
+      display: none;
+
+      h4 {
+        font-family: $button-text;
+        font-size: 14px;
+        color: black;
+        margin-bottom: 14px;
+      }
+
+      a {
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .button {
+        @include flex-j-a(space-between, center);
+        @include width-height(300px, 38px);
+        background: #7ed321;
+
+        padding: 1px 10px;
+        color: white;
+        border-radius: 3px;
+        .button-text {
+          font-family: $button-text;
+          font-size: 16px;
+          margin-left: 6px;
+        }
+        h3 {
+          font-family: $button-text;
+          font-size: 16px;
+          margin-right: 6px;
+        }
+      }
+    }
+    .show-thing {
+      display: flex;
+    }
+  }
+}
+
+.show-cart {
+  display: block;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
 }
