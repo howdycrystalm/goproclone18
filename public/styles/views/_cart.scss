@@ -9,6 +9,7 @@
     flex-direction: column;
     position: fixed;
     z-index: 1;
+    background-color: #ffffff;
 
     .buttons {
       @include flex-j-a(flex-end, center);
