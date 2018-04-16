@@ -1,6 +1,65 @@
 * {
   box-sizing: border-box;
 
+  .fixed-cart-header {
+    @include width-height(100%, 115px);
+    max-width: 1200px;
+    @include flex-j-a(space-between, space-between);
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    background: tan;
+
+    .buttons {
+      @include flex-j-a(flex-end, center);
+      padding-bottom: 5px;
+
+      a {
+        text-decoration: none;
+      }
+      .button-clear {
+        @include flex-j-a(center, center);
+        @include width-height(160px, 33px);
+        margin: 0 6px;
+        background: white;
+        color: $fake-black;
+        // border-radius: 3px;
+        border: black 1px solid;
+        transition: color 0.3s;
+        transition: background 0.3s;
+        h2 {
+          font-family: $main;
+          font-size: 14px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+      .button-clear:hover {
+        cursor: pointer;
+        background: #00b8fd;
+        color: white;
+      }
+      .button-green {
+        @include flex-j-a(space-between, center);
+        @include width-height(140px, 40px);
+        background: #27d000;
+        padding: 1px 10px;
+        color: white;
+        h2 {
+          text-transform: uppercase;
+          font-family: $button-text;
+          font-weight: bold;
+          font-size: 16px;
+          margin-left: 6px;
+        }
+      }
+      .button-green:hover {
+        cursor: pointer;
+        background-color: #21b600;
+        color: white;
+      }
+    }
+  }
   .cart-page {
     width: 100%;
     max-width: 1200px;
@@ -8,72 +67,20 @@
     position: relative;
     top: 75px;
     margin: 0 auto;
-    padding: 0 14px;
     background-color: gold;
     h2 {
       font-family: $main;
       font-size: 1.875rem;
       // padding: 20px 0;
     }
-    .fixed-cart-header {
-      @include width-height(100%, 115px);
-      @include flex-j-a(space-between, space-between);
-      flex-direction: column;
-      background: tan;
-
-      .buttons {
-        @include flex-j-a(flex-end, center);
-        padding-bottom: 5px;
-
-        a {
-          text-decoration: none;
-        }
-        .button-clear {
-          @include flex-j-a(center, center);
-          @include width-height(160px, 33px);
-          margin: 0 6px;
-          background: white;
-          color: $fake-black;
-          // border-radius: 3px;
-          border: black 1px solid;
-          transition: color 0.3s;
-          transition: background 0.3s;
-          h2 {
-            font-family: $main;
-            font-size: 14px;
-            font-weight: 500;
-            text-transform: uppercase;
-          }
-        }
-        .button-clear:hover {
-          cursor: pointer;
-          background: #00b8fd;
-          color: white;
-        }
-        .button-green {
-          @include flex-j-a(space-between, center);
-          @include width-height(140px, 40px);
-          background: #27d000;
-          padding: 1px 10px;
-          color: white;
-          h2 {
-            text-transform: uppercase;
-            font-family: $button-text;
-            font-weight: bold;
-            font-size: 16px;
-            margin-left: 6px;
-          }
-        }
-        .button-green:hover {
-          cursor: pointer;
-          background-color: #21b600;
-          color: white;
-        }
-      }
-    }
   }
   /* Cart Table (column names)
 ------------------------------------------------------------- */
+  .items-list {
+    padding: 0 14px;
+    position: relative;
+    top: 117px;
+  }
   .table-header {
     display: flex;
     justify-content: space-between;
