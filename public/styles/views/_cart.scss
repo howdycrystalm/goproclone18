@@ -12,7 +12,7 @@
 
     .buttons {
       @include flex-j-a(flex-end, center);
-      padding-bottom: 5px;
+      padding: 5px 14px;
 
       a {
         text-decoration: none;
@@ -194,14 +194,15 @@
       }
     }
   }
-
+  /* Total Section
+------------------------------------------------------------- */
   .total {
     @include flex-j-a(flex-end);
     .subTotal {
       @include flex-j-a(flex-start);
       flex-direction: column;
       @include width-height(375px, 200px);
-      margin-right: 20px;
+
       .row {
         @include flex-j-a(space-between, center);
         width: 100%;
@@ -215,7 +216,7 @@
         h3 {
           font-family: $main;
           font-weight: lighter;
-          font-size: 18px;
+          font-size: 1rem;
           color: $fake-black;
         }
         h4 {
@@ -227,8 +228,26 @@
       }
     }
     .bot-bar {
-      padding-bottom: 25px;
-      border-bottom: 1px solid #cccccc;
+      padding-bottom: 14px;
     }
+  }
+  #free-shipping {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400px;
+    font-size: $font14px;
+    letter-spacing: .5px;
+    margin: 8px 0;
+    color: #b40365;
+  }
+
+  #fake-country-drop {
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #999999;
+    border-radius: 3px;
+    text-align: left;
+    color: #999999;
+    font-size: $font12px;
+    font-family: $main;
   }
 }
