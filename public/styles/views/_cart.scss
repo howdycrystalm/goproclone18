@@ -8,7 +8,6 @@
     flex-direction: column;
     position: fixed;
     z-index: 1;
-    background: tan;
 
     .buttons {
       @include flex-j-a(flex-end, center);
@@ -67,7 +66,7 @@
     position: relative;
     top: 75px;
     margin: 0 auto;
-    background-color: gold;
+
     h2 {
       font-family: $main;
       font-size: 1.875rem;
