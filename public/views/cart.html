@@ -61,13 +61,17 @@
             <!-- <h2>{{shipping | currency}}</h2> -->
             <h2>FREE</h2>
          </div>
-           <div id="free-shipping">Free 2-Day Shipping + Free Returns</div>
-           <div id="fake-country-drop">United States</div>
-         <div class="row">
-            <h3>Estimated Total</h3>
+          <div id="free-shipping">Free 2-Day Shipping + Free Returns</div>
+          <div id="fake-country-container">
+            <div id="fake-country-drop">United States <i class="fas fa-angle-down"></i></div>
+            <div id="question-circle"><i class="fas fa-question-circle"></i></div>
+          </div>
+          <div class="row">
+            <h3 style="font-size: 1.25rem">Estimated Total</h3>
             <!-- <h2>{{shipping + subTotal | currency}}</h2> -->
             <h2>{{subTotal | currency}}</h2>
          </div>
+         <br>
          <div class="row">
             <h4>Prices shown reflects USD. Price excludes sales tax.</h4>
          </div>
