@@ -456,10 +456,7 @@
 // }
 * {
   box-sizing: border-box;
-  /* ----------------------------------------------------------- */
-  /*  Banner (blk nav)                                           */
-  /*------------------------------------------------------------ */
-  .banner {
+  -webkit-font-smoothing: antialiased .banner {
     @include width-height(100%, 75px);
     z-index: 15;
     position: fixed;

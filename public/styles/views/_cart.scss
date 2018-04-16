@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 
   .fixed-cart-header {
     @include width-height(100%, 115px);
@@ -176,8 +177,8 @@
         h2 {
           text-transform: uppercase;
           margin-top: 10px;
-          font-family: $main;
-          font-size: 14px;
+          font-family: Arial;
+          font-size: 12px;
           cursor: pointer;
         }
       }
@@ -219,13 +220,13 @@
           font-size: 1rem;
           color: $fake-black;
         }
-        h4 {
-          font-family: Tahoma, Helvetica, sans-serif;
-          letter-spacing: .5px;
-          font-size: $font12px;
-          color: black;
-          margin-top: -25px;
-        }
+        // h4 {
+        //   font-family: Tahoma, Helvetica, sans-serif;
+        //   letter-spacing: .5px;
+        //   font-size: $font12px;
+        //   color: black;
+        //   margin-top: -25px;
+        // }
       }
     }
     .bot-bar {
@@ -262,5 +263,23 @@
     font-size: 1.275rem;
     color: #ccc;
     padding-left: 10px;
+  }
+
+  #estimated-total {
+    @include flex-j-a(space-between, flex-start);
+    width: 375px;
+    flex-direction: row;
+    font-family: $main;
+    font-size: 1.25rem;
+    padding: 5px 0;
+  }
+
+  #fine-print {
+    font-family: Tahoma, Helvetica, sans-serif;
+    letter-spacing: .5px;
+    font-size: $font12px;
+    color: black;
+    position: relative;
+    bottom: 7px;
   }
 }

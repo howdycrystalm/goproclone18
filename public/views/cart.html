@@ -66,15 +66,17 @@
             <div id="fake-country-drop">United States <i class="fas fa-angle-down"></i></div>
             <div id="question-circle"><i class="fas fa-question-circle"></i></div>
           </div>
-          <div class="row">
-            <h3 style="font-size: 1.25rem">Estimated Total</h3>
+          <div id="estimated-total">
+            <h3 style="font-size: 1.25rem; padding-bottom: 10px;">Estimated Total</h3>
             <!-- <h2>{{shipping + subTotal | currency}}</h2> -->
-            <h2>{{subTotal | currency}}</h2>
-         </div>
+            <h2 style="font-size: 1.25rem;">{{subTotal | currency}}</h2>
+
+          </div>
+          <div id="fine-print">Prices shown reflects USD. Price excludes sales tax.</div>
          <br>
-         <div class="row">
+         <!-- <div class="row">
             <h4>Prices shown reflects USD. Price excludes sales tax.</h4>
-         </div>
+         </div> -->
       </div>
    </div>
   </div>
