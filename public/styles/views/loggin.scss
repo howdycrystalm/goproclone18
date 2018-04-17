@@ -103,6 +103,10 @@ $font: 'Roboto';
     }
     .center-spacer {
       text-align: center;
+      hr {
+        border: none;
+        height: 1px;
+      }
       .or-spacer1 {
         width: 192px;
         margin-right: 14px;
@@ -117,7 +121,7 @@ $font: 'Roboto';
       .or {
         display: inline-block;
         font-family: 'proxima-nova-light';
-        font-size: .625rem;
+        font-size: .75rem;
         text-transform: uppercase;
         color: white;
         letter-spacing: 5px;
@@ -146,7 +150,7 @@ $font: 'Roboto';
       position: relative;
       top: 60px;
       .fb-login {
-        width: 455.66px;
+        width: 449px;
         background: #222;
         background-color: rgb(34, 34, 34);
         text-align: center;
@@ -165,7 +169,7 @@ $font: 'Roboto';
       }
 
       .google-login {
-        width: 455.66px;
+        width: 449px;
         background: #222;
         background-color: rgb(34, 34, 34);
         text-align: center;
@@ -185,8 +189,8 @@ $font: 'Roboto';
         text-align: center;
         color: white;
         font-family: 'proxima-nova-light', sans-serif;
-        margin-top: 20px;
-        margin-bottom: 40px;
+        position: relative;
+        top: 43px;
       }
       .sign-up-link {
         color: #017faa;
