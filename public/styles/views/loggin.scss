@@ -17,9 +17,10 @@ $font: 'Roboto';
   overflow: overlay;
   .login-wrapper {
     .logo-login {
-      max-width: 145px;
+      max-width: 148px;
       margin: 0 auto;
-      padding-top: 44px;
+      position: relative;
+      top: 51px;
     }
 
     .sign-in {
@@ -31,8 +32,12 @@ $font: 'Roboto';
     }
 
     .form-wrapper {
-      width: 455.66px;
+      width: 449px;
+      height: 345px; //probably needs to be adjusted
       margin: 0 auto;
+      position: relative;
+      top: 85px;
+      background: firebrick;
 
       .sign-in {
         padding-bottom: 30px;
@@ -47,7 +52,8 @@ $font: 'Roboto';
 
         .email {
           display: flex;
-          padding: 21px 27px 21px 27px;
+          // padding: 21px 27px 21px 27px;
+          padding: 26px 27px;
           font-size: 18px;
           border: transparent;
         }
@@ -67,7 +73,8 @@ $font: 'Roboto';
         }
 
         .password {
-          padding: 21px 27px 21px 27px;
+          // padding: 21px 27px 21px 27px;
+          padding: 26px 27px;
           font-size: 18px;
           border: transparent;
         }
@@ -79,11 +86,12 @@ $font: 'Roboto';
         .sign-in-button {
           text-align: center;
           background: #009fdf;
-          padding: 21px 27px 21px 27px;
+          // padding: 21px 27px 21px 27px;
+          padding: 20px 27px;
           font-family: 'proxima-nova-light';
           color: white;
           font-size: 22px;
-          margin-top: 10px;
+          margin-top: 12px;
           text-transform: uppercase;
           border: none;
         }
@@ -96,37 +104,47 @@ $font: 'Roboto';
     .center-spacer {
       text-align: center;
       .or-spacer1 {
-        width: 200px;
+        width: 192px;
+        margin-right: 14px;
         display: inline-block;
         vertical-align: middle;
         background: transparent;
         opacity: .7;
         background-color: rgba(216, 216, 216, .3);
+        position: relative;
+        top: 64px;
       }
       .or {
         display: inline-block;
         font-family: 'proxima-nova-light';
-        font-size: 17px;
+        font-size: .625rem;
         text-transform: uppercase;
         color: white;
         letter-spacing: 5px;
         padding: 55px 5px 0 5px;
+        position: relative;
+        top: 64px;
       }
       .or-spacer2 {
-        width: 200px;
+        width: 197px;
+        margin-left: 14px;
         display: inline-block;
         vertical-align: middle;
         background: transparent;
         opacity: .7;
         background-color: rgba(216, 216, 216, .3);
+        position: relative;
+        top: 64px;
       }
     }
 
     .oauth-wrapper {
-      width: 455.66px;
+      width: 449px;
       z-index: 5;
       margin: 0 auto;
       margin-top: 20px;
+      position: relative;
+      top: 60px;
       .fb-login {
         width: 455.66px;
         background: #222;
