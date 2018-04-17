@@ -149,6 +149,10 @@ $font: 'Roboto';
       margin-top: 20px;
       position: relative;
       top: 60px;
+      .icon {
+        font-size: 18px;
+        margin-right: 13px;
+      }
       .fb-login {
         width: 449px;
         background: #222;
@@ -161,11 +165,11 @@ $font: 'Roboto';
         margin-top: 10px;
         text-transform: uppercase;
         border: none;
-        .fa-facebook-f:before,
-        .fa-facebook:before {
-          font-size: 20px;
-          padding-right: 10px;
-        }
+        // .fa-facebook-f:before,
+        // .fa-facebook:before {
+        //   font-size: 20px;
+        //   padding-right: 10px;
+        // }
       }
 
       .google-login {
@@ -180,10 +184,10 @@ $font: 'Roboto';
         margin-top: 10px;
         text-transform: uppercase;
         border: none;
-        .fa-google-plus:before {
-          font-size: 20px;
-          padding-right: 10px;
-        }
+        // .fa-google-plus:before {
+        //   font-size: 20px;
+        //   padding-right: 10px;
+        // }
       }
       .sign-up-text {
         text-align: center;
