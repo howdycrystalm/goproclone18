@@ -25,10 +25,15 @@ $font: 'Roboto';
 
     .sign-in {
       text-align: center;
+      text-transform: uppercase;
       padding-top: 50px;
-      font-size: 30px;
+      font-size: 1.813rem;
       font-family: $font;
       color: white;
+      -webkit-transform: scale(1.1, 1);
+      -moz-transform: scale(1.1, 1);
+      -ms-transform: scale(1.1, 1);
+      -o-transform: scale(1.1, 1);
     }
 
     .form-wrapper {
@@ -40,7 +45,7 @@ $font: 'Roboto';
       background: firebrick;
 
       .sign-in {
-        padding-bottom: 30px;
+        padding-bottom: 24px;
         font-family: 'proxima-nova-rg', sans-serif;
         font-weight: 700;
       }
@@ -56,6 +61,9 @@ $font: 'Roboto';
           padding: 26px 27px;
           font-size: 18px;
           border: transparent;
+          height: 67px;
+          position: relative;
+          top: 9px;
         }
 
         .email:focus {
@@ -63,20 +71,25 @@ $font: 'Roboto';
         }
 
         .spacer {
-          width: 388px;
-          margin: -7px;
-          height: 0;
-          color: #bdbdbd;
+          width: 402px;
+          border: none;
+          height: 1px;
+          background-color: rgba(0, 0, 0, .19);
+          padding-left: 15px;
           z-index: 4;
-          margin-left: 33px;
-          opacity: .3;
+          hr {
+            border: none;
+            height: 1px;
+          }
         }
 
         .password {
-          // padding: 21px 27px 21px 27px;
           padding: 26px 27px;
           font-size: 18px;
           border: transparent;
+          height: 67px;
+          position: relative;
+          bottom: 9px;
         }
 
         .password:focus {
