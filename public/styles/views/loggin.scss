@@ -45,6 +45,7 @@ $font: 'Roboto';
       background: firebrick;
 
       .sign-in {
+        // padding-bottom: 24px;
         padding-bottom: 24px;
         font-family: 'proxima-nova-rg', sans-serif;
         font-weight: 700;
@@ -54,16 +55,28 @@ $font: 'Roboto';
         display: flex;
         justify-content: center;
         flex-direction: column;
+        padding-top: 10px;
 
-        .email {
+        .input-icon {
           display: flex;
-          // padding: 21px 27px 21px 27px;
-          padding: 26px 27px;
-          font-size: 18px;
-          border: transparent;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          color: #45bdfd;
+          font-size: 22px;
+          z-index: 5;
+          // position: relative;
+          // top: 10px;
+          background: #fff;
+          padding-left: 19px;
+        }
+        .email {
+          font-size: 1.063rem;
+          border: none;
           height: 67px;
-          position: relative;
-          top: 9px;
+          width: 433px;
+          padding-left: 6px;
+          opacity: .5;
         }
 
         .email:focus {
@@ -76,7 +89,10 @@ $font: 'Roboto';
           height: 1px;
           background-color: rgba(0, 0, 0, .19);
           padding-left: 15px;
-          z-index: 4;
+          z-index: 6;
+          position: relative;
+          top: 10px;
+          margin-top: -9px;
           hr {
             border: none;
             height: 1px;
@@ -84,12 +100,18 @@ $font: 'Roboto';
         }
 
         .password {
-          padding: 26px 27px;
-          font-size: 18px;
-          border: transparent;
+          // padding: 26px 27px;
+          // font-size: 18px;
+          // border: transparent;
+          // height: 67px;
+          // position: relative;
+          // bottom: 9px;
+          font-size: 1.063rem;
+          border: none;
           height: 67px;
-          position: relative;
-          bottom: 9px;
+          width: 433px;
+          padding-left: 6px;
+          opacity: .5;
         }
 
         .password:focus {
@@ -104,7 +126,7 @@ $font: 'Roboto';
           font-family: 'proxima-nova-light';
           color: white;
           font-size: 22px;
-          margin-top: 12px;
+          margin-top: 8px;
           text-transform: uppercase;
           border: none;
         }

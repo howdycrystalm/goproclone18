@@ -9,9 +9,15 @@
         <form ng-submit="login(user)">
           <h1 class="sign-in">Sign in</h1>
           <div class="center-input">
-            <input type="email" ng-model="user.email" placeholder="Email" required class="email"/>
+            <div class="input-icon">
+              <i class="far fa-envelope"></i>
+              <input type="email" ng-model="user.email" placeholder="Email" required class="email"/>
+            </div>
             <hr class="spacer"/>
-            <input type="password" ng-model="user.password" placeholder="Password" required class="password"/>
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" ng-model="user.password" placeholder="Password" required class="password"/>
+            </div>
             <button type="submit" class="sign-in-button">sign in</button>
           </div>
         </form>
