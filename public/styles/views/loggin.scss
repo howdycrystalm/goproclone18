@@ -42,7 +42,6 @@ $font: 'Roboto';
       margin: 0 auto;
       position: relative;
       top: 85px;
-      background: firebrick;
 
       .sign-in {
         // padding-bottom: 24px;
@@ -76,7 +75,7 @@ $font: 'Roboto';
           height: 67px;
           width: 433px;
           padding-left: 6px;
-          opacity: .5;
+          opacity: .4;
         }
 
         .email:focus {
@@ -87,7 +86,7 @@ $font: 'Roboto';
           width: 402px;
           border: none;
           height: 1px;
-          background-color: rgba(0, 0, 0, .19);
+          background-color: rgba(0, 0, 0, .16);
           padding-left: 15px;
           z-index: 6;
           position: relative;
@@ -111,7 +110,7 @@ $font: 'Roboto';
           height: 67px;
           width: 433px;
           padding-left: 6px;
-          opacity: .5;
+          opacity: .4;
         }
 
         .password:focus {
@@ -125,7 +124,7 @@ $font: 'Roboto';
           padding: 20px 27px;
           font-family: 'proxima-nova-light';
           color: white;
-          font-size: 22px;
+          font-size: 1.25rem;
           margin-top: 8px;
           text-transform: uppercase;
           border: none;
@@ -135,6 +134,19 @@ $font: 'Roboto';
           cursor: pointer;
         }
       }
+    }
+    .forgot-password {
+      width: 150px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-family: proxima-nova-rg, 'Open Sans', Helvetica, sans-serif;
+      font-size: .8rem;
+      color: #a4a5a5;
+      margin: 0 auto;
+      letter-spacing: 0.5px;
+      padding: 20px 0;
     }
     .center-spacer {
       text-align: center;
