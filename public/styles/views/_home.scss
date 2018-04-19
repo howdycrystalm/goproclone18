@@ -407,9 +407,11 @@
   }
 
   #section3-copy {
-    bottom: 40.5%;
-    right: 11.7%;
-
+    // bottom: 40.5%;
+    // right: 11.7%;
+    /* bottom: 40.5%; */
+    right: 0;
+    width: 50%;
     h1 {
       text-transform: uppercase;
     }
