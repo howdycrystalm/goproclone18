@@ -397,8 +397,11 @@
   }
 
   #section2-copy {
-    bottom: 40.7%;
-    left: 10.4%;
+    top: 49.3%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    width: 50%;
   }
 
   #section2-logo-position {
@@ -407,9 +410,6 @@
   }
 
   #section3-copy {
-    // bottom: 40.5%;
-    // right: 11.7%;
-    /* bottom: 40.5%; */
     right: 0;
     width: 50%;
     h1 {
