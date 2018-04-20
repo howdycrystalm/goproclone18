@@ -9,10 +9,19 @@
         <form ng-submit="login(user)">
           <h1 class="sign-in">Sign in</h1>
           <div class="center-input">
-            <input type="email" ng-model="user.email" placeholder="Email" required class="email"/>
+            <div class="input-icon">
+              <i class="far fa-envelope"></i>
+              <input type="email" ng-model="user.email" placeholder="Email" required class="email"/>
+            </div>
             <hr class="spacer"/>
-            <input type="password" ng-model="user.password" placeholder="Password" required class="password"/>
-            <button type="submit" class="sign-in-button">sign-in</button>
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+              <input type="password" ng-model="user.password" placeholder="Password" required class="password"/>
+            </div>
+            <button type="submit" class="sign-in-button">sign in</button>
+          </div>
+          <div class="forgot-password">
+            <i class="fas fa-lock"></i>Forgot password?
           </div>
         </form>
 
@@ -30,15 +39,17 @@
 
       <div class="oauth-wrapper">
         <button class="fb-login">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-Connect with Facebook
+          <!-- <i class="fa fa-facebook" aria-hidden="true"></i> -->
+          <i class="fab fa-facebook-f icon"></i>
+Continue with Facebook
         </button>
         <button class="google-login">
-          <i class="fa fa-google-plus" aria-hidden="true"></i>
-Connect with Google
+          <!-- <i class="fa fa-google-plus" aria-hidden="true"></i> -->
+          <i class="fab fa-google-plus-g icon"></i>
+Continue with Google
         </button>
 
-        <p class="sign-up-text">Need an Account? <a ui-sref="#" class="sign-up-link">Sign up for free</a></p>
+        <p class="sign-up-text">Need an account? <a ui-sref="#" class="sign-up-link">Sign up for free.</a></p>
       </div>
 
     </div>

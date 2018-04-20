@@ -397,8 +397,11 @@
   }
 
   #section2-copy {
-    bottom: 40.7%;
-    left: 10.4%;
+    top: 49.3%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    width: 50%;
   }
 
   #section2-logo-position {
@@ -407,9 +410,8 @@
   }
 
   #section3-copy {
-    bottom: 40.5%;
-    right: 11.7%;
-
+    right: 0;
+    width: 50%;
     h1 {
       text-transform: uppercase;
     }
@@ -421,11 +423,15 @@
   }
 
   #section4-copy {
-    bottom: 36.5%;
-    left: 13.1%;
     text-align: center;
-    // line-height: 3.2rem;
-    // justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    left: 0;
+    margin: inherit;
+    padding-left: 13.3% !important;
+
     span {
       top: 10px;
     }
