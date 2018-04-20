@@ -35,7 +35,7 @@
     flex-direction: column;
     align-items: center;
 
-    h1 {
+    h2 {
       font-size: 1.875rem;
     }
 
@@ -48,7 +48,7 @@
     }
   }
 
-  h2 {
+  h1 {
     font-size: 3.75rem;
     font-weight: 900;
     padding: 15px;
@@ -227,11 +227,71 @@
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
+  /* enlarges background image
+  ------------------------------------------------------------- */
   @media only screen and (max-width: 1200px) and (min-width: 768px) {
     .section-image {
       background-size: cover;
       background-position: center;
       width: 104%;
+    }
+  }
+  /* center aligns section 2 type
+  ------------------------------------------------------------- */
+  // @media only screen and (max-width: 1179px) and (min-width: 1025px) {
+  #section2-mq {
+    .product-copy {
+      h2 {
+        position: relative;
+        bottom: 16px;
+      }
+      h1 {
+        padding: 9px;
+        position: relative;
+        bottom: 12px;
+      }
+    }
+    #section2-copy {
+      text-align: center;
+    }
+  }
+
+  /* minifies and places quik logo
+  ------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .product-copy {
+      h1 {
+        height: 35px;
+        font-size: 34px;
+        line-height: 34px;
+        padding: 0;
+        margin-top: -1px;
+      }
+      h2 {
+        height: 19px;
+        font-size: 16px;
+        line-height: 19px;
+        margin: auto;
+      }
+      h3 {
+        height: 19px;
+        font-size: 12px;
+        line-height: 19px;
+        text-transform: uppercase;
+        margin: 5px;
+      }
+    }
+    .buttons-container {
+      height: 57px;
+    }
+    .quick-stories-container {
+      .logo {
+        height: 60px !important;
+      }
+    }
+
+    #section1-logo-position {
+      bottom: 1%;
     }
   }
 }
