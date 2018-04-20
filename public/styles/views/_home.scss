@@ -296,12 +296,23 @@
     }
     .quick-stories-container {
       .logo {
-        height: 60px !important;
+        width: 112px;
+        height: 38px;
+      }
+      h6 {
+        left: 10px;
       }
     }
-
     #section1-logo-position {
-      bottom: 1%;
+      bottom: 2%;
+    }
+    #section2-logo-position {
+      bottom: 16%;
+      right: 23.3%;
+    }
+    #section3-logo-position {
+      bottom: 20.1%;
+      left: 27.6%;
     }
   }
 }
