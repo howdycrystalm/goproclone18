@@ -154,7 +154,7 @@
   #section3-copy {
     right: 0;
     width: 50%;
-    h1 {
+    h2 {
       text-transform: uppercase;
     }
   }
@@ -236,7 +236,7 @@
       width: 104%;
     }
   }
-  /* center aligns section 2 type
+  /* center aligns section 2 & 3type
   ------------------------------------------------------------- */
   // @media only screen and (max-width: 1179px) and (min-width: 1025px) {
   #section2-mq {
@@ -255,7 +255,17 @@
       text-align: center;
     }
   }
-
+  #section3-copy {
+    h1 {
+      text-align: center;
+      height: auto;
+      font-size: 4rem;
+      letter-spacing: -1px;
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+  }
   /* minifies and places quik logo
   ------------------------------------------------------------- */
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
