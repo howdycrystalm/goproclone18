@@ -266,13 +266,19 @@
   flex-direction: column;
   background-color: $white;
 
+  #banner-placeholder {
+    width: 100%;
+    height: 75px;
+    background: rebeccapurple;
+  }
+
   //***** moves all sections up to cover white space *****//
   // section {
   //   margin: -2px 0px;
   // }
   //***** allots space for nav bar *****//
   #section1 {
-    margin-top: 73px;
+    // margin-top: 73px;
   }
 
   .product-container {
@@ -389,7 +395,10 @@
   }
 
   #section1-copy {
-    top: 12.2%;
+    top: 6%;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 
   #section1-logo-position {
