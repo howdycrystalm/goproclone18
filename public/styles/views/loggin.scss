@@ -3,7 +3,8 @@ $font: 'Roboto';
 // background-size: cover;
 //https://ds9dsukghgfh6.cloudfront.net/54052903d80cd434072bb0cf7cb358e3e66afb64/7c5c16b72dd2180d81a8130c02452ace.jpg
 .overlay {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('https://ds9dsukghgfh6.cloudfront.net/54052903d80cd434072bb0cf7cb358e3e66afb64/7c5c16b72dd2180d81a8130c02452ace.jpg') center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../../../images/login/login-bg.jpg') center center;
   width: 100vw;
   height: 100vh;
   background-size: cover;
@@ -11,169 +12,241 @@ $font: 'Roboto';
   z-index: -1;
 }
 .login-page-wrapper {
-    width: 100vw;
-    height: 100vh;
-    overflow: overlay;
-    .login-wrapper {
-        .logo-login {
-            max-width: 145px;
-            margin: 0 auto;
-            padding-top: 44px;
-        }
-
-        .sign-in {
-            text-align: center;
-            padding-top: 50px;
-            font-size: 30px;
-            font-family: $font;
-            color: white;
-        }
-
-        .form-wrapper {
-            width: 455.66px;
-            margin: 0 auto;
-
-            .sign-in {
-                padding-bottom: 30px;
-                font-family: 'proxima-nova-rg', sans-serif;
-                font-weight: 700;
-            }
-
-            .center-input {
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-
-                .email {
-                    display: flex;
-                    padding: 21px 27px 21px 27px;
-                    font-size: 18px;
-                    border: transparent;
-                }
-
-                .email:focus {
-                    outline: none;
-                }
-
-                .spacer {
-                  width: 388px;
-                  margin: -7px;
-                  height: 0;
-                  color: #bdbdbd;
-                  z-index: 4;
-                  margin-left: 33px;
-                  opacity: .3;
-                }
-
-                .password {
-                    padding: 21px 27px 21px 27px;
-                    font-size: 18px;
-                    border: transparent;
-                }
-
-                .password:focus {
-                    outline: none;
-                }
-
-                .sign-in-button {
-                    text-align: center;
-                    background: #009fdf;
-                    padding: 21px 27px 21px 27px;
-                    font-family: 'proxima-nova-light';
-                    color: white;
-                    font-size: 22px;
-                    margin-top: 10px;
-                    text-transform: uppercase;
-                    border: none;
-                }
-
-                .sign-in-button:hover {
-                    cursor: pointer;
-                }
-            }
-        }
-        .center-spacer {
-          text-align: center;
-          .or-spacer1 {
-            width: 200px;
-            display: inline-block;
-            vertical-align: middle;
-            background: transparent;
-            opacity: .7;
-            background-color: rgba(216,216,216,.3);
-          }
-          .or {
-            display: inline-block;
-            font-family: 'proxima-nova-light';
-            font-size: 17px;
-            text-transform: uppercase;
-            color: white;
-            letter-spacing: 5px;
-            padding: 55px 5px 0 5px;
-          }
-          .or-spacer2 {
-            width: 200px;
-            display: inline-block;
-            vertical-align: middle;
-            background: transparent;
-            opacity: .7;
-            background-color: rgba(216,216,216,.3);
-          }
-        }
-
-        .oauth-wrapper {
-          width: 455.66px;
-          z-index: 5;
-          margin: 0 auto;
-          margin-top: 20px;
-          .fb-login {
-            width: 455.66px;
-            background: #222;
-            background-color: rgb(34, 34, 34);
-            text-align: center;
-            padding: 21px 27px 21px 27px;
-            font-family: 'proxima-nova-light';
-            color: white;
-            font-size: 15px;
-            margin-top: 10px;
-            text-transform: uppercase;
-            border: none;
-            .fa-facebook-f:before, .fa-facebook:before {
-              font-size: 20px;
-              padding-right: 10px;
-            }
-          }
-
-          .google-login {
-            width: 455.66px;
-            background: #222;
-            background-color: rgb(34, 34, 34);
-            text-align: center;
-            padding: 21px 27px 21px 27px;
-            font-family: 'proxima-nova-light';
-            color: white;
-            font-size: 15px;
-            margin-top: 10px;
-            text-transform: uppercase;
-            border: none;
-            .fa-google-plus:before {
-              font-size: 20px;
-              padding-right: 10px;
-            }
-          }
-          .sign-up-text {
-            text-align: center;
-            color: white;
-            font-family: 'proxima-nova-light',sans-serif;
-            margin-top: 20px;
-            margin-bottom: 40px;
-
-          }
-          .sign-up-link {
-            color: #017faa;
-            padding-left: 4px;
-          }
-        }
-
+  width: 100vw;
+  height: 100vh;
+  overflow: overlay;
+  .login-wrapper {
+    .logo-login {
+      max-width: 148px;
+      margin: 0 auto;
+      position: relative;
+      top: 51px;
     }
+
+    .sign-in {
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 50px;
+      font-size: 1.813rem;
+      font-family: $font;
+      color: white;
+      -webkit-transform: scale(1.1, 1);
+      -moz-transform: scale(1.1, 1);
+      -ms-transform: scale(1.1, 1);
+      -o-transform: scale(1.1, 1);
+    }
+
+    .form-wrapper {
+      width: 449px;
+      height: 345px; //probably needs to be adjusted
+      margin: 0 auto;
+      position: relative;
+      top: 85px;
+
+      .sign-in {
+        // padding-bottom: 24px;
+        padding-bottom: 24px;
+        font-family: 'proxima-nova-rg', sans-serif;
+        font-weight: 700;
+      }
+
+      .center-input {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10px;
+
+        .input-icon {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          color: #45bdfd;
+          font-size: 22px;
+          z-index: 5;
+          // position: relative;
+          // top: 10px;
+          background: #fff;
+          padding-left: 19px;
+        }
+        .email {
+          font-size: 1.063rem;
+          border: none;
+          height: 67px;
+          width: 433px;
+          padding-left: 6px;
+          opacity: .4;
+        }
+
+        .email:focus {
+          outline: none;
+        }
+
+        .spacer {
+          width: 402px;
+          border: none;
+          height: 1px;
+          background-color: rgba(0, 0, 0, .16);
+          padding-left: 15px;
+          z-index: 6;
+          position: relative;
+          top: 10px;
+          margin-top: -9px;
+          hr {
+            border: none;
+            height: 1px;
+          }
+        }
+
+        .password {
+          // padding: 26px 27px;
+          // font-size: 18px;
+          // border: transparent;
+          // height: 67px;
+          // position: relative;
+          // bottom: 9px;
+          font-size: 1.063rem;
+          border: none;
+          height: 67px;
+          width: 433px;
+          padding-left: 6px;
+          opacity: .4;
+        }
+
+        .password:focus {
+          outline: none;
+        }
+
+        .sign-in-button {
+          text-align: center;
+          background: #009fdf;
+          // padding: 21px 27px 21px 27px;
+          padding: 20px 27px;
+          font-family: 'proxima-nova-light';
+          color: white;
+          font-size: 1.25rem;
+          margin-top: 8px;
+          text-transform: uppercase;
+          border: none;
+        }
+
+        .sign-in-button:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .forgot-password {
+      width: 150px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-family: proxima-nova-rg, 'Open Sans', Helvetica, sans-serif;
+      font-size: .8rem;
+      color: #a4a5a5;
+      margin: 0 auto;
+      letter-spacing: 0.5px;
+      padding: 20px 0;
+    }
+    .center-spacer {
+      text-align: center;
+      hr {
+        border: none;
+        height: 1px;
+      }
+      .or-spacer1 {
+        width: 192px;
+        margin-right: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent;
+        opacity: .7;
+        background-color: rgba(216, 216, 216, .3);
+        position: relative;
+        top: 64px;
+      }
+      .or {
+        display: inline-block;
+        font-family: 'proxima-nova-light';
+        font-size: .75rem;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 5px;
+        padding: 55px 5px 0 5px;
+        position: relative;
+        top: 64px;
+      }
+      .or-spacer2 {
+        width: 197px;
+        margin-left: 14px;
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent;
+        opacity: .7;
+        background-color: rgba(216, 216, 216, .3);
+        position: relative;
+        top: 64px;
+      }
+    }
+
+    .oauth-wrapper {
+      width: 449px;
+      z-index: 5;
+      margin: 0 auto;
+      margin-top: 20px;
+      position: relative;
+      top: 60px;
+      .icon {
+        font-size: 18px;
+        margin-right: 13px;
+      }
+      .fb-login {
+        width: 449px;
+        background: #222;
+        background-color: rgb(34, 34, 34);
+        text-align: center;
+        padding: 21px 27px 21px 27px;
+        font-family: 'proxima-nova-light';
+        color: white;
+        font-size: 15px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        border: none;
+        // .fa-facebook-f:before,
+        // .fa-facebook:before {
+        //   font-size: 20px;
+        //   padding-right: 10px;
+        // }
+      }
+
+      .google-login {
+        width: 449px;
+        background: #222;
+        background-color: rgb(34, 34, 34);
+        text-align: center;
+        padding: 21px 27px 21px 27px;
+        font-family: 'proxima-nova-light';
+        color: white;
+        font-size: 15px;
+        margin-top: 10px;
+        text-transform: uppercase;
+        border: none;
+        // .fa-google-plus:before {
+        //   font-size: 20px;
+        //   padding-right: 10px;
+        // }
+      }
+      .sign-up-text {
+        text-align: center;
+        color: white;
+        font-family: 'proxima-nova-light', sans-serif;
+        position: relative;
+        top: 43px;
+      }
+      .sign-up-link {
+        color: #017faa;
+        padding-left: 4px;
+      }
+    }
+  }
 }
