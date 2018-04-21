@@ -893,10 +893,16 @@
 .hide {
   display: none;
 }
-/* Hide Mobile Logo
+/* Hide Mobile Logo and Mobile Cart Container and Mobile Cart Total
 ------------------------------------------------------------- */
 @media screen and (min-width: 851px) {
   .mobile-logo {
+    display: none;
+  }
+  .mobile-cart-container {
+    display: none;
+  }
+  .mobile-cart-total {
     display: none;
   }
 }
@@ -906,14 +912,45 @@
   .banner {
     height: 60px;
     background: olivedrab;
-    @include flex-j-a(space-between, center);
     .nav-container {
+      @include flex-j-a(space-between, center);
       height: 60px;
+      width: 100%;
+      padding: 0 12px 0 2px;
       .mobile-logo {
         @include width-height(80px, 25px);
       }
       .right-container {
-        display: none;
+        background-color: darkseagreen;
+        height: 33px;
+        .top,
+        .bottom {
+          display: none;
+        }
+        .mobile-cart-container {
+          display: flex;
+          position: relative;
+          background: pink;
+        }
+
+        .mobile-cart-total {
+          @include flex-j-a(center, center);
+          @include width-height(19px, 19px);
+          background-color: #f44243;
+          border-radius: 50%;
+
+          h2 {
+            margin-left: -2px;
+            font-family: $button-text;
+            font-size: .75rem;
+          }
+        }
+        .mobile-cart-total:hover {
+          position: absolute;
+          border: 3px solid #f44243;
+          cursor: pointer;
+          padding: 8px;
+        }
       }
       .left {
         display: none;
