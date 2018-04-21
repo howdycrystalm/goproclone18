@@ -494,7 +494,7 @@
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
   /* enlarges background image
----------------------------------------------------------------- */
+  -------------------------------------------------------------- */
   @media only screen and (max-width: 1200px) and (min-width: 768px) {
     .section-image {
       background-size: cover;
@@ -502,4 +502,6 @@
       width: 104%;
     }
   }
-}
+  /* minifies and positions copy and quikstories logo
+  -------------------------------------------------------------- */
+} //landing end bracket
