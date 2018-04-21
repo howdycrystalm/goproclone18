@@ -158,9 +158,8 @@
     </div>
     <div class="right-container">
     <!-- contains login, links, cart, cart dropdown -->
-    <!-- Mobile Cart Container is hidden at > 851px -->
-
       <div class="right">
+        <i class="fas fa-search"></i>
         <div class="grouped-cart-and-total">
           <div class="mobile-cart-container">
             <div ng-click="cartShow = !cartShow" class="hover">
@@ -171,7 +170,9 @@
             <h2>{{incart}}</h2>
           </div>
         </div>
-        <!-- Back to non-mobile nav -->
+        <div class="mobile-avatar-icon"><i class="fas fa-user-circle fa-1x"></i></div>
+        <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+        <!-- Back to desktop nav -->
         <div class="top">Free 2-Day Shipping + Free Returns</div>
         <div class="bottom">
           <ul>

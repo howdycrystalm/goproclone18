@@ -898,7 +898,8 @@
 @media screen and (min-width: 851px) {
   .mobile-logo,
   .mobile-cart-total,
-  .mobile-cart-container {
+  .mobile-cart-container,
+  .mobile-search-icon {
     display: none;
   }
 }
@@ -917,6 +918,8 @@
         @include width-height(80px, 25px);
       }
       .right-container {
+        margin-right: 2px;
+        margin-top: 0;
         .top,
         .bottom {
           display: none;
@@ -926,12 +929,27 @@
           display: none;
         }
         .right {
-          width: 220px;
+          margin-right: 2px;
+          margin-top: 0;
           background-color: tomato;
-          @include flex-j-a(flex-end, center) .mobile-cart-container {
+          @include flex-j-a(space-between, center) .mobile-cart-container {
             display: flex;
             position: relative;
             background: pink;
+          }
+          .mobile-search-icon {
+            color: rebeccapurple;
+            font-size: 1.5rem;
+          }
+          .mobile-avatar-icon {
+            color: darkseagreen;
+            font-size: 1.5rem;
+          }
+          .mobile-menu {
+            -webkit-transform: scale(1.1, 1);
+            -moz-transform: scale(1.1, 1);
+            -ms-transform: scale(1.1, 1);
+            -o-transform: scale(1.1, 1);
           }
           .mobile-cart-total {
             @include flex-j-a(center, center);
