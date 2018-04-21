@@ -531,10 +531,17 @@
     .product-copy {
       h2 {
         height: 19px;
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 19px;
         margin: auto;
       }
+      h1 {
+        font-size: 34px;
+        padding: 0px;
+      }
+      // h3 {
+      //   font-size: 12px;
+      // }
     }
-  }
+  } //media query
 } //landing end bracket
