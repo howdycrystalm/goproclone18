@@ -159,15 +159,18 @@
     <div class="right-container">
     <!-- contains login, links, cart, cart dropdown -->
     <!-- Mobile Cart Container is hidden at > 851px -->
-      <div class="mobile-cart-container">
-        <div ng-click="cartShow = !cartShow" class="hover">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-      </div>
-      <div class="mobile-cart-total">
-        <h2>{{incart}}</h2>
-      </div>
+
       <div class="right">
+        <div class="grouped-cart-and-total">
+          <div class="mobile-cart-container">
+            <div ng-click="cartShow = !cartShow" class="hover">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
+          <div class="mobile-cart-total">
+            <h2>{{incart}}</h2>
+          </div>
+        </div>
         <!-- Back to non-mobile nav -->
         <div class="top">Free 2-Day Shipping + Free Returns</div>
         <div class="bottom">

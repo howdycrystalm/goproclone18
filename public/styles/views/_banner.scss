@@ -896,13 +896,9 @@
 /* Hide Mobile Logo and Mobile Cart Container and Mobile Cart Total
 ------------------------------------------------------------- */
 @media screen and (min-width: 851px) {
-  .mobile-logo {
-    display: none;
-  }
+  .mobile-logo,
+  .mobile-cart-total,
   .mobile-cart-container {
-    display: none;
-  }
-  .mobile-cart-total {
     display: none;
   }
 }
@@ -921,35 +917,44 @@
         @include width-height(80px, 25px);
       }
       .right-container {
-        background-color: darkseagreen;
-        height: 33px;
         .top,
         .bottom {
           display: none;
         }
-        .mobile-cart-container {
-          display: flex;
-          position: relative;
-          background: pink;
+        .cart-container,
+        .cart-total {
+          display: none;
         }
-
-        .mobile-cart-total {
-          @include flex-j-a(center, center);
-          @include width-height(19px, 19px);
-          background-color: #f44243;
-          border-radius: 50%;
-
-          h2 {
-            margin-left: -2px;
-            font-family: $button-text;
-            font-size: .75rem;
+        .right {
+          width: 220px;
+          background-color: tomato;
+          @include flex-j-a(flex-end, center) .mobile-cart-container {
+            display: flex;
+            position: relative;
+            background: pink;
           }
-        }
-        .mobile-cart-total:hover {
-          position: absolute;
-          border: 3px solid #f44243;
-          cursor: pointer;
-          padding: 8px;
+          .mobile-cart-total {
+            @include flex-j-a(center, center);
+            @include width-height(19px, 19px);
+            background-color: #f44243;
+            border-radius: 50%;
+
+            h2 {
+              margin-left: -2px;
+              font-family: $button-text;
+              font-size: .75rem;
+            }
+          }
+          .mobile-cart-total:hover {
+            position: absolute;
+            border: 3px solid #f44243;
+            cursor: pointer;
+            padding: 8px;
+          }
+          .grouped-cart-and-total {
+            display: flex;
+            background: rebeccapurple;
+          }
         }
       }
       .left {
