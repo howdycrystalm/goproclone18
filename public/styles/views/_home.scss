@@ -235,6 +235,13 @@
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
+  /* Re-sizes nav bar place holder for mobile
+  -------------------------------------------------------------- */
+  @media screen and (max-width: 850px) {
+    #banner-placeholder {
+      height: 60px;
+    }
+  }
   /* Enlarges background image
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1200px) and (min-width: 768px) {

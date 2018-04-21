@@ -893,11 +893,34 @@
 .hide {
   display: none;
 }
+/* Hide Mobile Logo
+------------------------------------------------------------- */
+@media screen and (min-width: 851px) {
+  .mobile-logo {
+    display: none;
+  }
+}
 /* Nav Bar Mobile
 ------------------------------------------------------------- */
 @media screen and (max-width: 850px) {
   .banner {
     height: 60px;
     background: olivedrab;
+    @include flex-j-a(space-between, center);
+    .nav-container {
+      height: 60px;
+      .mobile-logo {
+        @include width-height(80px, 25px);
+      }
+      .right-container {
+        display: none;
+      }
+      .left {
+        display: none;
+      }
+    }
+  }
+  .dropdown {
+    display: none;
   }
 }
