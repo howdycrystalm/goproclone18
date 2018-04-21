@@ -893,3 +893,11 @@
 .hide {
   display: none;
 }
+/* Nav Bar Mobile
+------------------------------------------------------------- */
+@media screen and (max-width: 850px) {
+  .banner {
+    height: 60px;
+    background: olivedrab;
+  }
+}
