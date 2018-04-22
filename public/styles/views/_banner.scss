@@ -917,7 +917,8 @@
       width: 100%;
       padding: 0 12px 0 2px;
       .mobile-logo {
-        @include width-height(80px, 25px);
+        @include width-height(98px, 25px);
+        padding-left: 18px;
       }
       .right-container {
         margin-right: 2px;
@@ -954,10 +955,10 @@
           }
           .mobile-menu {
             padding-right: 5px;
-            -webkit-transform: scale(2.8, 1.4);
-            -moz-transform: scale(2.8, 1.4);
-            -ms-transform: scale(2.8, 1.4);
-            -o-transform: scale(2.8, 1.4);
+            -webkit-transform: scale(2.6, 1.7);
+            -moz-transform: scale(2.6, 1.7);
+            -ms-transform: scale(2.6, 1.7);
+            -o-transform: scale(2.6, 1.7);
           }
           .mobile-cart-total {
             @include flex-j-a(center, center);
