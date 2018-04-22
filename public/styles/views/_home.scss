@@ -6,7 +6,8 @@
   width: 100%;
   @include flex-j-a(center, center);
   flex-direction: column;
-  background-color: $white;
+  background-color: red;
+  overflow: hidden;
 
   #banner-placeholder {
     width: 100%;
