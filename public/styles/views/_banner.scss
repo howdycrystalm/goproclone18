@@ -910,7 +910,7 @@
 @media screen and (max-width: 850px) {
   .banner {
     height: 60px;
-    background: olivedrab;
+
     .nav-container {
       @include flex-j-a(space-between, center);
       height: 60px;
@@ -935,19 +935,22 @@
           margin-right: -2px;
           margin-top: 0;
           padding: 6px 0;
-          background-color: tomato;
           @include flex-j-a(space-between, center) .mobile-cart-container {
             display: flex;
             position: relative;
-            background: pink;
+            align-items: center;
           }
           .mobile-search-icon {
-            color: rebeccapurple;
+            color: white;
             font-size: .9rem;
           }
           .mobile-avatar-icon {
-            color: darkseagreen;
+            color: white;
             font-size: 1.35rem;
+            width: auto;
+            background: #3a9dde;
+            border-radius: 50%;
+            margin-right: 14px;
           }
           .mobile-menu {
             padding-right: 5px;
@@ -961,6 +964,7 @@
             @include width-height(19px, 19px);
             background-color: #f44243;
             border-radius: 50%;
+            margin-left: 5px;
             h2 {
               margin-left: -2px;
               font-family: $button-text;
@@ -972,10 +976,12 @@
             border: 3px solid #f44243;
             cursor: pointer;
             padding: 8px;
+            margin-left: 20px;
+            bottom: 6px;
           }
           .grouped-cart-and-total {
             display: flex;
-            background: rebeccapurple;
+            width: 43px;
           }
         }
       }
