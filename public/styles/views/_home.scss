@@ -317,4 +317,23 @@
       }
     }
   }
+  /* Minifies and positions SPECIFICALLY Section4 Copy
+  -------------------------------------------------------------- */
+  //Section4 displays a little differently from the other sections.
+  //The below is to adjust Section4 w/o altering other sections.
+  @media only screen and (max-width: 1024px) {
+    #section4-copy {
+      width: 50%;
+      height: 200px;
+      transform: translateY(-53%);
+      -webkit-transform: translateY(-53%);
+      padding-left: 0 !important;
+    }
+    #no-padding {
+      padding-top: 0;
+    }
+    #more-buttons-padding {
+      padding-bottom: 5%;
+    }
+  }
 } //landing end bracket
