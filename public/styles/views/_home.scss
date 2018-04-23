@@ -245,6 +245,7 @@
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
+
   /* Re-sizes nav bar place holder for mobile
   -------------------------------------------------------------- */
   @media screen and (max-width: 850px) {
@@ -259,6 +260,22 @@
       background-size: cover;
       background-position: center;
       width: 104%;
+    }
+  }
+  /* Section 2 Text Align Center
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1179px) and (min-width: 1025px) {
+    #section2-copy {
+      padding: 0 50px;
+      text-align: center;
+    }
+  }
+  /* Section 3 Text Align Center
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1055px) and (min-width: 1025px) {
+    #section3-copy {
+      padding: 0 50px;
+      text-align: center;
     }
   }
   /* Minifies and positions copy and quikstories logo
@@ -342,26 +359,18 @@
   /* Section 5
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1167px) {
-    // .product-card-container {
-    //   background-color: pink;
-    //   @include flex-j-a(center, center);
-    // }
-    //
-    // #move-down {
-    //   width: 100%;
-    // }
     .product-card-container {
       display: inline-block;
       text-align: center;
-      // background: pink;
     }
     .product-card {
       display: inline-block;
     }
-    #test400 {
+    #center-card {
       @include flex-j-a(center, center);
       flex-direction: column;
-      // background: cornflowerblue;
+      bottom: 51px;
+      position: relative;
     }
   }
 } //landing end bracket
