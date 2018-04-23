@@ -140,6 +140,7 @@
 @media only screen and (max-width: 991px) {
   .footer {
     padding: 10px 20px;
+    top: 0;
     .thirds {
       display: block;
       width: 100%;
@@ -161,9 +162,12 @@
       .top {
         @include flex-j-a(flex-start, flex-start);
         flex-direction: column;
-        height: 117px;
+        .images {
+          display: inline-block;
+          width: auto;
+        }
         .right {
-          margin-top: 50px;
+          margin-top: 29px;
         }
       }
     }
@@ -171,8 +175,8 @@
       margin: 45px 0 0;
     }
   }
-  .lower {
-    position: relative;
-    top: 30px;
-  }
+  // .lower {
+  //   position: relative;
+  //   top: 30px;
+  // }
 }
