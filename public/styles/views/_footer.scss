@@ -1,6 +1,7 @@
 .droper {
-  position: absolute;
   width: 100%;
+  position: relative;
+  bottom: 75px;
 }
 
 .footer {
@@ -128,5 +129,24 @@
     font-size: .75rem;
     font-weight: 100px;
     color: #3c3c3c;
+  }
+}
+/* ----------------------------------------------------------- */
+/*                      Media Queries                          */
+/*------------------------------------------------------------ */
+
+/* Re-sizes nav bar place holder for mobile
+-------------------------------------------------------------- */
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 10px 20px;
+    .thirds {
+      display: block;
+      width: 100%;
+      .third {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
