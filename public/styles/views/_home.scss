@@ -83,6 +83,10 @@
     .button {
       @include width-height(150px, 50px);
       @include button-text() @include flex-j-a(center, center);
+      font-weight: 700;
+      font-family: $main;
+      font-size: $font12px;
+      letter-spacing: 0;
     }
 
     .solid-button {
