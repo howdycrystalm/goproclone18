@@ -146,7 +146,33 @@
       .third {
         display: block;
         width: 100%;
+        padding-top: 11px;
+        .lower {
+          position: relative;
+          top: 30px;
+        }
+        .bottom {
+          top: 41px;
+        }
       }
     }
+    .middle {
+      margin: 45px 0 0;
+      .top {
+        @include flex-j-a(flex-start, flex-start);
+        flex-direction: column;
+        height: 117px;
+        .right {
+          margin-top: 50px;
+        }
+      }
+    }
+    .bottom-box {
+      margin: 45px 0 0;
+    }
+  }
+  .lower {
+    position: relative;
+    top: 30px;
   }
 }
