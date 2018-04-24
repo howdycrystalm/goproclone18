@@ -146,6 +146,11 @@
     margin: 0 7px;
   }
 
+  #position-contents {
+    position: relative;
+    bottom: 54px;
+  }
+
   #section1-copy {
     top: 6%;
     left: 0;
@@ -241,24 +246,31 @@
   //logo
   #position-fusion-logo {
     position: relative;
-    bottom: 58px;
+    bottom: 7px;
   }
   //container
-  #move-up {
-    position: relative;
-    bottom: 30px;
-  }
+  // #move-up {
+  //   position: relative;
+  //   bottom: 30px;
+  // }
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
 
   /* Re-sizes nav bar place holder for mobile
   -------------------------------------------------------------- */
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1168px) {
     #banner-placeholder {
       height: 60px;
     }
   }
+  // /* Positions Fusion image and info in Section5 "find the right GoPro for you."
+  // -------------------------------------------------------------- */
+  // @media screen and (min-width: 850px) {
+  //   #banner-placeholder {
+  //     height: 60px;
+  //   }
+  // }
   /* Enlarges background image
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1200px) and (min-width: 768px) {
