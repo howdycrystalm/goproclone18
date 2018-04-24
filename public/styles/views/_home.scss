@@ -234,12 +234,12 @@
     position: relative;
   }
   //logo
-  #push-hero-up {
+  #position-hero-logo {
     position: relative;
     top: 13px;
   }
   //logo
-  #push-fusion-up {
+  #position-fusion-logo {
     position: relative;
     bottom: 58px;
   }
@@ -334,7 +334,6 @@
       @include flex-j-a(space-between, center);
       height: 72px;
       padding-top: 7px;
-      background-color: bisque;
 
       .button {
         font-size: .75rem;
@@ -362,92 +361,6 @@
       padding-bottom: 5%;
     }
   }
-  /* Section 5 "Find the right GoPro for you." Minifi product images
-  -------------------------------------------------------------- */
-  @media only screen and (max-width: 1024px) and (min-width: 768px) {
-    #section5-copy {
-      padding: 35px 20px;
-      position: relative;
-      bottom: 15px;
-      h1 {
-        height: auto;
-        font-size: 34px;
-        line-height: 34px;
-        margin: auto;
-      }
-    }
-    .product-card-container {
-      display: inline-block;
-      width: 100vw;
-      text-align: center;
-      background: rebeccapurple;
-      flex-direction: row;
-    }
-    .product-card {
-      display: inline-block;
-      background: darkslategrey;
-      border: 2px solid red;
-      /* flex-direction: column; */
-      /* justify-content: center; */
-      align-items: center;
-      width: 170px;
-      height: 227px;
-    }
-    .section5-small-image {
-      width: 150px;
-      height: 98px;
-      background-size: contain;
-    }
-    .logo-width {
-      width: 88px;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    // HERO Customs **********************
-    #push-hero-container-up {
-      position: relative;
-      bottom: 3px;
-    }
-    #logo-width-hero {
-      width: 80px;
-      height: 18px;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    #push-hero-up {
-      position: relative;
-      top: 21px;
-    }
-
-    // Fusion Customs **********************
-    #move-down {
-      position: relative;
-      top: 9px;
-    }
-    #push-fusion-up {
-      position: relative;
-      top: 13px;
-    }
-    #push-fusion-container-down {
-      position: relative;
-      top: 30px;
-    }
-    #section5-small-fusion-image {
-      width: 150px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center bottom;
-    }
-
-    #logo-width-fusion {
-      width: 112px;
-      height: 18px;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-
   /* Section 5 "Find the right GoPro for you." inline-block solve
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1167px) {
@@ -463,6 +376,93 @@
       flex-direction: column;
       bottom: 51px;
       position: relative;
+    }
+  }
+  /* Section 5 "Find the right GoPro for you." Minifi product images
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    #center-card {
+      bottom: 74px;
+    }
+    #section5-copy {
+      padding: 35px 20px;
+      position: relative;
+      bottom: 15px;
+      h1 {
+        height: auto;
+        font-size: 34px;
+        line-height: 34px;
+        margin: auto;
+        letter-spacing: -1px;
+      }
+    }
+    .product-card-container {
+      display: inline-block;
+      width: 100vw;
+      text-align: center;
+      flex-direction: row;
+    }
+    .product-card {
+      display: inline-block;
+      // background: darkslategrey;
+      // border: 2px solid red;
+      align-items: center;
+      width: 168px;
+      // height: 227px;
+      height: 210px;
+      margin: 0;
+    }
+    .section5-small-image {
+      width: 150px;
+      height: 98px;
+      background-size: contain;
+    }
+    .logo-width {
+      width: 88px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #position-hero-logo {
+      position: relative;
+      top: 21px;
+    }
+    // HERO Customs **********************
+    #position-hero-container {
+      position: relative;
+      bottom: 3px;
+    }
+    #logo-width-hero {
+      width: 80px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    // Fusion Customs **********************
+    #position-contents {
+      position: relative;
+      top: 9px;
+    }
+    #position-fusion-logo {
+      position: relative;
+      top: 8px;
+    }
+    #position-fusion-container {
+      position: relative;
+      top: 30px;
+    }
+    #section5-small-fusion-image {
+      width: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    #logo-width-fusion {
+      width: 112px;
+      height: 18px;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 } //landing end bracket
