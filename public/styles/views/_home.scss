@@ -233,14 +233,20 @@
     color: $button-color;
     position: relative;
   }
+  //logo
   #push-hero-up {
     position: relative;
     top: 13px;
   }
-
+  //logo
   #push-fusion-up {
     position: relative;
     bottom: 58px;
+  }
+  //container
+  #move-up {
+    position: relative;
+    bottom: 30px;
   }
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
@@ -356,7 +362,93 @@
       padding-bottom: 5%;
     }
   }
-  /* Section 5
+  /* Section 5 "Find the right GoPro for you." Minifi product images
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    #section5-copy {
+      padding: 35px 20px;
+      position: relative;
+      bottom: 15px;
+      h1 {
+        height: auto;
+        font-size: 34px;
+        line-height: 34px;
+        margin: auto;
+      }
+    }
+    .product-card-container {
+      display: inline-block;
+      width: 100vw;
+      text-align: center;
+      background: rebeccapurple;
+      flex-direction: row;
+    }
+    .product-card {
+      display: inline-block;
+      background: darkslategrey;
+      border: 2px solid red;
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      align-items: center;
+      width: 170px;
+      height: 200px;
+    }
+    .section5-small-image {
+      width: 150px;
+      height: 98px;
+      background-size: contain;
+    }
+    .logo-width {
+      width: 88px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    // HERO Customs **********************
+    #push-hero-container-up {
+      position: relative;
+      bottom: 3px;
+    }
+    #logo-width-hero {
+      width: 80px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #push-hero-up {
+      position: relative;
+      top: 13px;
+    }
+
+    // Fusion Customs **********************
+    #move-down {
+      position: relative;
+      top: 9px;
+    }
+    #push-fusion-up {
+      position: relative;
+      bottom: 2px;
+    }
+    #push-fusion-container-down {
+      position: relative;
+      top: 30px;
+    }
+    #section5-small-fusion-image {
+      width: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    #logo-width-fusion {
+      width: 112px;
+      height: 18px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  /* Section 5 "Find the right GoPro for you." inline-block solve
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1167px) {
     .product-card-container {
