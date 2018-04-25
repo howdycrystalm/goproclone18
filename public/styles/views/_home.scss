@@ -1,7 +1,3 @@
-//***** .landing allots space for the nav bar *****//
-// * {
-//   box-sizing: border-box;
-
 .landing {
   width: 100%;
   @include flex-j-a(center, center);
@@ -15,13 +11,20 @@
     background: rebeccapurple;
   }
 
-  //***** moves all sections up to cover white space *****//
-  // section {
-  //   margin: -2px 0px;
-  // }
-  //***** allots space for nav bar *****//
   #section1 {
-    // margin-top: 73px;
+    background-image: url('../../../images/home/splash1-0418.jpg');
+  }
+  #section2 {
+    background-image: url('../../../images/home/splash2-0418.jpg');
+    padding: 28.3%;
+  }
+  #section3 {
+    background-image: url('../../../images/home/splash3-0418.jpg');
+    padding: 28.3%;
+  }
+  #section4 {
+    background-image: url('../../../images/home/splash4-0418.jpg');
+    padding: 28.3%;
   }
 
   .product-container {
@@ -32,11 +35,11 @@
   }
 
   .section-image {
-    width: 100%;
-    // max-width: 1200px;
+    width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 59.1%;
   }
 
   .product-copy {
@@ -65,9 +68,10 @@
   }
 
   h1 {
-    font-size: 3.75rem;
+    font-size: 4rem;
     font-weight: 900;
-    padding: 15px;
+    // padding: 15px;
+    padding: 12px;
     -webkit-transform: scale(1.1, 1);
     -moz-transform: scale(1.1, 1);
     -ms-transform: scale(1.1, 1);
@@ -75,7 +79,8 @@
   }
 
   .buttons-container {
-    @include width-height(320px, 68px);
+    // @include width-height(320px, 68px);
+    @include width-height(320px, 70px);
     @include flex-j-a(space-between, flex-end);
     flex-direction: row;
     text-transform: uppercase;
@@ -143,7 +148,12 @@
     // flex-direction: column;
     text-align: center;
     display: inline-block;
-    margin: 0 7px;
+    // margin: 0 7px;
+  }
+
+  #position-contents {
+    position: relative;
+    bottom: 54px;
   }
 
   #section1-copy {
@@ -233,23 +243,62 @@
     color: $button-color;
     position: relative;
   }
-  #push-hero-up {
+  //logo
+  #position-hero-logo {
     position: relative;
     top: 13px;
   }
-
-  #push-fusion-up {
+  //logo
+  #position-fusion-logo {
     position: relative;
-    bottom: 58px;
+    bottom: 7px;
   }
+  //container
+  // #move-up {
+  //   position: relative;
+  //   bottom: 30px;
+  // }
   /* ----------------------------------------------------------- */
   /*                      Media Queries                          */
   /*------------------------------------------------------------ */
+
   /* Re-sizes nav bar place holder for mobile
   -------------------------------------------------------------- */
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1168px) {
     #banner-placeholder {
       height: 60px;
+    }
+  }
+  /* Section1 Background Image re-sizes
+  ------------------------------------------------------------- */
+  @media screen and (max-width: 1200px) {
+    .section-image {
+      padding-top: 63.1%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .section-image {
+      padding-top: 65.5%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .section-image {
+      padding-top: 65.1%;
+    }
+  }
+  // /* Section 1 Copy minify
+  // -------------------------------------------------------------- */
+  @media screen and (min-width: 1024px) {
+    #section1-copy {
+      top: 7.5%;
+    }
+    .product-copy {
+      h3 {
+        margin-top: 3px;
+      }
+    }
+    .buttons-container {
+      padding-top: 13px;
     }
   }
   /* Enlarges background image
@@ -259,6 +308,22 @@
       background-size: cover;
       background-position: center;
       width: 104%;
+    }
+  }
+  /* Section 2 Text Align Center
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1179px) and (min-width: 1025px) {
+    #section2-copy {
+      padding: 0 50px;
+      text-align: center;
+    }
+  }
+  /* Section 3 Text Align Center
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1055px) and (min-width: 1025px) {
+    #section3-copy {
+      padding: 0 50px;
+      text-align: center;
     }
   }
   /* Minifies and positions copy and quikstories logo
@@ -288,7 +353,6 @@
     }
     // ----- COPY ----- //
     .product-copy {
-      background-color: darkseagreen;
       height: 145px;
       h2 {
         height: 19px;
@@ -310,8 +374,7 @@
     .buttons-container {
       @include flex-j-a(space-between, center);
       height: 72px;
-      padding-top: 7px;
-      background-color: bisque;
+      padding-top: 13px;
 
       .button {
         font-size: .75rem;
@@ -320,14 +383,15 @@
       }
     }
   }
-  /* Minifies and positions SPECIFICALLY Section4 Copy
+  /* Section 4: Minifies and positions SPECIFICALLY Section4 Copy
   -------------------------------------------------------------- */
   //Section4 displays a little differently from the other sections.
   //The below is to adjust Section4 w/o altering other sections.
   @media only screen and (max-width: 1024px) {
     #section4-copy {
       width: 50%;
-      height: 200px;
+      height: 193px;
+      padding-top: 15px;
       transform: translateY(-53%);
       -webkit-transform: translateY(-53%);
       padding-left: 0 !important;
@@ -336,32 +400,111 @@
       padding-top: 0;
     }
     #more-buttons-padding {
-      padding-bottom: 5%;
+      padding-bottom: 13px;
     }
   }
-  /* Section 5
+  /* Section 5 "Find the right GoPro for you." inline-block solve
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1167px) {
-    // .product-card-container {
-    //   background-color: pink;
-    //   @include flex-j-a(center, center);
-    // }
-    //
-    // #move-down {
-    //   width: 100%;
-    // }
     .product-card-container {
       display: inline-block;
       text-align: center;
-      // background: pink;
     }
     .product-card {
       display: inline-block;
     }
-    #test400 {
+    #center-card {
       @include flex-j-a(center, center);
       flex-direction: column;
-      // background: cornflowerblue;
+      bottom: 51px;
+      position: relative;
+      width: 95vw;
+    }
+  }
+  /* Section 5 "Find the right GoPro for you." Minifi product images
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    #center-card {
+      bottom: 74px;
+    }
+    #section5-copy {
+      padding: 35px 20px;
+      position: relative;
+      bottom: 15px;
+      h1 {
+        height: auto;
+        font-size: 34px;
+        line-height: 34px;
+        margin: auto;
+        letter-spacing: -1px;
+      }
+    }
+    .product-card-container {
+      display: inline-block;
+      width: 100vw;
+      text-align: center;
+      flex-direction: row;
+    }
+    .product-card {
+      display: inline-block;
+      // background: darkslategrey;
+      // border: 2px solid red;
+      align-items: center;
+      width: 168px;
+      height: 210px;
+      margin: 0;
+    }
+    .section5-small-image {
+      width: 150px;
+      height: 98px;
+      background-size: contain;
+    }
+    .logo-width {
+      width: 88px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    #position-hero-logo {
+      position: relative;
+      top: 21px;
+    }
+    // HERO Customs **********************
+    #position-hero-container {
+      position: relative;
+      bottom: 3px;
+    }
+    #logo-width-hero {
+      width: 80px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    // Fusion Customs **********************
+    #position-contents {
+      position: relative;
+      top: 9px;
+    }
+    #position-fusion-logo {
+      position: relative;
+      top: 8px;
+    }
+    #position-fusion-container {
+      position: relative;
+      top: 30px;
+    }
+    #section5-small-fusion-image {
+      width: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    #logo-width-fusion {
+      width: 112px;
+      height: 18px;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 } //landing end bracket
