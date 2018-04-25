@@ -423,7 +423,8 @@
   }
   /* Section 5 "Find the right GoPro for you." Minifi product images
   -------------------------------------------------------------- */
-  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+  // @media only screen and (max-width: 1024px) and (min-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     #center-card {
       bottom: 74px;
       //
@@ -545,15 +546,46 @@
     //   background: thistle;
     //   border: 1px solid orangered;
     // }
-    .section5-small-image {
-      width: 150px;
-      height: 98px;
-      background-size: contain;
+    // .section5-small-image {
+    //   width: 150px;
+    //   height: 98px;
+    //   background-size: contain;
+    // }
+    // #section5-small-fusion-image {
+    //   width: 150px;
+    // }
+    //
+    // .logo-width {
+    //   width: 88px;
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    // }
+    .product-card-container {
+      width: 100vw;
+      @include flex-j-a(space-around, center);
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: brown;
+      padding: 0 3%;
     }
-    .logo-width {
-      width: 88px;
-      background-repeat: no-repeat;
-      background-size: contain;
+    .product-card {
+      width: 150px;
+      height: 203px;
+    }
+    //Fusion
+    #position-contents {
+      bottom: 10px;
+    }
+    //HERO
+    #hero-product-card {
+      height: 163px;
+    }
+    #position-hero-contents {
+      position: relative;
+      top: 10px;
+    }
+    #position-hero-logo {
+      top: 17px;
     }
   }
 } //landing end bracket
