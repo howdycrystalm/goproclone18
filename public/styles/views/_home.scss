@@ -353,7 +353,6 @@
     }
     // ----- COPY ----- //
     .product-copy {
-      background-color: darkseagreen;
       height: 145px;
       h2 {
         height: 19px;
@@ -391,7 +390,8 @@
   @media only screen and (max-width: 1024px) {
     #section4-copy {
       width: 50%;
-      height: 200px;
+      height: 193px;
+      padding-top: 15px;
       transform: translateY(-53%);
       -webkit-transform: translateY(-53%);
       padding-left: 0 !important;
@@ -400,7 +400,7 @@
       padding-top: 0;
     }
     #more-buttons-padding {
-      padding-bottom: 5%;
+      padding-bottom: 13px;
     }
   }
   /* Section 5 "Find the right GoPro for you." inline-block solve
@@ -451,7 +451,6 @@
       // border: 2px solid red;
       align-items: center;
       width: 168px;
-      // height: 227px;
       height: 210px;
       margin: 0;
     }
