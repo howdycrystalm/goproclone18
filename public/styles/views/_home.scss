@@ -21,7 +21,16 @@
   // }
   //***** allots space for nav bar *****//
   #section1 {
-    margin-top: -3px;
+    background-image: url('../../../images/home/splash1-0418.jpg');
+  }
+  #section2 {
+    background-image: url('../../../images/home/splash2-0418.jpg');
+  }
+  #section3 {
+    background-image: url('../../../images/home/splash3-0418.jpg');
+  }
+  #section4 {
+    background-image: url('../../../images/home/splash4-0418.jpg');
   }
 
   .product-container {
@@ -32,12 +41,11 @@
   }
 
   .section-image {
-    // width: 100%;
-    // max-width: 1200px;
-    width: 106%;
+    width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 59.1%;
   }
 
   .product-copy {
@@ -144,6 +152,7 @@
     // flex-direction: column;
     text-align: center;
     display: inline-block;
+    // margin: 0 7px;
   }
 
   #position-contents {
@@ -264,7 +273,24 @@
       height: 60px;
     }
   }
-  // /* Positions Fusion image and info in Section5 "find the right GoPro for you."
+  /* Section1 Background Image re-sizes
+  ------------------------------------------------------------- */
+  @media screen and (max-width: 1200px) {
+    .section-image {
+      padding-top: 63.1%;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .section-image {
+      padding-top: 65.5%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .section-image {
+      padding-top: 65.1%;
+    }
+  }
+  // /*
   // -------------------------------------------------------------- */
   // @media screen and (min-width: 850px) {
   //   #banner-placeholder {
@@ -388,6 +414,7 @@
       flex-direction: column;
       bottom: 51px;
       position: relative;
+      width: 95vw;
     }
   }
   /* Section 5 "Find the right GoPro for you." Minifi product images
@@ -477,4 +504,8 @@
       background-repeat: no-repeat;
     }
   }
+  // /* Weird Section5 in-betwen section. Aligns fusion product-container
+  // -------------------------------------------------------------------- */
+  // @media only screen and (max-width: 1167px) and (min-width: 1127px) {
+  // }
 } //landing end bracket
