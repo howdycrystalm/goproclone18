@@ -439,6 +439,7 @@
         letter-spacing: -1px;
       }
     }
+    // }
     .product-card-container {
       display: inline-block;
       width: 100vw;
@@ -505,6 +506,25 @@
       height: 18px;
       background-size: contain;
       background-repeat: no-repeat;
+    }
+  }
+  /* Super Mobile Media Queries Time
+  ------------------------------------------------------------- */
+  @media only screen and (max-width: 767px) {
+    #section5-copy {
+      padding: 35px 20px;
+      position: relative;
+      bottom: 15px;
+      margin: 0 auto;
+      width: 277px;
+      h1 {
+        height: auto;
+        font-size: 2rem;
+        line-height: 32px;
+        margin: 16px auto;
+        letter-spacing: -1px;
+        text-align: center;
+      }
     }
   }
 } //landing end bracket
