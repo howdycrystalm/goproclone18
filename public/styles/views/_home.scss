@@ -286,13 +286,21 @@
       padding-top: 65.1%;
     }
   }
-  // /*
+  // /* Section 1 Copy minify
   // -------------------------------------------------------------- */
-  // @media screen and (min-width: 850px) {
-  //   #banner-placeholder {
-  //     height: 60px;
-  //   }
-  // }
+  @media screen and (min-width: 1024px) {
+    #section1-copy {
+      top: 7.5%;
+    }
+    .product-copy {
+      h3 {
+        margin-top: 3px;
+      }
+    }
+    .buttons-container {
+      padding-top: 13px;
+    }
+  }
   /* Enlarges background image
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1200px) and (min-width: 768px) {
@@ -367,7 +375,7 @@
     .buttons-container {
       @include flex-j-a(space-between, center);
       height: 72px;
-      padding-top: 7px;
+      padding-top: 13px;
 
       .button {
         font-size: .75rem;
@@ -376,7 +384,7 @@
       }
     }
   }
-  /* Minifies and positions SPECIFICALLY Section4 Copy
+  /* Section 4: Minifies and positions SPECIFICALLY Section4 Copy
   -------------------------------------------------------------- */
   //Section4 displays a little differently from the other sections.
   //The below is to adjust Section4 w/o altering other sections.
