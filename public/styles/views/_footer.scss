@@ -1,7 +1,7 @@
 .droper {
   width: 100%;
   position: relative;
-  bottom: 75px;
+  bottom: -3px;
 }
 
 .footer {
@@ -10,7 +10,7 @@
   color: white;
   background: black;
   position: absolute;
-  top: 75px;
+  // top: 75px;
 
   .thirds {
     @include flex-j-a(space-around, center);

@@ -450,7 +450,7 @@
       @include flex-j-a(space-between, center);
       flex-direction: row;
       flex-wrap: wrap;
-      width: 77vw;
+      width: 75vw;
       position: relative;
       top: 70px;
       background-color: indianred;
@@ -460,9 +460,10 @@
       // background: darkslategrey;
       // border: 2px solid red;
       align-items: center;
-      width: 168px;
-      height: 210px;
+      width: 143px;
+      height: 175px;
       margin: 0;
+      background: teal;
     }
     .section5-small-image {
       width: 150px;
@@ -479,10 +480,10 @@
       position: relative;
       top: 21px;
     }
-    #position-hero-container {
-      position: relative;
-      bottom: 3px;
-    }
+    // #position-hero-container {
+    //   position: relative;
+    //   bottom: 3px;
+    // }
     #logo-width-hero {
       width: 80px;
       height: 18px;
