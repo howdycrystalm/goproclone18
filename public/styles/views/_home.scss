@@ -8,7 +8,7 @@
   #banner-placeholder {
     width: 100%;
     height: 75px;
-    background: rebeccapurple;
+    // background: rebeccapurple;
   }
 
   #section1 {
@@ -16,15 +16,18 @@
   }
   #section2 {
     background-image: url('../../../images/home/splash2-0418.jpg');
-    padding: 28.3%;
+    padding: 28.4%;
+    width: 100%;
   }
   #section3 {
     background-image: url('../../../images/home/splash3-0418.jpg');
-    padding: 28.3%;
+    padding: 28.1%;
+    width: 100%;
   }
   #section4 {
     background-image: url('../../../images/home/splash4-0418.jpg');
-    padding: 28.3%;
+    padding: 28.1%;
+    width: 100%;
   }
 
   .product-container {
@@ -269,47 +272,68 @@
       height: 60px;
     }
   }
-  /* Section1 Background Image re-sizes
+  /* Section1 BACKGROUND IMAGES RE-SIZES
   ------------------------------------------------------------- */
+  @media screen and (max-width: 1400px) {
+    .section-image {
+      padding-top: 59.7%;
+      // padding-top: 65.1%;
+    }
+  }
   @media screen and (max-width: 1200px) {
     .section-image {
-      padding-top: 63.1%;
+      // padding-top: 63.7%;
+      padding-top: 65.1%;
+    }
+  }
+  @media screen and (max-width: 1067px) {
+    .section-image {
+      // padding-top: 64.1%;
+      padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 1024px) {
     .section-image {
-      padding-top: 65.5%;
+      // padding-top: 66%;
+      padding-top: 66.1%;
+    }
+  }
+  @media screen and (max-width: 867px) {
+    .section-image {
+      // padding-top: 67.5%;
+      padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 850px) {
     .section-image {
-      padding-top: 65.1%;
+      padding-top: 66%;
+      // padding-top: 65.1%;
     }
   }
   // /* Section 1 Copy minify
   // -------------------------------------------------------------- */
-  @media screen and (min-width: 1024px) {
-    #section1-copy {
-      top: 7.5%;
-    }
-    .product-copy {
-      h3 {
-        margin-top: 3px;
-      }
-    }
-    .buttons-container {
-      padding-top: 13px;
-    }
-  }
+  // @media screen and (min-width: 1024px) {
+  //   #section1-copy {
+  //     top: 7.5%;
+  //   }
+  //   .product-copy {
+  //     h3 {
+  //       margin-top: 3px;
+  //     }
+  //   }
+  //   .buttons-container {
+  //     padding-top: 13px;
+  //   }
+  // }
   /* Enlarges background image
   -------------------------------------------------------------- */
-  @media only screen and (max-width: 1200px) and (min-width: 768px) {
-    .section-image {
-      background-size: cover;
-      background-position: center;
-      width: 104%;
-    }
-  }
+  // @media only screen and (max-width: 1200px) and (min-width: 768px) {
+  //   .section-image {
+  //     background-size: cover;
+  //     background-position: center;
+  //     width: 104%;
+  //   }
+  // }
   /* Section 2 Text Align Center
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1179px) and (min-width: 1025px) {
@@ -326,8 +350,10 @@
       text-align: center;
     }
   }
-  /* Minifies and positions copy and quikstories logo
-  -------------------------------------------------------------- */
+  /* ----------------------------------------------------------- */
+  /*      Minifies and positions copy and quikstories logo       */
+  /*------------------------------------------------------------ */
+
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     // ----- LOGO ----- //
     .quick-stories-container {
@@ -381,6 +407,14 @@
         letter-spacing: 0;
         font-weight: bolder;
       }
+    }
+  }
+  /* SECTION 1 Minifies and positions copy
+  -------------------------------------------------------------- */
+  // @media only screen and (max-width: 1024px) and (min-width: 851px) {
+  @media only screen and (max-width: 1168px) and (min-width: 851px) {
+    #section1-copy {
+      top: 7.8%;
     }
   }
   /* Section 4: Minifies and positions SPECIFICALLY Section4 Copy
@@ -454,8 +488,9 @@
       width: 75vw;
       position: relative;
       // top: 70px;
-      top: 118px;
-      background-color: indianred;
+      // top: 118px;
+      top: 69px;
+      // background-color: indianred;
     }
     .product-card {
       //display: inline-block;
@@ -465,7 +500,7 @@
       width: 143px;
       height: 175px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
     .section5-small-image {
       width: 150px;
@@ -498,7 +533,8 @@
       position: relative;
       // top: 9px;
       // bottom: 24px;
-      bottom: 28px;
+      // bottom: 28px;
+      bottom: 24px;
     }
     #position-fusion-logo {
       position: relative;
@@ -523,9 +559,30 @@
     }
   }
 
-  /* Super Mobile Media Queries Time
+  /* ----------------------------------------------------------- */
+  /*                    Mobile Media Queries                     */
+  /*------------------------------------------------------------ */
+  /* Background Imagses, Copy, and Logo
   ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) {
+    /******* Background Images *******/
+    #section1 {
+      background-image: url('../../../images/home/mobile/mobile-splash1.jpg');
+      padding-top: 160%;
+    }
+    #section2 {
+      background-image: url('../../../images/home/mobile/mobile-splash2.jpg');
+      padding-top: 125%;
+    }
+    #section3 {
+      background-image: url('../../../images/home/mobile/mobile-splash3.jpg');
+      padding-top: 125%;
+    }
+    #section4 {
+      background-image: url('../../../images/home/mobile/mobile-splash4.jpg');
+      padding-top: 125%;
+    }
+
     #section5-copy {
       padding: 35px 20px;
       position: relative;
@@ -580,7 +637,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       position: relative;
-      background-color: orange;
+      // background-color: orange;
 
       // height: 441px;
       // display: flex;
@@ -631,7 +688,97 @@
     #position-hero-logo {
       top: 17px;
     }
+    /* MOBILE Minifies and positions copy and quikstories logo
+  ------------------------------------------------------------- */
+    // ----- LOGO ----- //
+    .quick-stories-container {
+      .logo {
+        width: 112px;
+        height: 38px;
+      }
+      h6 {
+        position: relative;
+        left: 10px;
+      }
+    }
+    #section1-logo-position {
+      bottom: 2%;
+    }
+    #section2-logo-position {
+      bottom: 16%;
+      right: 23.3%;
+    }
+    #section3-logo-position {
+      bottom: 20.1%;
+      left: 27.6%;
+    }
+    // ----- COPY ----- //
+    .product-copy {
+      height: 145px;
+      h2 {
+        height: 19px;
+        font-size: 1.25rem;
+        line-height: 19px;
+        margin: auto;
+        letter-spacing: -1px;
+      }
+      h1 {
+        font-size: 2rem;
+        padding: none;
+        letter-spacing: -1px;
+        text-align: center;
+        width: 300px;
+      }
+      h3 {
+        font-size: 1.125rem;
+        padding-top: none;
+      }
+    }
+    #section1-copy {
+      top: 7%;
+    }
+    #section2-copy {
+      top: 113px;
+      left: auto;
+    }
+    #section3-copy {
+      top: 45px;
+      right: auto;
+    }
+    #section4-copy {
+      width: auto;
+      height: 0;
+      padding-top: 0;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      padding-left: 0;
+      left: auto;
+      top: 45px;
+    }
+    #no-padding {
+      position: relative;
+      bottom: 11px;
+    }
+    #more-buttons-padding {
+      position: relative;
+      bottom: 19px;
+    }
+    .buttons-container {
+      @include flex-j-a(space-between, center);
+      height: 72px;
+      padding-top: 48px;
+
+      .button {
+        font-size: .75rem;
+        letter-spacing: 0;
+        font-weight: bolder;
+      }
+    }
   }
+  /*
+  ------------------------------------------------------------- */
+  /*
+  ------------------------------------------------------------- */
   // /* Fluid Product Image Spacing for Container 5 ONE
   // ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) and (min-width: 638px) {
@@ -645,7 +792,7 @@
       // height: 175px;
       height: 131px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
   }
   // /* Fluid Product Image Spacing for Container TWO
@@ -653,7 +800,7 @@
   @media only screen and (max-width: 637px) and (min-width: 478px) {
     .product-card {
       width: 205px;
-      background: purple;
+      // background: purple;
       // width: 150px;
       height: 134px;
       // height: 131px;
@@ -667,7 +814,7 @@
       width: 151px;
       height: 137px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
   }
 } //landing end bracket
