@@ -562,24 +562,36 @@
     //   background-size: contain;
     // }
     .product-card-container {
+      // width: 100vw;
+      // @include flex-j-a(space-around, center);
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // background-color: brown;
+      // padding: 0 3%;
       width: 100vw;
-      @include flex-j-a(space-around, center);
+      height: 441px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
       background-color: brown;
       padding: 0 3%;
+      padding-bottom: 47px;
     }
     .product-card {
       width: 150px;
       height: 203px;
+      // height: 131px;
     }
     //Fusion
     #position-contents {
-      bottom: 10px;
+      bottom: 4px;
     }
     //HERO
     #hero-product-card {
-      height: 163px;
+      // height: 163px;
+      height: 87px;
     }
     #position-hero-contents {
       position: relative;
@@ -599,7 +611,8 @@
       align-items: center;
       // width: 143px;
       width: 241px;
-      height: 175px;
+      // height: 175px;
+      height: 131px;
       margin: 0;
       background: teal;
     }
@@ -610,6 +623,9 @@
     .product-card {
       width: 205px;
       background: purple;
+      // width: 150px;
+      height: 134px;
+      // height: 131px;
     }
   }
   // /* Fluid Product Image Spacing for Container THREE
@@ -618,7 +634,7 @@
     .product-card {
       align-items: center;
       width: 151px;
-      height: 175px;
+      height: 137px;
       margin: 0;
       background: teal;
     }
