@@ -743,6 +743,24 @@
       top: 45px;
       right: auto;
     }
+    #section4-copy {
+      width: auto;
+      height: 0;
+      padding-top: 0;
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      padding-left: 0;
+      left: auto;
+      top: 45px;
+    }
+    #no-padding {
+      position: relative;
+      bottom: 11px;
+    }
+    #more-buttons-padding {
+      position: relative;
+      bottom: 19px;
+    }
     .buttons-container {
       @include flex-j-a(space-between, center);
       height: 72px;
