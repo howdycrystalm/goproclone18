@@ -350,8 +350,10 @@
       text-align: center;
     }
   }
-  /* Minifies and positions copy and quikstories logo
-  -------------------------------------------------------------- */
+  /* ----------------------------------------------------------- */
+  /*      Minifies and positions copy and quikstories logo       */
+  /*------------------------------------------------------------ */
+
   @media only screen and (max-width: 1024px) and (min-width: 768px) {
     // ----- LOGO ----- //
     .quick-stories-container {
@@ -557,25 +559,28 @@
     }
   }
 
-  /* Super Mobile Media Queries Time
+  /* ----------------------------------------------------------- */
+  /*                    Mobile Media Queries                     */
+  /*------------------------------------------------------------ */
+  /* Background Imagses, Copy, and Logo
   ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) {
     /******* Background Images *******/
     #section1 {
-      background-image: url('https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw7dd92dec/images/camera-landing-page/hero6black/01_CLP_H6B_ML.jpg');
+      background-image: url('../../../images/home/mobile/mobile-splash1.jpg');
       padding-top: 160%;
     }
     #section2 {
-      background-image: url('../../../images/home/splash2-0418.jpg');
-      padding: 28.3%;
+      background-image: url('../../../images/home/mobile/mobile-splash2.jpg');
+      padding-top: 125%;
     }
     #section3 {
-      background-image: url('../../../images/home/splash3-0418.jpg');
-      padding: 28.3%;
+      background-image: url('../../../images/home/mobile/mobile-splash3.jpg');
+      padding-top: 125%;
     }
     #section4 {
-      background-image: url('../../../images/home/splash4-0418.jpg');
-      padding: 28.3%;
+      background-image: url('../../../images/home/mobile/mobile-splash4.jpg');
+      padding-top: 125%;
     }
 
     #section5-copy {
@@ -683,7 +688,69 @@
     #position-hero-logo {
       top: 17px;
     }
+    /* MOBILE Minifies and positions copy and quikstories logo
+  ------------------------------------------------------------- */
+    // ----- LOGO ----- //
+    .quick-stories-container {
+      .logo {
+        width: 112px;
+        height: 38px;
+      }
+      h6 {
+        position: relative;
+        left: 10px;
+      }
+    }
+    #section1-logo-position {
+      bottom: 2%;
+    }
+    #section2-logo-position {
+      bottom: 16%;
+      right: 23.3%;
+    }
+    #section3-logo-position {
+      bottom: 20.1%;
+      left: 27.6%;
+    }
+    // ----- COPY ----- //
+    .product-copy {
+      height: 145px;
+      h2 {
+        height: 19px;
+        font-size: 1.25rem;
+        line-height: 19px;
+        margin: auto;
+        letter-spacing: -1px;
+      }
+      h1 {
+        font-size: 2rem;
+        padding: none;
+        letter-spacing: -1px;
+      }
+      h3 {
+        font-size: 1.125rem;
+        padding-top: none;
+      }
+    }
+    #section1-copy {
+      top: 7%;
+    }
+    .buttons-container {
+      @include flex-j-a(space-between, center);
+      height: 72px;
+      padding-top: 48px;
+
+      .button {
+        font-size: .75rem;
+        letter-spacing: 0;
+        font-weight: bolder;
+      }
+    }
   }
+  /*
+  ------------------------------------------------------------- */
+  /*
+  ------------------------------------------------------------- */
   // /* Fluid Product Image Spacing for Container 5 ONE
   // ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) and (min-width: 638px) {
