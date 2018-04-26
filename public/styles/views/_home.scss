@@ -520,6 +520,7 @@
       background-repeat: no-repeat;
     }
   }
+
   /* Super Mobile Media Queries Time
   ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) {
@@ -586,6 +587,40 @@
     }
     #position-hero-logo {
       top: 17px;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container 5 ONE
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 767px) and (min-width: 638px) {
+    .product-card {
+      //   width: 205px;
+      //   background: purple;
+      // }
+      align-items: center;
+      // width: 143px;
+      width: 241px;
+      height: 175px;
+      margin: 0;
+      background: teal;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container TWO
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 637px) and (min-width: 478px) {
+    .product-card {
+      width: 205px;
+      background: purple;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container THREE
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 478px) and (min-width: 400px) {
+    .product-card {
+      align-items: center;
+      width: 151px;
+      height: 175px;
+      margin: 0;
+      background: teal;
     }
   }
 } //landing end bracket
