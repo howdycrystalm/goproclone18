@@ -383,6 +383,13 @@
       }
     }
   }
+  /* SECTION 1 Minifies and positions copy
+  -------------------------------------------------------------- */
+  @media only screen and (max-width: 1024px) and (min-width: 851px) {
+    #section1-copy {
+      top: 7.5%;
+    }
+  }
   /* Section 4: Minifies and positions SPECIFICALLY Section4 Copy
   -------------------------------------------------------------- */
   //Section4 displays a little differently from the other sections.
