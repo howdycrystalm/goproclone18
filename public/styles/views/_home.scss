@@ -269,21 +269,42 @@
       height: 60px;
     }
   }
-  /* Section1 Background Image re-sizes
+  /* Section1 BACKGROUND IMAGES RE-SIZES
   ------------------------------------------------------------- */
+  @media screen and (max-width: 1400px) {
+    .section-image {
+      // padding-top: 59.7%;
+      padding-top: 65.1%;
+    }
+  }
   @media screen and (max-width: 1200px) {
     .section-image {
-      padding-top: 63.1%;
+      // padding-top: 63.7%;
+      padding-top: 65.1%;
+    }
+  }
+  @media screen and (max-width: 1067px) {
+    .section-image {
+      // padding-top: 64.1%;
+      padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 1024px) {
     .section-image {
-      padding-top: 65.5%;
+      // padding-top: 66%;
+      padding-top: 65.1%;
+    }
+  }
+  @media screen and (max-width: 867px) {
+    .section-image {
+      // padding-top: 67.5%;
+      padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 850px) {
     .section-image {
-      padding-top: 65.1%;
+      padding-top: 66%;
+      // padding-top: 65.1%;
     }
   }
   // /* Section 1 Copy minify
@@ -535,6 +556,24 @@
   /* Super Mobile Media Queries Time
   ------------------------------------------------------------- */
   @media only screen and (max-width: 767px) {
+    /******* Background Images *******/
+    #section1 {
+      background-image: url('https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw7dd92dec/images/camera-landing-page/hero6black/01_CLP_H6B_ML.jpg');
+      padding-top: 160%;
+    }
+    #section2 {
+      background-image: url('../../../images/home/splash2-0418.jpg');
+      padding: 28.3%;
+    }
+    #section3 {
+      background-image: url('../../../images/home/splash3-0418.jpg');
+      padding: 28.3%;
+    }
+    #section4 {
+      background-image: url('../../../images/home/splash4-0418.jpg');
+      padding: 28.3%;
+    }
+
     #section5-copy {
       padding: 35px 20px;
       position: relative;
