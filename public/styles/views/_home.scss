@@ -735,6 +735,10 @@
     #section1-copy {
       top: 7%;
     }
+    #section2-copy {
+      top: 113px;
+      left: auto;
+    }
     .buttons-container {
       @include flex-j-a(space-between, center);
       height: 72px;
