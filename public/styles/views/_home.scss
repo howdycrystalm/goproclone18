@@ -631,7 +631,7 @@
     // }
     #section5-product-container {
       width: 100vw;
-      height: 77vh;
+      height: 100vh;
       // @include flex-j-a(center, center);
       @include flex-j-a(space-around, center);
       flex-direction: row;
@@ -652,6 +652,7 @@
 
     #center-card {
       bottom: 122px;
+      height: 61%;
     }
     .product-card-container {
       width: 100vw;
