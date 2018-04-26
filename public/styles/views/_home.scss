@@ -16,15 +16,18 @@
   }
   #section2 {
     background-image: url('../../../images/home/splash2-0418.jpg');
-    padding: 28.3%;
+    padding: 28.1%;
+    width: 100%;
   }
   #section3 {
     background-image: url('../../../images/home/splash3-0418.jpg');
-    padding: 28.3%;
+    padding: 28.1%;
+    width: 100%;
   }
   #section4 {
     background-image: url('../../../images/home/splash4-0418.jpg');
-    padding: 28.3%;
+    padding: 28.1%;
+    width: 100%;
   }
 
   .product-container {
@@ -324,13 +327,13 @@
   }
   /* Enlarges background image
   -------------------------------------------------------------- */
-  @media only screen and (max-width: 1200px) and (min-width: 768px) {
-    .section-image {
-      background-size: cover;
-      background-position: center;
-      width: 104%;
-    }
-  }
+  // @media only screen and (max-width: 1200px) and (min-width: 768px) {
+  //   .section-image {
+  //     background-size: cover;
+  //     background-position: center;
+  //     width: 104%;
+  //   }
+  // }
   /* Section 2 Text Align Center
   -------------------------------------------------------------- */
   @media only screen and (max-width: 1179px) and (min-width: 1025px) {
