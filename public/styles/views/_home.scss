@@ -276,8 +276,8 @@
   ------------------------------------------------------------- */
   @media screen and (max-width: 1400px) {
     .section-image {
-      // padding-top: 59.7%;
-      padding-top: 65.1%;
+      padding-top: 59.7%;
+      // padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 1200px) {
@@ -312,19 +312,19 @@
   }
   // /* Section 1 Copy minify
   // -------------------------------------------------------------- */
-  @media screen and (min-width: 1024px) {
-    #section1-copy {
-      top: 7.5%;
-    }
-    .product-copy {
-      h3 {
-        margin-top: 3px;
-      }
-    }
-    .buttons-container {
-      padding-top: 13px;
-    }
-  }
+  // @media screen and (min-width: 1024px) {
+  //   #section1-copy {
+  //     top: 7.5%;
+  //   }
+  //   .product-copy {
+  //     h3 {
+  //       margin-top: 3px;
+  //     }
+  //   }
+  //   .buttons-container {
+  //     padding-top: 13px;
+  //   }
+  // }
   /* Enlarges background image
   -------------------------------------------------------------- */
   // @media only screen and (max-width: 1200px) and (min-width: 768px) {
@@ -409,9 +409,10 @@
   }
   /* SECTION 1 Minifies and positions copy
   -------------------------------------------------------------- */
-  @media only screen and (max-width: 1024px) and (min-width: 851px) {
+  // @media only screen and (max-width: 1024px) and (min-width: 851px) {
+  @media only screen and (max-width: 1168px) and (min-width: 851px) {
     #section1-copy {
-      top: 7.5%;
+      top: 7.8%;
     }
   }
   /* Section 4: Minifies and positions SPECIFICALLY Section4 Copy
