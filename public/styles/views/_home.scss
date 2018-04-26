@@ -8,7 +8,7 @@
   #banner-placeholder {
     width: 100%;
     height: 75px;
-    background: rebeccapurple;
+    // background: rebeccapurple;
   }
 
   #section1 {
@@ -490,7 +490,7 @@
       // top: 70px;
       // top: 118px;
       top: 69px;
-      background-color: indianred;
+      // background-color: indianred;
     }
     .product-card {
       //display: inline-block;
@@ -500,7 +500,7 @@
       width: 143px;
       height: 175px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
     .section5-small-image {
       width: 150px;
@@ -637,7 +637,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       position: relative;
-      background-color: orange;
+      // background-color: orange;
 
       // height: 441px;
       // display: flex;
@@ -792,7 +792,7 @@
       // height: 175px;
       height: 131px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
   }
   // /* Fluid Product Image Spacing for Container TWO
@@ -800,7 +800,7 @@
   @media only screen and (max-width: 637px) and (min-width: 478px) {
     .product-card {
       width: 205px;
-      background: purple;
+      // background: purple;
       // width: 150px;
       height: 134px;
       // height: 131px;
@@ -814,7 +814,7 @@
       width: 151px;
       height: 137px;
       margin: 0;
-      background: teal;
+      // background: teal;
     }
   }
 } //landing end bracket
