@@ -719,4 +719,10 @@
       margin: 0;
     }
   }
+  @media only screen and (max-width: 410px) {
+    #small-hero-product-card {
+      position: relative;
+      bottom: 33px;
+    }
+  }
 } //landing end bracket
