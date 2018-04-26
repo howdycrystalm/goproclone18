@@ -423,9 +423,13 @@
   }
   /* Section 5 "Find the right GoPro for you." Minifi product images
   -------------------------------------------------------------- */
-  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+  // @media only screen and (max-width: 1024px) and (min-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     #center-card {
       bottom: 74px;
+      //
+      width: 100%;
+      // background: darkblue;
     }
     #section5-copy {
       padding: 35px 20px;
@@ -440,19 +444,28 @@
       }
     }
     .product-card-container {
-      display: inline-block;
-      width: 100vw;
-      text-align: center;
+      // display: inline-block;
+      // width: 100vw;
+      // text-align: center;
+      // flex-direction: row;
+      @include flex-j-a(space-between, center);
       flex-direction: row;
+      flex-wrap: wrap;
+      width: 75vw;
+      position: relative;
+      // top: 70px;
+      top: 118px;
+      background-color: indianred;
     }
     .product-card {
-      display: inline-block;
+      //display: inline-block;
       // background: darkslategrey;
       // border: 2px solid red;
       align-items: center;
-      width: 168px;
-      height: 210px;
+      width: 143px;
+      height: 175px;
       margin: 0;
+      background: teal;
     }
     .section5-small-image {
       width: 150px;
@@ -464,15 +477,15 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+    // HERO Customs **********************
     #position-hero-logo {
       position: relative;
       top: 21px;
     }
-    // HERO Customs **********************
-    #position-hero-container {
-      position: relative;
-      bottom: 3px;
-    }
+    // #position-hero-container {
+    //   position: relative;
+    //   bottom: 3px;
+    // }
     #logo-width-hero {
       width: 80px;
       height: 18px;
@@ -483,7 +496,9 @@
     // Fusion Customs **********************
     #position-contents {
       position: relative;
-      top: 9px;
+      // top: 9px;
+      // bottom: 24px;
+      bottom: 28px;
     }
     #position-fusion-logo {
       position: relative;
@@ -505,6 +520,154 @@
       height: 18px;
       background-size: contain;
       background-repeat: no-repeat;
+    }
+  }
+
+  /* Super Mobile Media Queries Time
+  ------------------------------------------------------------- */
+  @media only screen and (max-width: 767px) {
+    #section5-copy {
+      padding: 35px 20px;
+      position: relative;
+      bottom: 15px;
+      margin: 0 auto;
+      width: 277px;
+      h1 {
+        height: auto;
+        font-size: 2rem;
+        line-height: 32px;
+        margin: 9px auto;
+        letter-spacing: -1px;
+        text-align: center;
+        position: relative;
+        // bottom: 17px;
+        top: 6px;
+      }
+    }
+    #section5-buttons-container {
+      width: 145px;
+      margin: 0 auto;
+      position: relative;
+      top: 17px;
+    }
+    // .product-card-container {
+    //   margin-top: 14px;
+    // }
+    // .product-card {
+    //   padding: 0 19px;
+    //   background: thistle;
+    //   border: 1px solid orangered;
+    // }
+    // .section5-small-image {
+    //   width: 150px;
+    //   height: 98px;
+    //   background-size: contain;
+    // }
+    // #section5-small-fusion-image {
+    //   width: 150px;
+    // }
+    //
+    // .logo-width {
+    //   width: 88px;
+    //   background-repeat: no-repeat;
+    //   background-size: contain;
+    // }
+    #section5-product-container {
+      width: 100vw;
+      height: 77vh;
+      // @include flex-j-a(center, center);
+      @include flex-j-a(space-around, center);
+      flex-direction: row;
+      flex-wrap: wrap;
+      position: relative;
+      background-color: orange;
+
+      // height: 441px;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // background-color: brown;
+      // padding: 0 3%;
+      // padding-bottom: 47px;
+    }
+
+    #center-card {
+      bottom: 122px;
+    }
+    .product-card-container {
+      width: 100vw;
+      height: 441px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      /* background-color: brown; */
+      padding: 0 3% 47px;
+      position: relative;
+      top: 102px;
+    }
+    .product-card {
+      width: 150px;
+      height: 203px;
+      // height: 131px;
+    }
+
+    //Fusion
+    #position-contents {
+      bottom: 4px;
+    }
+    //HERO
+    #hero-product-card {
+      // height: 163px;
+      height: 87px;
+    }
+    #position-hero-contents {
+      position: relative;
+      top: 10px;
+    }
+    #position-hero-logo {
+      top: 17px;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container 5 ONE
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 767px) and (min-width: 638px) {
+    .product-card {
+      //   width: 205px;
+      //   background: purple;
+      // }
+      align-items: center;
+      // width: 143px;
+      width: 241px;
+      // height: 175px;
+      height: 131px;
+      margin: 0;
+      background: teal;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container TWO
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 637px) and (min-width: 478px) {
+    .product-card {
+      width: 205px;
+      background: purple;
+      // width: 150px;
+      height: 134px;
+      // height: 131px;
+    }
+  }
+  // /* Fluid Product Image Spacing for Container THREE
+  // ------------------------------------------------------------- */
+  @media only screen and (max-width: 478px) and (min-width: 400px) {
+    .product-card {
+      align-items: center;
+      width: 151px;
+      height: 137px;
+      margin: 0;
+      background: teal;
     }
   }
 } //landing end bracket
