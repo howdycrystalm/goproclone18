@@ -43,6 +43,10 @@
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 59.1%;
+    /* display: table allows <img> to work with background: url.
+    otherwise, moz is broken. nevery forget, display table. face palm.
+    ------------------------------------------------------------- */
+    display: table;
   }
 
   .product-copy {
