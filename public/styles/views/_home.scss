@@ -272,35 +272,36 @@
   @media screen and (max-width: 1400px) {
     .section-image {
       padding-top: 59.7%;
-      // padding-top: 65.1%;
+      display: table;
     }
   }
   @media screen and (max-width: 1200px) {
     .section-image {
-      // padding-top: 63.7%;
+      display: table;
       padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 1067px) {
     .section-image {
-      // padding-top: 64.1%;
+      display: table;
       padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 1024px) {
     .section-image {
-      // padding-top: 66%;
+      display: table;
       padding-top: 66.1%;
     }
   }
   @media screen and (max-width: 867px) {
     .section-image {
-      // padding-top: 67.5%;
+      display: table;
       padding-top: 65.1%;
     }
   }
   @media screen and (max-width: 850px) {
     .section-image {
+      display: table;
       padding-top: 66%;
     }
   }
